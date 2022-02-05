@@ -3,7 +3,7 @@
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <g-image alt="Example image" src="~/favicon.png" width="135" />
 
-    <h1 class="text-5xl">Juho Pekkala - Developer & Designer</h1>
+    <h1 class="text-5xl font-medium">Juho Pekkala - Developer & Designer</h1>
 
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste

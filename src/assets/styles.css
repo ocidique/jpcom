@@ -472,7 +472,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: static;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.font-medium {
+  font-weight: 500;
 }
