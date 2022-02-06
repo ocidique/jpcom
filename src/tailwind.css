@@ -20,3 +20,18 @@
     src: url(fonts/RobotoMono-Regular.ttf) format("truetype");
   }
 }
+
+@layer utilities {
+  .text-shadow-xl {
+    /* text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.45); */
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.8);
+  }
+  .text-shadow {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
+  }
+
+  /* used to give drop shadow for icons if used with text-shadow */
+  .filter-shadow {
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.45));
+  }
+}
