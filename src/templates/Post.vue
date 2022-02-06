@@ -1,16 +1,11 @@
 <template>
   <Layout>
     <article>
-      <h1>{{ $page.post.title }} </h1>
+      <h1>{{ $page.post.title }}</h1>
 
       <div>
         Tags:
-        <g-link
-            v-for="tag in $page.post.tags"
-            :to="tag.path"
-            :key="tag.id">
-          #{{ tag.title }}
-        </g-link>
+        <g-link v-for="tag in $page.post.tags" :to="tag.path" :key="tag.id"> #{{ tag.title }} </g-link>
       </div>
 
       <p>Posted on {{ $page.post.date }}</p>
@@ -35,11 +30,11 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
-  export default {
+export default {
   metaInfo() {
     return {
-      title: this.$page.post.title
-    }
-  }
-}
+      title: this.$page.post.title,
+    };
+  },
+};
 </script>

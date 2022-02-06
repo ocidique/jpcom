@@ -1,14 +1,22 @@
 <template>
   <Layout>
-    <article v-for="post in $page.posts.edges" :key="post.id" >
-      <h2><g-link :to="post.node.path" rel="bookmark">{{ post.node.title }}</g-link></h2>
+    <article
+      v-for="post in $page.posts.edges"
+      :key="post.id"
+    >
+      <h2>
+        <g-link
+          :to="post.node.path"
+          rel="bookmark"
+        >{{ post.node.title }}</g-link>
+      </h2>
       <p>Posted on <time :datetime="post.node.date">{{ post.node.date }}</time></p>
 
       <p>{{ post.node.summary }}</p>
     </article>
 
     <h2>Pagination</h2>
-    <Pager :info="$page.posts.pageInfo"/>
+    <Pager :info="$page.posts.pageInfo" />
   </Layout>
 </template>
 
@@ -34,14 +42,14 @@ query Posts ($page: Int) {
 </page-query>
 
 <script>
-import { Pager } from "gridsome"
+import { Pager } from "gridsome";
 
 export default {
   components: {
-    Pager
+    Pager,
   },
   metaInfo: {
-    title: "View my blog posts"
+    title: "View my blog posts",
   },
-}
+};
 </script>
