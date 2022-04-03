@@ -4,7 +4,7 @@
     title="Toggle theme between light and dark"
     aria-label="Toggle theme between light and dark"
     @click.prevent="toggleTheme"
-    class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
+    class="text-zinc-900 dark:text-zinc-100 hover:text-orange-700 dark:hover:text-orange-600"
   >
     <svg
       v-if="theme === 'dark'"
@@ -25,7 +25,7 @@
     <svg
       v-else
       xmlns="http://www.w3.org/2000/svg"
-      class="h-6 w-6"
+      class="h-5 w-5"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"

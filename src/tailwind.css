@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  /*  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Mono&display=swap"); */
   @font-face {
     font-family: "Poppins";
     font-weight: 400;
@@ -15,9 +14,29 @@
     src: url(fonts/Poppins-Medium.ttf) format("truetype");
   }
   @font-face {
+    font-family: "Poppins";
+    font-weight: 600;
+    src: url(fonts/Poppins-SemiBold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 700;
+    src: url(fonts/Poppins-Bold.ttf) format("truetype");
+  }
+  @font-face {
     font-family: "Roboto Mono";
     font-weight: 400;
     src: url(fonts/RobotoMono-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Roboto Mono";
+    font-weight: 500;
+    src: url(fonts/RobotoMono-Medium.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Lavishly Yours";
+    font-weight: 400;
+    src: url(fonts/LavishlyYours-Regular.ttf) format("truetype");
   }
 }
 
@@ -34,4 +53,13 @@
   .filter-shadow {
     filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.45));
   }
+}
+
+/* gridsome generated active nav link */
+.active--exact {
+  @apply text-orange-700 dark:text-orange-600 font-medium underline !important;
+}
+
+.pagination {
+  @apply p-1;
 }
