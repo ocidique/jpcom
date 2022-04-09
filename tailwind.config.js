@@ -1,5 +1,7 @@
 module.exports = {
-  content: ["./src/**/*.{html,vue,js,md}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
   darkMode: "class",
   theme: {
     fontFamily: {
