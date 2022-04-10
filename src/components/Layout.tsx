@@ -14,7 +14,8 @@ const Layout: React.FC<Props> = ({ children }) => {
           <Navigation />
           {children}
         </div>
-        <Footer />
+
+        {window.location.pathname !== "/" && <Footer />}
       </div>
     </div>
   );

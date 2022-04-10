@@ -30,7 +30,7 @@ const Navigation = () => {
     <Disclosure as="nav">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 xl:px-0">
+          <div className="max-w-7xl mx-auto px-2 sm:px-6 xl:px-0 pt-6">
             <div className="relative flex items-center justify-between py-6">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -53,12 +53,18 @@ const Navigation = () => {
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-col space-y-6">
                   <div className="flex-shrink-0 flex items-center">
-                    <Link
-                      to="/"
-                      className="text-xl sm:text-2xl md:text-3xl font-sans font-semibold text-zinc-900 dark:text-zinc-100 hover:text-orange-700 dark:hover:text-orange-600"
-                    >
-                      juho pekkala
-                    </Link>
+                    {window.location.pathname === "/" ? (
+                      <div className="text-xl sm:text-2xl md:text-3xl font-sans font-semibold text-zinc-900 dark:text-zinc-100">
+                        juho pekkala
+                      </div>
+                    ) : (
+                      <Link
+                        to="/"
+                        className="text-xl sm:text-2xl md:text-3xl font-sans font-semibold text-zinc-900 dark:text-zinc-100 hover:text-orange-700 dark:hover:text-orange-600"
+                      >
+                        juho pekkala
+                      </Link>
+                    )}
                   </div>
 
                   <div className="hidden sm:flex sm:items-center">
@@ -103,7 +109,6 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-
               <div className="px-3">
                 <ThemeSwitcher />
               </div>
