@@ -1,5 +1,4 @@
 import * as React from "react";
-import ThemeSwitcher from "../components/ThemeSwitcher";
 import Layout from "../components/Layout";
 
 // styles
@@ -133,7 +132,6 @@ const IndexPage = () => {
     <Layout>
       <main style={pageStyles}>
         <title>Home Page</title>
-        <ThemeSwitcher />
         <h1 style={headingStyles}>
           Congratulations
           <br />
