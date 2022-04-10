@@ -1,6 +1,4 @@
-import type { GatsbyConfig } from "gatsby";
-
-const config: GatsbyConfig = {
+module.exports = {
   siteMetadata: {
     title: `jpcom`,
     siteUrl: `https://www.yourdomain.tld`,
@@ -43,5 +41,3 @@ const config: GatsbyConfig = {
     },
   ],
 };
-
-export default config;
