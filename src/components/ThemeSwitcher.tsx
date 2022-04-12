@@ -6,25 +6,36 @@ function ThemeSwitcher({}: Props) {
   const [theme, setTheme] = useState("");
 
   useEffect(() => {
+    applyTheme(getTheme());
+  });
+
+  function getTheme() {
     const userPrefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
     const defaultTheme = userPrefersDark ? "dark" : "light";
     const localStorateTheme = localStorage.getItem("theme") || defaultTheme;
-    handleTheme(localStorateTheme);
-  });
-
-  function toggleTheme() {
-    const newTheme = theme === "light" ? "dark" : "light";
-    handleTheme(newTheme);
+    return localStorateTheme;
   }
 
-  function handleTheme(newTheme: string) {
-    setTheme(newTheme);
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+  function saveTheme(theme: string) {
+    localStorage.setItem("theme", theme);
+  }
+
+  function applyTheme(theme: string) {
+    setTheme(theme);
+    document.body.className = theme;
+  }
+
+  function rotateTheme(theme: string) {
+    if (theme === "light") {
+      return "dark";
     }
-    localStorage.setItem("theme", newTheme);
+    return "light";
+  }
+
+  function toggleTheme() {
+    const newTheme = rotateTheme(getTheme());
+    applyTheme(newTheme);
+    saveTheme(newTheme);
   }
 
   return (
