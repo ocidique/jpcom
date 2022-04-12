@@ -8,13 +8,13 @@ import Logo from "../assets/logo.svg";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 
 const navigation = [
-  { name: "About", href: "/about/" },
-  { name: "CV", href: "/cv/" },
-  { name: "Projects", href: "/projects/" },
-  { name: "Portfolio", href: "/portfolio/" },
-  { name: "Photography", href: "/photography/" },
-  { name: "Blog", href: "/blog/" },
-  { name: "Resources", href: "/resources/" },
+  { name: "about", href: "/about/" },
+  { name: "cv", href: "/cv/" },
+  { name: "projects", href: "/projects/" },
+  { name: "portfolio", href: "/portfolio/" },
+  { name: "photography", href: "/photography/" },
+  { name: "blog", href: "/blog/" },
+  { name: "resources", href: "/resources/" },
 ];
 
 const Navigation = () => {
@@ -30,8 +30,8 @@ const Navigation = () => {
     <Disclosure as="nav">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 xl:px-0 pt-6">
-            <div className="relative flex items-center justify-between py-6">
+          <div className="max-w-7xl mx-auto px-2 sm:px-6 xl:px-0">
+            <div className="relative flex items-center justify-between py-8">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="p-2">
@@ -51,16 +51,16 @@ const Navigation = () => {
               </div>
 
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-col space-y-6">
+                <div className="flex flex-col space-y-12">
                   <div className="flex-shrink-0 flex items-center">
                     {window.location.pathname === "/" ? (
-                      <div className="text-xl sm:text-2xl md:text-3xl font-sans font-semibold text-zinc-900 dark:text-zinc-100">
+                      <div className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-100">
                         juho pekkala
                       </div>
                     ) : (
                       <Link
                         to="/"
-                        className="text-xl sm:text-2xl md:text-3xl font-sans font-semibold text-zinc-900 dark:text-zinc-100 hover:text-orange-700 dark:hover:text-orange-600"
+                        className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-100 hover:text-orange-700 dark:hover:text-orange-600"
                       >
                         juho pekkala
                       </Link>
