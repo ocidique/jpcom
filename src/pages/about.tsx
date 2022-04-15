@@ -1,6 +1,8 @@
 import * as React from "react";
-import Layout from "../components/Layout";
 import { StaticImage } from "gatsby-plugin-image";
+
+import Layout from "../components/Layout";
+import CTA from "../components/CTA";
 
 import DotPattern from "../assets/dot_pattern.svg";
 
@@ -8,7 +10,7 @@ const AboutPage = () => {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto">
-        <div className="flex space-x-24 mt-32">
+        <div className="flex space-x-24 my-32">
           <div className="relative w-full md:w-2/5">
             <div
               className="absolute z-30"
@@ -50,6 +52,13 @@ const AboutPage = () => {
                 designing software architectures to applications including user interfaces, drawing graphics and
                 deciding looks and feels. Sometimes even solve and develop business aspects as well.
               </p>
+            </div>
+            <div className="flex flex-col space-y-4">
+              <CTA to="#">Read more about me in the introduction post</CTA>
+              <CTA to="#">Here to check my CV?</CTA>
+              <CTA to="#">Check out my work portfolio</CTA>
+              <CTA to="#">Check out my hobby photography</CTA>
+              <CTA to="#">Read my blog. I write sometimes</CTA>
             </div>
           </div>
         </div>
