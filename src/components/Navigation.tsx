@@ -88,7 +88,7 @@ const Navigation = () => {
                   </div>
                 </div>
               </div>
-              <div className="hidden lg:block px-4">
+              <div className="hidden lg:block px-4 text-zinc-900 dark:text-orange-600">
                 <Logo />
               </div>
             </div>
