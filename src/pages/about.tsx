@@ -27,7 +27,10 @@ const AboutPage = () => {
                 borderColor: "transparent transparent #cd5c5c transparent",
               }}
             ></div>
-            <div className="absolute z-10" style={{ top: "150px", left: "100px", transform: "rotate(-90deg)" }}>
+            <div
+              className="absolute z-10 text-gray-200 dark:text-zinc-700"
+              style={{ top: "150px", left: "100px", transform: "rotate(-90deg)" }}
+            >
               <DotPattern />
             </div>
             <StaticImage
@@ -37,7 +40,7 @@ const AboutPage = () => {
               style={{ top: "50px", left: "80px" }}
             />
           </div>
-          <div className="w-full md:w-3/5 space-y-12 text-zinc-900 mt-12">
+          <div className="w-full md:w-3/5 space-y-12 mt-12 text-zinc-900 dark:text-zinc-100">
             <h2 className="font-semibold uppercase text-5xl">Hi there 👋🏻</h2>
             <div className="flex flex-col space-y-6">
               <p>My name is Juho Pekkala. I warmly thank you finding here and humbly welcome you to my website 🙏🏼</p>
