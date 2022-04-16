@@ -9,7 +9,7 @@ const IndexPage = () => {
       <div className="absolute inset-0 z-20 bg-gradient-to-tl from-lime-900 via-sky-200 to-orange-300 opacity-80 dark:bg-gradient-br dark:from-black dark:via-slate-900 dark:to-cyan-900" />
 
       <div className="min-h-screen relative z-30">
-        <div className="max-w-5xl mx-auto flex flex-col min-h-screen justify-between">
+        <div className="flex flex-col min-h-screen justify-between">
           <div className="space-y-12">
             <Navigation />
 
