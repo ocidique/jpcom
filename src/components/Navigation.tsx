@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import React from "react";
 import { Link } from "gatsby";
 import { Disclosure } from "@headlessui/react";
@@ -18,8 +17,8 @@ const navigation = [
 ];
 
 const Navigation = () => {
-  const isActive = ({ isCurrent }) => {
-    return isCurrent
+  const isActive = ({ isPartiallyCurrent }) => {
+    return isPartiallyCurrent
       ? {
           className: "font-mono text-orange-700 dark:text-orange-600 font-medium rounded-md text-2sm underline",
         }
