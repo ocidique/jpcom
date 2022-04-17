@@ -1,12 +1,12 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import Layout from "../components/Layout";
-import PostLink from "../components/PostLink";
+import Layout from "../../components/Layout";
+import PostLink from "../../components/PostLink";
 
 const BlogPage = ({
   data: {
-    allMarkdownRemark: { edges },
+    allMdx: { edges },
   },
 }) => {
   const Posts = edges
@@ -17,7 +17,7 @@ const BlogPage = ({
     <Layout>
       <div className="max-w-7xl mx-auto">
         <div className="max-w-2xl space-y-12">
-          <div className="space-y-4 text-zinc-900">
+          <div className="space-y-4 text-zinc-900 dark:text-zinc-200">
             <h1 className="text-2xl font-medium">I write sometimes</h1>
             <p>
               I intend write large variety of things. Blogs can be from substance content focusing around IT, design
@@ -35,7 +35,7 @@ export default BlogPage;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           id
