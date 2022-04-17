@@ -9,18 +9,18 @@ import ThemeSwitcher from "../components/ThemeSwitcher";
 const navigation = [
   { name: "about", href: "/about/" },
   { name: "cv", href: "/cv/" },
-  { name: "projects", href: "/projects/" },
-  { name: "portfolio", href: "/portfolio/" },
-  { name: "photography", href: "/photography/" },
+  // { name: "projects", href: "/projects/" },
+  // { name: "portfolio", href: "/portfolio/" },
+  // { name: "photography", href: "/photography/" },
   { name: "blog", href: "/blog/" },
-  { name: "resources", href: "/resources/" },
+  // { name: "resources", href: "/resources/" },
 ];
 
 const Navigation = () => {
   const isActive = ({ isPartiallyCurrent }) => {
     return isPartiallyCurrent
       ? {
-          className: "font-mono text-orange-700 dark:text-orange-600 font-medium rounded-md text-2sm underline",
+          className: "font-mono text-orange-600 dark:text-orange-600 font-medium rounded-md text-2sm underline",
         }
       : {};
   };
@@ -37,12 +37,12 @@ const Navigation = () => {
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon
-                      className="block h-6 w-6 text-zinc-900 dark:text-zinc-100 hover:text-orange-700 dark:hover:text-orange-600"
+                      className="block h-6 w-6 text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
                       aria-hidden="true"
                     />
                   ) : (
                     <MenuAlt1Icon
-                      className="block h-6 w-6 text-zinc-900 dark:text-zinc-100 hover:text-orange-700 dark:hover:text-orange-600"
+                      className="block h-6 w-6 text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
                       aria-hidden="true"
                     />
                   )}
@@ -53,13 +53,13 @@ const Navigation = () => {
                 <div className="flex flex-col space-y-12">
                   <div className="flex-shrink-0 flex items-center">
                     {window.location.pathname === "/" ? (
-                      <div className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-100">
+                      <div className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-300">
                         juho pekkala
                       </div>
                     ) : (
                       <Link
                         to="/"
-                        className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-100 hover:text-orange-700 dark:hover:text-orange-600"
+                        className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
                       >
                         juho pekkala
                       </Link>
@@ -74,13 +74,13 @@ const Navigation = () => {
                           to={item.href}
                           getProps={isActive}
                           className={
-                            "font-mono text-zinc-900 dark:text-zinc-100 hover:text-orange-700 dark:hover:text-orange-600 rounded-md text-2sm"
+                            "font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm"
                           }
                         >
                           {item.name}
                         </Link>
                       ))}
-                      <div className="font-mono text-zinc-900 dark:text-zinc-100" aria-hidden="true">
+                      <div className="font-mono text-zinc-900 dark:text-zinc-300" aria-hidden="true">
                         /
                       </div>
                       <ThemeSwitcher />
@@ -102,7 +102,7 @@ const Navigation = () => {
                   to={item.href}
                   getProps={isActive}
                   className={
-                    "font-mono text-zinc-900 dark:text-zinc-100 hover:text-orange-700 dark:hover:text-orange-600 px-3 py-2 rounded-md text-2sm"
+                    "font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 px-3 py-2 rounded-md text-2sm"
                   }
                 >
                   {item.name}

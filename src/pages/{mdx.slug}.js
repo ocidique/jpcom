@@ -11,10 +11,10 @@ const BlogPost = ({
     <Layout>
       <div className="max-w-7xl mx-auto space-y-10">
         <div className="space-y-2">
-          <h2 className="text-2xl font-medium text-zinc-900 dark:text-zinc-200">{data.mdx.frontmatter.title}</h2>
+          <h2 className="text-2xl font-medium text-zinc-900 dark:text-zinc-300">{data.mdx.frontmatter.title}</h2>
           <p className="font-mono text-sm text-zinc-600 dark:text-zinc-300">{data.mdx.frontmatter.date}</p>
         </div>
-        <div className="text-zinc-900 dark:text-zinc-200">
+        <div className="text-zinc-900 dark:text-zinc-300">
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </div>
       </div>

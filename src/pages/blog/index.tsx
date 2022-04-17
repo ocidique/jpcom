@@ -17,7 +17,7 @@ const BlogPage = ({
     <Layout>
       <div className="max-w-7xl mx-auto">
         <div className="max-w-2xl space-y-12">
-          <div className="space-y-4 text-zinc-900 dark:text-zinc-200">
+          <div className="space-y-4 text-zinc-900 dark:text-zinc-300">
             <h1 className="text-2xl font-medium">I write sometimes</h1>
             <p>
               I intend write large variety of things. Blogs can be from substance content focusing around IT, design

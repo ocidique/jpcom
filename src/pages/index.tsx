@@ -17,19 +17,19 @@ const IndexPage = () => {
               <div className="mt-40 mb-20 relative">
                 <div className="relative z-50">
                   <div
-                    className="font-cursive absolute dark:text-zinc-100 text-zinc-100 text-shadow-xl text-center"
+                    className="font-cursive absolute dark:text-zinc-200 text-zinc-200 text-shadow-xl text-center"
                     style={{ fontSize: "60px", top: "-30px", left: "60px" }}
                   >
                     creative
                   </div>
                   <div
-                    className="font-semibold dark:text-zinc-100 text-zinc-100 text-shadow-xl tracking-tight"
+                    className="font-semibold dark:text-zinc-200 text-zinc-200 text-shadow-xl tracking-tight"
                     style={{ fontSize: "80px" }}
                   >
                     developer
                   </div>
                   <div
-                    className="font-cursive -mt-16 text-zinc-100 text-shadow-xl"
+                    className="font-cursive -mt-16 text-zinc-200 text-shadow-xl"
                     style={{
                       position: "relative",
                       fontSize: "90px",
@@ -46,10 +46,10 @@ const IndexPage = () => {
                   <div className="landing-circle" />
                   <div className="landing-square">
                     <div className="landing-square__left">
-                      <p className="welcome font-mono dark:text-zinc-100">welcome to my website</p>
+                      <p className="welcome font-mono dark:text-zinc-200">welcome to my website</p>
                     </div>
                     <div className="landing-square__right">
-                      <p className="slogan font-mono dark:text-zinc-100">only development is permanent</p>
+                      <p className="slogan font-mono dark:text-zinc-200">only development is permanent</p>
                     </div>
                   </div>
                   <div className="landing-triangle" />

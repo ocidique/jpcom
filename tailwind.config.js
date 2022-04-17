@@ -1,7 +1,5 @@
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: "class",
   theme: {
     fontFamily: {
@@ -9,9 +7,14 @@ module.exports = {
       sans: ["Poppins", "sans-serif"],
       mono: ["Roboto Mono", "monospace"],
       "roboto-mono": ["Roboto Mono", "monospace"],
-      cursive: ["Lavishly Yours", "cursive"]
+      cursive: ["Lavishly Yours", "cursive"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        "one-dark-500": "#282c34",
+        "one-dark-600": "#21252b",
+      },
+    },
   },
   plugins: [],
-}
+};

@@ -3,25 +3,16 @@ import React from "react";
 const Layout = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="flex max-w-7xl mx-auto items-center justify-between text-sm relative bottom-0 w-full border-t border-dashed border-zinc-900 dark:border-zinc-100 mt-12 py-6">
-      <span className="text-zinc-900 dark:text-zinc-100">
+    <footer className="flex max-w-7xl mx-auto items-center justify-between text-sm relative bottom-0 w-full border-t-2 border-dashed border-gray-300 dark:border-zinc-700 mt-12 py-6">
+      <span className="text-zinc-700 dark:text-zinc-400">
         Copyright © Juho Pekkala {currentYear}. All rights reserved.{" "}
         <span className="font-mono tracking-tighter">(⌐■_■)</span>{" "}
       </span>
-      {/*span className="text-zinc-900 dark:text-zinc-100">Powered by <a
-        href="//netlify.com"
-        target="_blank"
-        className="text-green-600"
-      >Netlify</a>. Made with <a
-        href="//gridsome.org"
-        target="_blank"
-        className="text-green-600"
-      > Gridsome</a> and plenty of tea 🍵</span*/}
-      <div className="flex items-center space-x-4 text-zinc-900 dark:text-zinc-100">
+      <div className="flex items-center space-x-4 text-zinc-700 dark:text-zinc-400">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 640 512"
-          className="w-5 h-5 shrink-0 text-zinc-900 dark:text-zinc-100"
+          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400"
           stroke="currentColor"
         >
           {/* Discord ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
@@ -33,7 +24,7 @@ const Layout = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
-          className="w-5 h-5 shrink-0 text-zinc-900 dark:text-zinc-100"
+          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400"
           stroke="currentColor"
         >
           {/* Instagram ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
@@ -45,7 +36,7 @@ const Layout = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
-          className="w-5 h-5 shrink-0 text-zinc-900 dark:text-zinc-100"
+          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400"
           stroke="currentColor"
         >
           {/* IMDb ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
@@ -57,7 +48,7 @@ const Layout = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
-          className="w-5 h-5 shrink-0 text-zinc-900 dark:text-zinc-100"
+          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400"
           stroke="currentColor"
         >
           {/* Twitter ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
@@ -69,7 +60,7 @@ const Layout = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 496 512"
-          className="w-5 h-5 shrink-0 text-zinc-900 dark:text-zinc-100"
+          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400"
           stroke="currentColor"
         >
           {/* Spotify ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
@@ -81,7 +72,7 @@ const Layout = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 576 512"
-          className="w-5 h-5 shrink-0 text-zinc-900 dark:text-zinc-100"
+          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400"
           stroke="currentColor"
         >
           {/* Youtube ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
@@ -93,7 +84,7 @@ const Layout = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
-          className="w-5 h-5 shrink-0 text-zinc-900 dark:text-zinc-100"
+          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400"
           stroke="currentColor"
         >
           {/* Twitch ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
@@ -105,7 +96,7 @@ const Layout = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 640 512"
-          className="w-5 h-5 shrink-0 text-zinc-900 dark:text-zinc-100"
+          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400"
           stroke="currentColor"
         >
           {/* SoundCloud ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
@@ -117,7 +108,7 @@ const Layout = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
-          className="w-5 h-5 shrink-0 text-zinc-900 dark:text-zinc-100"
+          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400"
         >
           {/* LinkedIn ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
           <path
@@ -125,13 +116,13 @@ const Layout = () => {
             d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
           />
         </svg>
-        <div className="font-mono text-zinc-900 dark:text-zinc-100" aria-hidden="true">
+        <div className="font-mono text-zinc-700 dark:text-zinc-400" aria-hidden="true">
           /
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 496 512"
-          className="w-5 h-5 shrink-0 text-zinc-900 dark:text-zinc-100"
+          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400"
           stroke="currentColor"
         >
           {/* Github ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
@@ -143,7 +134,7 @@ const Layout = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
-          className="w-5 h-5 shrink-0 text-zinc-900 dark:text-zinc-100"
+          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400"
           stroke="currentColor"
         >
           {/* Codepen ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
@@ -155,7 +146,7 @@ const Layout = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
-          className="w-5 h-5 shrink-0 text-zinc-900 dark:text-zinc-100"
+          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400"
           stroke="currentColor"
         >
           {/* Dribbble ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
@@ -168,7 +159,7 @@ const Layout = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 384 512"
-          className="w-5 h-5 shrink-0 text-zinc-900 dark:text-zinc-100"
+          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400"
           stroke="currentColor"
         >
           {/* Stack Overflow ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}

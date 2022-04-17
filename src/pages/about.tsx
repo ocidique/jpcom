@@ -10,7 +10,7 @@ const AboutPage = () => {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto">
-        <div className="flex space-x-24 my-32">
+        <div className="flex space-x-32 my-32">
           <div className="relative w-full md:w-2/5">
             <div
               className="absolute z-30"
@@ -40,28 +40,23 @@ const AboutPage = () => {
               style={{ top: "50px", left: "80px" }}
             />
           </div>
-          <div className="w-full md:w-3/5 space-y-12 mt-12 text-zinc-900 dark:text-zinc-100">
-            <h2 className="font-semibold uppercase text-5xl">Hi there 👋🏻</h2>
+          <div className="w-full md:w-3/5 space-y-12 mt-12 text-zinc-900 dark:text-zinc-300">
+            <h2 className="font-medium text-6xl">Hi there 👋🏻</h2>
             <div className="flex flex-col space-y-6">
-              <p>My name is Juho Pekkala. I warmly thank you finding here and humbly welcome you to my website 🙏🏼</p>
+              <p>My name is Juho Pekkala. I warmly thank you finding here and humbly welcome you to my website.</p>
               <p>
-                I'm a <span className="font-semibold">full stack developer</span>,{" "}
-                <span className="font-semibold">designer</span> and lifelong learner from Finland 🇫🇮. Strongest skill
-                set for front end development, eye for design and usability, but also solid skills for back end
-                development. Knowledge for distributed systems and cloud. Creative and entrepreneurial mindset.
-              </p>
-              <p>
-                Sometimes I'm lucky to combine my multiple passions at work. I love the variety of tasks; from
-                designing software architectures to applications including user interfaces, drawing graphics and
-                deciding looks and feels. Sometimes even solve and develop business aspects as well.
+                I'm a <span className="font-semibold">developer</span>, <span className="font-semibold">designer</span>{" "}
+                and lifelong learner from Finland. From the website you can find my professional info as well as my
+                blog which I intend to write in a relaxed manner. I love creativity and will probably set up a gallery
+                for that as well later!
               </p>
             </div>
             <div className="flex flex-col space-y-4">
-              <CTA to="#">Read more about me in the introduction post</CTA>
-              <CTA to="#">Here to check my CV?</CTA>
-              <CTA to="#">Check out my work portfolio</CTA>
-              <CTA to="#">Check out my hobby photography</CTA>
-              <CTA to="#">Read my blog. I write sometimes</CTA>
+              {/* <CTA to="#">Read more about me in the introduction post</CTA> */}
+              <CTA to="/cv/">Here to check my CV?</CTA>
+              {/* <CTA to="#">Check out my work portfolio</CTA> */}
+              {/* <CTA to="#">Check out my hobby photography</CTA> */}
+              <CTA to="/blog/">Read my blog. I write sometimes</CTA>
             </div>
           </div>
         </div>
