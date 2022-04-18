@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `jpcom`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Juho Pekkala's Website`,
+    siteUrl: `https://www.juhopekkala.com`,
+    description: `Creative Software Developer and Designer`,
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
@@ -29,15 +30,6 @@ module.exports = {
         name: "images",
         path: "./src/images/",
       },
-      __key: "images",
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
     },
     {
       resolve: "gatsby-source-filesystem",
@@ -45,7 +37,6 @@ module.exports = {
         name: "blog",
         path: `${__dirname}/blog`,
       },
-      __key: "blog",
     },
     "gatsby-transformer-remark",
     {
