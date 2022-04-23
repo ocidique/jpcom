@@ -56,15 +56,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   });
 
   // Create post detail pages
-  posts.forEach(({ node, index }) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1];
-    const next = index === 0 ? null : posts[index - 1];
+  posts.forEach((post, index) => {
+    console.log(posts, post);
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+    const next = index === 0 ? null : posts[index - 1].node;
 
     createPage({
-      path: `/blog/${node.frontmatter.slug}/`,
+      path: `/blog/${post.node.frontmatter.slug}/`,
       component: blogPostTemplate,
       context: {
-        id: node.id,
+        id: post.node.id,
         previous,
         next,
       },
