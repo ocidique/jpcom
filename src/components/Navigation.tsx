@@ -3,6 +3,8 @@ import { Link } from "gatsby";
 import { Disclosure } from "@headlessui/react";
 import { MenuAlt1Icon, XIcon } from "@heroicons/react/outline";
 
+import { isPartiallyCurrent } from "../helpers/utils";
+
 import Logo from "../assets/logo.svg";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 
@@ -17,14 +19,6 @@ const navigation = [
 ];
 
 const Navigation = () => {
-  const isActive = ({ isPartiallyCurrent }) => {
-    return isPartiallyCurrent
-      ? {
-          className: "font-mono text-orange-600 dark:text-orange-600 font-medium rounded-md text-2sm underline",
-        }
-      : {};
-  };
-
   return (
     <Disclosure as="nav">
       {({ open }) => (
@@ -50,8 +44,8 @@ const Navigation = () => {
               </div>
 
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-col space-y-12">
-                  <div className="flex-shrink-0 flex items-center">
+                <div className="flex flex-col space-y-10">
+                  <div className="flex-shrink-0 flex items-center pl-4">
                     {window.location.pathname === "/" ? (
                       <div className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-300">
                         juho pekkala
@@ -72,7 +66,7 @@ const Navigation = () => {
                         <Link
                           key={item.name}
                           to={item.href}
-                          getProps={isActive}
+                          getProps={isPartiallyCurrent}
                           className={
                             "font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm"
                           }
@@ -100,7 +94,7 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  getProps={isActive}
+                  getProps={isPartiallyCurrent}
                   className={
                     "font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 px-3 py-2 rounded-md text-2sm"
                   }

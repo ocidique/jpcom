@@ -31,17 +31,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `);
 
-  // handle errors
+  // Handle errors
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
     return;
   }
 
   const posts = result.data.allMdx.edges;
+  const tags = result.data.tagsGroup.group;
 
   // Create paginated posts pages
   const postsPerPage = 2;
   const numPages = Math.ceil(posts.length / postsPerPage);
+
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
@@ -51,13 +53,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         skip: i * postsPerPage,
         numPages,
         currentPage: i + 1,
+        tags,
       },
     });
   });
 
   // Create post detail pages
   posts.forEach((post, index) => {
-    console.log(posts, post);
     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
     const next = index === 0 ? null : posts[index - 1].node;
 
@@ -72,16 +74,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
-  // Extract tag data from query
-  const tags = result.data.tagsGroup.group;
-
-  // Make tag pages
+  // Create tag pages
   tags.forEach((tag) => {
     createPage({
-      path: `/tags/${kebabCase(tag.fieldValue)}/`,
+      path: `/blog/tags/${kebabCase(tag.fieldValue)}/`,
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
+        tags,
       },
     });
   });

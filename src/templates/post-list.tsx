@@ -3,12 +3,14 @@ import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import kebabCase from "lodash.kebabcase";
 
+import { isCurrent, isPartiallyCurrent } from "../helpers/utils";
+
 import Layout from "../components/Layout";
 
 const BlogList = ({ pageContext, data }) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMdx.edges;
-  const { currentPage, numPages } = pageContext;
+  const { currentPage, numPages, tags } = pageContext;
 
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
@@ -19,15 +21,38 @@ const BlogList = ({ pageContext, data }) => {
   return (
     <Layout>
       <div className="max-w-7xl mx-auto space-y-12">
-        {/* <div className="max-w-2xl space-y-12"> */}
-        <div className="max-w-2xl space-y-4 text-zinc-900 dark:text-zinc-300">
-          <h1 className="text-2xl font-semibold">Blog</h1>
-          <p>
-            I write large variety of things. Blogs can be from substance content focusing around IT, design and
-            worklife or more relaxed lifestyle writings.
-          </p>
+        <div className="space-y-2">
+          <div className="space-y-4 text-zinc-900 dark:text-zinc-300">
+            <h2 className="text-2xl font-semibold">Blog</h2>
+            <p>
+              I write large variety of things. Blogs can be from substance content focusing around IT, design and
+              worklife or more relaxed lifestyle writings.
+            </p>
+          </div>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
+
+        <ul className="inline-flex items-center space-x-6">
+          <li>
+            <Link
+              to="/blog/"
+              getProps={isCurrent}
+              className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm"
+            >
+              all
+            </Link>
+          </li>
+          {tags.map((tag) => (
+            <li key={tag.fieldValue}>
+              <Link
+                to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}
+                getProps={isPartiallyCurrent}
+                className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm"
+              >{`${tag.fieldValue}`}</Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {posts.map(({ node }) => {
             const { title, slug, tags, hero_image, hero_image_alt } = node.frontmatter;
             const postTitle = title || slug;
@@ -35,7 +60,7 @@ const BlogList = ({ pageContext, data }) => {
               <Link
                 to={slug}
                 key={slug}
-                className="inline-block relative group transform hover:scale-[1.01] transition-all h-56"
+                className="inline-block relative group transform hover:scale-[1.01] transition-all h-56 shadow-lg"
               >
                 <div className="absolute flex z-10 bg-black opacity-20 group-hover:opacity-10 transform transition-opacity w-full h-full rounded-xl"></div>
 
@@ -125,7 +150,7 @@ export const pageQuery = graphql`
             hero_image_credit_text
             hero_image {
               childImageSharp {
-                gatsbyImageData(width: 300, placeholder: BLURRED)
+                gatsbyImageData(width: 600, placeholder: BLURRED)
               }
             }
           }
