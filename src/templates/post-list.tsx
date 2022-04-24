@@ -62,8 +62,8 @@ const BlogList = ({ pageContext, data }) => {
                 key={slug}
                 className={
                   node.frontmatter.pin
-                    ? "inline-block relative group transform hover:scale-[1.01] transition-all h-56 shadow-lg col-span-2"
-                    : "inline-block relative group transform hover:scale-[1.01] transition-all h-56 shadow-lg col-span-1"
+                    ? "inline-block relative group transform hover:scale-[1.01] transition-all h-56 rounded-xl shadow-md col-span-2"
+                    : "inline-block relative group transform hover:scale-[1.01] transition-all h-56 rounded-xl shadow-md col-span-1"
                 }
               >
                 {node.frontmatter.pin && (
@@ -95,7 +95,11 @@ const BlogList = ({ pageContext, data }) => {
                     ))}
                   </ul>*/}
                 </div>
-                <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full rounded-xl" />
+                <GatsbyImage
+                  image={getImage(hero_image)}
+                  alt={hero_image_alt}
+                  className="h-full rounded-xl shadow-md"
+                />
               </Link>
             );
           })}

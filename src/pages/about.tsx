@@ -21,7 +21,7 @@ const AboutPage = () => {
               className="absolute w-0 h-0 border z-20"
               style={{
                 top: "50px",
-                left: "120px",
+                left: "130px",
                 transform: "rotate(-130deg)",
                 borderWidth: "0 100px 170px 100px",
                 borderColor: "transparent transparent #cd5c5c transparent",
@@ -33,22 +33,26 @@ const AboutPage = () => {
             >
               <DotPattern />
             </div>
-            <StaticImage
-              src="../assets/juho_profile.jpg"
-              alt="Juho Pekkala"
-              className="absolute rounded-full z-40 shrink-0"
+            <div
+              className="absolute rounded-full transform hover:scale-[1.01] transition-all bg-gradient-to-r p-1 from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] z-40"
               style={{ top: "50px", left: "80px" }}
-            />
+            >
+              <StaticImage
+                src="../assets/juho_profile.jpg"
+                alt="Juho Pekkala"
+                className="p-4 rounded-full z-40 shrink-0"
+              />
+            </div>
           </div>
           <div className="w-full md:w-3/5 space-y-12 mt-12 text-zinc-900 dark:text-zinc-300">
             <h2 className="font-medium text-6xl">Hi there 👋🏻</h2>
             <div className="flex flex-col space-y-6">
               <p>My name is Juho Pekkala. I warmly thank you finding here and humbly welcome you to my website.</p>
               <p>
-                I'm a <span className="font-semibold">developer</span>, <span className="font-semibold">designer</span>{" "}
-                and lifelong learner from Finland. From the website you can find my professional info as well as my
-                blog which I intend to write in a relaxed manner. I love creativity and will probably set up a gallery
-                for that as well later!
+                I'm a <span className="font-bold tracking-wide">developer</span>,{" "}
+                <span className="font-bold tracking-wide">designer</span> and lifelong learner from Finland 🇫🇮. From
+                the website you can find my professional info as well as my blog which I intend to write in a relaxed
+                manner. I love creativity and will probably set up a gallery for that as well later!
               </p>
             </div>
             <div className="flex flex-col space-y-4">

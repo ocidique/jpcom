@@ -54,27 +54,31 @@ const CVPage = () => {
               }}
             ></div>
             <div
-              className="relative shadow-md border dark:border-zinc-800 rounded-lg p-6 bg-white dark:bg-one-dark-600 z-20 space-y-8 w-80"
+              // className="relative shadow-md border dark:border-zinc-800 rounded-lg p-6 bg-white dark:bg-one-dark-600 z-20 space-y-8 w-80"
+              className="relative transform hover:scale-[1.01] transition-all rounded-xl bg-gradient-to-r p-1 from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] z-20 w-80"
               style={{ top: "60px", left: "60px" }}
             >
-              <p className="italic text-zinc-900 dark:text-zinc-300">
-                Juho has been a valuable asset in our team. He has shown great multi-talent as a designer and front-end
-                developer
-              </p>
-              <p className="italic text-zinc-900 dark:text-zinc-300">
-                Juho is a dedicated and hardworking person. He always gives input and ideas to develop every day work.
-              </p>
-              <div className="flex flex-col space-y-4">
-                <CTA to="#">Portfolio coming soon</CTA>
-                <CTA to="#">Printable CV coming soon</CTA>
-                {/* <CTA to="#">Check the portfolio</CTA>
+              <div className="p-4 rounded-lg bg-white dark:bg-one-dark-600 space-y-8">
+                <p className="italic text-zinc-900 dark:text-zinc-300">
+                  Juho has been a valuable asset in our team. He has shown great multi-talent as a designer and
+                  front-end developer
+                </p>
+                <p className="italic text-zinc-900 dark:text-zinc-300">
+                  Juho is a dedicated and hardworking person. He always gives input and ideas to develop every day
+                  work.
+                </p>
+                <div className="flex flex-col space-y-4">
+                  <CTA to="#">Portfolio coming soon</CTA>
+                  <CTA to="#">Printable CV coming soon</CTA>
+                  {/* <CTA to="#">Check the portfolio</CTA>
                 <CTA to="#">Printable CV</CTA> */}
+                </div>
               </div>
             </div>
           </div>
           <div className="w-3/5 text-zinc-900 space-y-8">
             <div className="space-y-4">
-              <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">About me</p>
+              <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Profile</p>
               <p className="text-zinc-900 dark:text-zinc-300">
                 Senior Software Developer with over 10 years of experience. Lifelong learner. Strongest skill set for
                 front end development, eye for design and usability, but also solid skills for back end development.
@@ -83,16 +87,18 @@ const CVPage = () => {
 
               <p className="text-zinc-900 dark:text-zinc-300">
                 On my freetime I like to challenge myself once in a while mentally and physically. Most of the time
-                work already offers challenges so I like to focus on physical exercises and creative hobbiess. My
-                permanent favourite is the gym and recent new hobby is golf.
+                work already offer challenges so I like to focus on physical exercises and creative hobbies. My
+                permanent favourite is the gym and recently I have started golf.
               </p>
             </div>
 
             <div className="space-y-4">
-              <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">Expertise</p>
+              <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Expertise</p>
               <ul className="ml-4 space-y-2">
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Eager to build the finest software</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">
+                    Eager to build the finest software, hands-on coding skillz
+                  </span>
                 </li>
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">HTML/CSS/TS/JS/React</span>
@@ -101,13 +107,9 @@ const CVPage = () => {
                   <span className="text-zinc-900 dark:text-zinc-300">Design Systems</span>
                 </li>
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">
-                    UI/UX/Usable, accessible and responsive web design
-                  </span>
+                  <span className="text-zinc-900 dark:text-zinc-300">UI/UX/Accessibility/RWD</span>
                 </li>
-                <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Azure/AWS</span>
-                </li>
+
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">Python/Django/NodeJS/Java</span>
                 </li>
@@ -118,7 +120,10 @@ const CVPage = () => {
                   <span className="text-zinc-900 dark:text-zinc-300">Database Design/Schemas/SQL/NoSQL</span>
                 </li>
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Hands on coding skillz</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">Git</span>
+                </li>
+                <li className="list-disc text-orange-600">
+                  <span className="text-zinc-900 dark:text-zinc-300">Azure/AWS</span>
                 </li>
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">Agile Methodologies, XP, Scrum Master</span>
@@ -146,10 +151,10 @@ const CVPage = () => {
 
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="space-y-4">
-            <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">Languages</p>
+            <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Languages</p>
             <ul className="ml-4 space-y-2">
               <li className="list-disc text-orange-600">
-                <span className="text-zinc-900 dark:text-zinc-300">Finnish is my native language</span>
+                <span className="text-zinc-900 dark:text-zinc-300">Finnish as native</span>
               </li>
               <li className="list-disc text-orange-600">
                 <span className="text-zinc-900 dark:text-zinc-300">Professional working proficiency in English</span>
@@ -161,10 +166,10 @@ const CVPage = () => {
           </div>
 
           <div className="space-y-4">
-            <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">Education</p>
+            <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Education</p>
             <ul className="flex flex-col space-y-10">
               <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
-                <div className="w-44">
+                <div className="w-36">
                   <YearLabel>2017 - 2022</YearLabel>
                 </div>
                 <div className="w-full space-y-4">
@@ -173,18 +178,18 @@ const CVPage = () => {
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300">
                     Studied my master's alongside with full time job. Entrepreneurship as minor studies. The subject of
-                    the master's thesis was related to the design system.
+                    the master's thesis was related to the design systems.
                   </p>
-                  <p className="text-zinc-900 dark:text-zinc-300">
+                  {/* <p className="text-zinc-900 dark:text-zinc-300">
                     Having few years apart from bachelor's studies made a huge difference. Blog post coming about the
                     journey...
-                  </p>
+                  </p> */}
                   {/* <CTA to="#">Read about my master's journey</CTA> */}
                 </div>
               </li>
 
               <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
-                <div className="w-44">
+                <div className="w-36">
                   <YearLabel>2009 - 2013</YearLabel>
                 </div>
                 <div className="w-full space-y-4">
@@ -204,7 +209,7 @@ const CVPage = () => {
             <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">Experience</p>
             <ul className="flex flex-col space-y-10">
               <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
-                <div className="w-44">
+                <div className="w-36">
                   <YearLabel>2022 -</YearLabel>
                 </div>
                 <div className="w-full space-y-4">
@@ -225,7 +230,7 @@ const CVPage = () => {
               </li>
 
               <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
-                <div className="w-44">
+                <div className="w-36">
                   <YearLabel>2018 - 2021</YearLabel>
                 </div>
                 <div className="w-full space-y-4">
@@ -244,7 +249,7 @@ const CVPage = () => {
               </li>
 
               <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
-                <div className="w-44">
+                <div className="w-36">
                   <YearLabel>2017 - 2018</YearLabel>
                 </div>
                 <div className="w-full space-y-4">
@@ -258,7 +263,7 @@ const CVPage = () => {
               </li>
 
               <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
-                <div className="w-44">
+                <div className="w-36">
                   <YearLabel>2013 - 2017</YearLabel>
                 </div>
                 <div className="w-full space-y-4">
@@ -272,7 +277,7 @@ const CVPage = () => {
               </li>
 
               <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
-                <div className="w-44">
+                <div className="w-36">
                   <YearLabel>2011 - 2014</YearLabel>
                 </div>
                 <div className="w-full space-y-4">
@@ -282,7 +287,7 @@ const CVPage = () => {
               </li>
 
               <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
-                <div className="w-44">
+                <div className="w-36">
                   <YearLabel>2012</YearLabel>
                 </div>
                 <div className="w-full space-y-4">
@@ -296,7 +301,7 @@ const CVPage = () => {
               </li>
 
               <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
-                <div className="w-44">
+                <div className="w-36">
                   <YearLabel>2012</YearLabel>
                 </div>
                 <div className="w-full space-y-4">
@@ -308,7 +313,7 @@ const CVPage = () => {
               </li>
 
               <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
-                <div className="w-44">
+                <div className="w-36">
                   <YearLabel>2010</YearLabel>
                 </div>
                 <div className="w-full space-y-4">
