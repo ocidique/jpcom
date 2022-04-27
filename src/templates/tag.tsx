@@ -52,7 +52,7 @@ const Tags = ({ pageContext, data }) => {
               <Link
                 to={`/blog/${slug}`}
                 key={slug}
-                className="inline-block relative group transform hover:scale-[1.01] transition-all h-56 rounded-xl shadow-md"
+                className="inline-block relative group transform hover:scale-[1.01] transition-all h-60 rounded-xl shadow-md"
               >
                 <div className="absolute flex z-10 bg-black opacity-20 group-hover:opacity-10 transform transition-opacity w-full h-full rounded-xl"></div>
                 <div className="absolute flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-1">

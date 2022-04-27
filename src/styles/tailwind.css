@@ -55,7 +55,16 @@
   }
 }
 
-/* Middle stuff */
+/* Post content */
+.post-content ul {
+  @apply max-w-3xl mx-auto pl-4 space-y-2 text-lg list-disc;
+}
+
+.post-content ol {
+  @apply max-w-3xl mx-auto pl-4 space-y-2 text-lg list-decimal;
+}
+
+/* Frontpage */
 .landing {
   position: absolute;
   flex-direction: column;
@@ -64,7 +73,7 @@
   width: 100%;
   top: -200px;
   z-index: 1;
-  /*   box-sizing: border-box;
+  /* box-sizing: border-box;
   pointer-events: auto; */
   /* height: 768px; */
   max-width: 768px;

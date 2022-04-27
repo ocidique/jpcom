@@ -58,12 +58,12 @@ const BlogList = ({ pageContext, data }) => {
             const postTitle = title || slug;
             return (
               <Link
-                to={slug}
+                to={`/blog/${slug}`}
                 key={slug}
                 className={
                   node.frontmatter.pin
-                    ? "inline-block relative group transform hover:scale-[1.01] transition-all h-56 rounded-xl shadow-md col-span-2"
-                    : "inline-block relative group transform hover:scale-[1.01] transition-all h-56 rounded-xl shadow-md col-span-1"
+                    ? "inline-block relative group transform hover:scale-[1.01] transition-all h-60 rounded-xl shadow-md col-span-2"
+                    : "inline-block relative group transform hover:scale-[1.01] transition-all h-60 rounded-xl shadow-md col-span-1"
                 }
               >
                 {node.frontmatter.pin && (
@@ -104,7 +104,7 @@ const BlogList = ({ pageContext, data }) => {
             );
           })}
         </div>
-        <ul className="flex justify-center items-center space-x-6 text-zinc-900 dark:text-zinc-300">
+        <div className="flex justify-center items-center space-x-6 text-zinc-900 dark:text-zinc-300">
           <div className="flex justify-end w-56">
             {!isFirst && (
               <Link to={`/blog/${prevPage}`} rel="prev" className="inline-flex items-center space-x-3">
@@ -121,12 +121,12 @@ const BlogList = ({ pageContext, data }) => {
             )}
           </div>
           {Array.from({ length: numPages }, (_, i) => (
-            <li
+            <div
               key={`pagination-number${i + 1}`}
               className={`rounded px-2 py-1 ${currentPage === i + 1 ? "bg-orange-600 text-white font-medium" : ""}`}
             >
               <Link to={`/blog/${i === 0 ? "" : i + 1}`}>{i + 1}</Link>
-            </li>
+            </div>
           ))}
           <div className="flex justify-start w-56">
             {!isLast && (
@@ -142,7 +142,7 @@ const BlogList = ({ pageContext, data }) => {
               </Link>
             )}
           </div>
-        </ul>
+        </div>
       </div>
     </Layout>
   );
