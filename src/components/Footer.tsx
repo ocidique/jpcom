@@ -3,11 +3,11 @@ import React from "react";
 const Layout = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="flex max-w-7xl mx-auto items-center justify-between text-sm relative bottom-0 w-full border-t-2 border-dashed border-gray-300 dark:border-zinc-700 mt-12 py-6">
-      <span className="text-zinc-700 dark:text-zinc-400">
-        Copyright © Juho Pekkala {currentYear}. All rights reserved.{" "}
-        <span className="font-mono tracking-tighter">(⌐■_■)</span>{" "}
-      </span>
+    <footer className="flex max-w-7xl mx-auto items-center justify-between text-sm relative bottom-0 w-full border-t border-zinc-300 dark:border-zinc-700 mt-12 py-6">
+      <div className="space-x-2 text-zinc-700 dark:text-zinc-400">
+        <span>Copyright © Juho Pekkala {currentYear}. All rights reserved.</span>
+        <span className="font-mono tracking-tighter">(⌐■_■)</span>
+      </div>
       <div className="flex items-center space-x-4 text-zinc-700 dark:text-zinc-400">
         <svg
           xmlns="http://www.w3.org/2000/svg"
