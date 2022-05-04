@@ -31,6 +31,7 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <MDXProvider components={shortcodes}>
       <div className="min-h-screen relative bg-slate-50 dark:bg-zinc-900 z-30">
+        <div className="absolute w-full z-20 bg-gradient-to-r from-amber-400 via-orange-600 to-orange-300 h-1"></div>
         <div className="flex flex-col min-h-screen justify-between">
           <div className="space-y-12">
             <Navigation />

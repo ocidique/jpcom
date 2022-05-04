@@ -53,7 +53,7 @@ const Navigation = () => {
                     ) : (
                       <Link
                         to="/"
-                        className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
+                        className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-amber-400 hover:via-orange-600 hover:to-orange-300 dark:hover:text-transparent dark:hover:bg-clip-text dark:hover:bg-gradient-to-r dark:hover:from-amber-400 dark:hover:via-orange-600 dark:hover:to-orange-300 p-5 -m-5"
                       >
                         juho pekkala
                       </Link>
