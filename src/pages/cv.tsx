@@ -168,7 +168,7 @@ const CVPage = () => {
           <div className="space-y-4">
             <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Education</p>
             <ul className="flex flex-col space-y-10">
-              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
+              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 border border-zinc-300 dark:border-zinc-700 p-6">
                 <div className="w-36">
                   <YearLabel>2017 - 2022</YearLabel>
                 </div>
@@ -188,7 +188,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
+              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 border border-zinc-300 dark:border-zinc-700 p-6">
                 <div className="w-36">
                   <YearLabel>2009 - 2013</YearLabel>
                 </div>
@@ -208,7 +208,7 @@ const CVPage = () => {
           <div className="space-y-4 pb-12">
             <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">Experience</p>
             <ul className="flex flex-col space-y-10">
-              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
+              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 border border-zinc-300 dark:border-zinc-700 p-6">
                 <div className="w-36">
                   <YearLabel>2022 -</YearLabel>
                 </div>
@@ -229,7 +229,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
+              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 border border-zinc-300 dark:border-zinc-700 p-6">
                 <div className="w-36">
                   <YearLabel>2018 - 2021</YearLabel>
                 </div>
@@ -248,7 +248,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
+              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 border border-zinc-300 dark:border-zinc-700 p-6">
                 <div className="w-36">
                   <YearLabel>2017 - 2018</YearLabel>
                 </div>
@@ -262,7 +262,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
+              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 border border-zinc-300 dark:border-zinc-700 p-6">
                 <div className="w-36">
                   <YearLabel>2013 - 2017</YearLabel>
                 </div>
@@ -276,7 +276,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
+              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 border border-zinc-300 dark:border-zinc-700 p-6">
                 <div className="w-36">
                   <YearLabel>2011 - 2014</YearLabel>
                 </div>
@@ -286,7 +286,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
+              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 border border-zinc-300 dark:border-zinc-700 p-6">
                 <div className="w-36">
                   <YearLabel>2012</YearLabel>
                 </div>
@@ -300,7 +300,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
+              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 border border-zinc-300 dark:border-zinc-700 p-6">
                 <div className="w-36">
                   <YearLabel>2012</YearLabel>
                 </div>
@@ -312,7 +312,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 rounded-lg shadow-md border dark:border-zinc-800 p-6">
+              <li className="flex bg-white dark:bg-one-dark-600 space-x-4 border border-zinc-300 dark:border-zinc-700 p-6">
                 <div className="w-36">
                   <YearLabel>2010</YearLabel>
                 </div>
