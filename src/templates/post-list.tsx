@@ -21,22 +21,19 @@ const BlogList = ({ pageContext, data }) => {
   return (
     <Layout>
       <div className="max-w-7xl mx-auto space-y-12">
-        <div className="space-y-2">
-          <div className="space-y-4 text-zinc-900 dark:text-zinc-300">
-            <h2 className="text-2xl font-semibold">Blog</h2>
-            <p>
-              I write large variety of things. Blogs can be from substance content focusing around IT, design and
-              worklife or more relaxed lifestyle writings.
-            </p>
-          </div>
-        </div>
+        <h2 className="text-6xl font-medium text-zinc-900 dark:text-zinc-300">Blog</h2>
+
+        <p className="text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider">
+          I write large variety of things. Blogs can be from IT, design and worklife to more relaxed lifestyle
+          writings.
+        </p>
 
         <ul className="inline-flex items-center space-x-6">
           <li>
             <Link
               to="/blog/"
               getProps={isCurrent}
-              className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm"
+              className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
             >
               all
             </Link>
@@ -46,7 +43,7 @@ const BlogList = ({ pageContext, data }) => {
               <Link
                 to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}
                 getProps={isPartiallyCurrent}
-                className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm"
+                className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
               >{`${tag.fieldValue}`}</Link>
             </li>
           ))}
@@ -60,10 +57,15 @@ const BlogList = ({ pageContext, data }) => {
               <Link
                 to={`/blog/${slug}`}
                 key={slug}
+                // className={
+                //   node.frontmatter.pin
+                //     ? "inline-block relative group transform hover:scale-[1.01] p-1 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all h-60 col-span-2 box-border"
+                //     : "inline-block relative group transform hover:scale-[1.01] p-1 bg-gradient-to-r from-[#ff6a00] via-[#fff45f] to-[#ff82f5] transition-all h-60 col-span-1"
+                // }
                 className={
                   node.frontmatter.pin
-                    ? "inline-block relative group transform hover:scale-[1.01] transition-all h-60 rounded-xl shadow-md col-span-2"
-                    : "inline-block relative group transform hover:scale-[1.01] transition-all h-60 rounded-xl shadow-md col-span-1"
+                    ? "inline-block relative group transform hover:scale-[1.01] p-1 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all h-60 col-span-2 box-border"
+                    : "inline-block relative group transform hover:scale-[1.01] transition-all h-60 col-span-1"
                 }
               >
                 {node.frontmatter.pin && (
@@ -81,11 +83,19 @@ const BlogList = ({ pageContext, data }) => {
                   </svg>
                 )}
 
-                <div className="absolute flex z-10 bg-black opacity-20 group-hover:opacity-10 transform transition-opacity w-full h-full rounded-xl"></div>
-                <div className="absolute flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-1">
-                  <h3 className="text-lg text-zinc-100">{postTitle}</h3>
+                <div
+                  className={`absolute flex z-10 bg-black opacity-25 group-hover:opacity-0 transform transition-opacity w-full h-full ${
+                    node.frontmatter.pin && "-m-1"
+                  }`}
+                ></div>
+                <div
+                  className={`absolute flex flex-col justify-end w-full h-full p-5 z-20 text-zinc-100 space-y-1 ${
+                    node.frontmatter.pin && "-m-1"
+                  }`}
+                >
+                  <h3 className="text-lg text-shadow-xl text-zinc-100">{postTitle}</h3>
 
-                  <p className="font-mono text-xs">{node.frontmatter.date}</p>
+                  <p className="font-mono text-shadow-xl text-sm">{node.frontmatter.date}</p>
                   {/* <p dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
                   {/* <ul className="inline-flex items-center space-x-3">
                     {tags.map((tag) => (
@@ -95,11 +105,7 @@ const BlogList = ({ pageContext, data }) => {
                     ))}
                   </ul>*/}
                 </div>
-                <GatsbyImage
-                  image={getImage(hero_image)}
-                  alt={hero_image_alt}
-                  className="h-full rounded-xl shadow-md"
-                />
+                <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full" />
               </Link>
             );
           })}
@@ -123,7 +129,9 @@ const BlogList = ({ pageContext, data }) => {
           {Array.from({ length: numPages }, (_, i) => (
             <div
               key={`pagination-number${i + 1}`}
-              className={`rounded px-2 py-1 ${currentPage === i + 1 ? "bg-orange-600 text-white font-medium" : ""}`}
+              className={`w-8 text-center px-2 py-1 ${
+                currentPage === i + 1 ? "bg-orange-600 text-white font-medium" : ""
+              }`}
             >
               <Link to={`/blog/${i === 0 ? "" : i + 1}`}>{i + 1}</Link>
             </div>

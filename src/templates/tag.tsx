@@ -16,19 +16,15 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <div className="max-w-7xl mx-auto space-y-12">
-        <div className="space-y-2">
-          <div className="space-y-4 text-zinc-900 dark:text-zinc-300">
-            <h1 className="text-2xl font-semibold">Blog</h1>
-            <p>{tagHeader}</p>
-          </div>
-        </div>
+        <h2 className="text-6xl font-medium text-zinc-900 dark:text-zinc-300">Blog</h2>
+        <p className="text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider">{tagHeader}</p>
 
         <ul className="inline-flex items-center space-x-6">
           <li>
             <Link
               to="/blog/"
               getProps={isCurrent}
-              className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm"
+              className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
             >
               all
             </Link>
@@ -38,7 +34,7 @@ const Tags = ({ pageContext, data }) => {
               <Link
                 to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}
                 getProps={isPartiallyCurrent}
-                className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm"
+                className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
               >{`${tag.fieldValue}`}</Link>
             </li>
           ))}
@@ -52,18 +48,14 @@ const Tags = ({ pageContext, data }) => {
               <Link
                 to={`/blog/${slug}`}
                 key={slug}
-                className="inline-block relative group transform hover:scale-[1.01] transition-all h-60 rounded-xl shadow-md"
+                className="inline-block relative group transform hover:scale-[1.01] transition-all h-60 col-span-1"
               >
-                <div className="absolute flex z-10 bg-black opacity-20 group-hover:opacity-10 transform transition-opacity w-full h-full rounded-xl"></div>
+                <div className="absolute flex z-10 bg-black opacity-20 group-hover:opacity-10 transform transition-opacity w-full h-full"></div>
                 <div className="absolute flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-1">
                   <h3 className="text-lg text-zinc-100">{postTitle}</h3>
                   <p className="font-mono text-xs">{node.frontmatter.date}</p>
                 </div>
-                <GatsbyImage
-                  image={getImage(hero_image)}
-                  alt={hero_image_alt}
-                  className="h-full rounded-xl shadow-md"
-                />
+                <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full" />
               </Link>
             );
           })}
