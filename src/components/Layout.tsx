@@ -1,8 +1,8 @@
 import React from "react";
 import { MDXProvider } from "@mdx-js/react";
 
+import WrapperBlock from "./WrapperBlock";
 import ContentHeading from "./ContentHeading";
-
 import StartBlock from "./StartBlock";
 import ContentBlock from "./ContentBlock";
 import HighlightBlock from "./HighlightBlock";
@@ -16,7 +16,16 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const shortcodes = { ContentHeading, StartBlock, ContentBlock, HighlightBlock, QuoteBlock, LogoBlock, PhotoMeta };
+const shortcodes = {
+  WrapperBlock,
+  ContentHeading,
+  StartBlock,
+  ContentBlock,
+  HighlightBlock,
+  QuoteBlock,
+  LogoBlock,
+  PhotoMeta,
+};
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (

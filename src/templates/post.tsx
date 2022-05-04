@@ -6,6 +6,7 @@ import kebabCase from "lodash.kebabcase";
 
 import Layout from "../components/Layout";
 import PhotoMeta from "../components/PhotoMeta";
+import LogoBlock from "../components/LogoBlock";
 
 const BlogPost = ({ pageContext, data }) => {
   const { mdx } = data;
@@ -14,34 +15,48 @@ const BlogPost = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <div className="max-w-7xl mx-auto space-y-12">
-        <div className="space-y-2">
-          <div className="max-w-2xl space-y-4">
-            <h2 className="text-2xl font-medium text-zinc-900 dark:text-zinc-300">{mdx.frontmatter.title}</h2>
-            <p className="font-mono text-sm text-zinc-600 dark:text-zinc-300">{mdx.frontmatter.date}</p>
-          </div>
-          <ul className="inline-flex items-center space-x-3">
-            {mdx.frontmatter.tags.map((tag) => (
-              <li key={tag} className="text-orange-600 hover:text-orange-500">
-                <Link to={`/blog/tags/${kebabCase(tag)}/`}>{`#${tag}`}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="absolute w-full z-10">
+        <div className="max-w-7xl mx-auto space-y-2 mt-24">
+          <div className="space-y-6 text-center">
+            <h2 className="text-6xl font-semibold text-zinc-100 text-shadow-xl tracking-tight">
+              {mdx.frontmatter.title}
+            </h2>
+            <p className="font-mono text-zinc-100 text-shadow-xl">{mdx.frontmatter.date}</p>
 
-        <div>
-          <GatsbyImage image={image} alt={mdx.frontmatter.hero_image_alt} className="" />
+            <ul className="inline-flex items-center space-x-3">
+              {mdx.frontmatter.tags.map((tag) => (
+                <li key={tag} className="text-shadow-xl text-orange-600 hover:text-orange-500">
+                  <Link to={`/blog/tags/${kebabCase(tag)}/`}>{`#${tag}`}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        {image ? (
+          <GatsbyImage image={image} alt={mdx.frontmatter.hero_image_alt} className="w-full" />
+        ) : (
+          <div className="w-full bg-zinc-500" style={{ height: "600px" }}></div>
+        )}
+
+        {mdx.frontmatter.hero_image_credit_text && (
           <PhotoMeta
             alt={mdx.frontmatter.hero_image_alt}
             credit={mdx.frontmatter.hero_image_credit_text}
             url={mdx.frontmatter.hero_image_credit_link}
           />
-        </div>
+        )}
+      </div>
 
-        <div className="post-content text-zinc-900 dark:text-zinc-300 space-y-10">
-          <MDXRenderer localImages={mdx.frontmatter.embeddedImagesLocal}>{mdx.body}</MDXRenderer>
-        </div>
+      <div className="post-content text-zinc-900 dark:text-zinc-300 space-y-10">
+        <MDXRenderer localImages={mdx.frontmatter.embeddedImagesLocal}>{mdx.body}</MDXRenderer>
+      </div>
 
+      <LogoBlock />
+
+      <div className="max-w-7xl mx-auto space-y-12">
         <div className="flex justify-center items-center space-x-6 py-12">
           {previous && (
             <Link
@@ -98,7 +113,7 @@ export const pageQuery = graphql`
         hero_image_credit_text
         hero_image {
           childImageSharp {
-            gatsbyImageData(width: 1280, placeholder: BLURRED)
+            gatsbyImageData(width: 1920, height: 600, placeholder: BLURRED)
           }
         }
         embeddedImagesLocal {
