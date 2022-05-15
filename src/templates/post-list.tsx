@@ -171,7 +171,12 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(sort: { fields: [frontmatter___pin, frontmatter___date], order: [ASC, DESC] }, limit: $limit, skip: $skip) {
+    allMdx(
+      sort: { fields: [frontmatter___pin, frontmatter___date], order: [ASC, DESC] }
+      filter: { frontmatter: { type: { eq: "blog" } } }
+      limit: $limit
+      skip: $skip
+    ) {
       edges {
         node {
           id

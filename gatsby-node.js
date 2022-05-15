@@ -7,6 +7,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const blogPostTemplate = path.resolve("src/templates/post.tsx");
   const tagTemplate = path.resolve("src/templates/tag.tsx");
 
+  const projectPostTemplate = path.resolve("src/templates/project.tsx");
+
   const result = await graphql(`
     {
       allMdx(sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000) {
@@ -18,6 +20,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               date(formatString: "MMMM DD, YYYY")
               slug
               title
+              type
               tags
             }
           }
@@ -41,7 +44,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const tags = result.data.tagsGroup.group;
 
   // Create paginated posts pages
-  const postsPerPage = 2;
+  const postsPerPage = 9;
   const numPages = Math.ceil(posts.length / postsPerPage);
 
   Array.from({ length: numPages }).forEach((_, i) => {
@@ -63,15 +66,27 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
     const next = index === 0 ? null : posts[index - 1].node;
 
-    createPage({
-      path: `/blog/${post.node.frontmatter.slug}/`,
-      component: blogPostTemplate,
-      context: {
-        id: post.node.id,
-        previous,
-        next,
-      },
-    });
+    if (post.node.frontmatter.type === "project") {
+      createPage({
+        path: `/projects/${post.node.frontmatter.slug}/`,
+        component: projectPostTemplate,
+        context: {
+          id: post.node.id,
+          previous,
+          next,
+        },
+      });
+    } else {
+      createPage({
+        path: `/blog/${post.node.frontmatter.slug}/`,
+        component: blogPostTemplate,
+        context: {
+          id: post.node.id,
+          previous,
+          next,
+        },
+      });
+    }
   });
 
   // Create tag pages
