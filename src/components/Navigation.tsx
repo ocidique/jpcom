@@ -31,12 +31,12 @@ const Navigation = () => {
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon
-                      className="block h-6 w-6 text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
+                      className="block h-6 w-6 text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500"
                       aria-hidden="true"
                     />
                   ) : (
                     <MenuAlt1Icon
-                      className="block h-6 w-6 text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
+                      className="block h-6 w-6 text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500"
                       aria-hidden="true"
                     />
                   )}
@@ -47,13 +47,13 @@ const Navigation = () => {
                 <div className="flex flex-col space-y-10">
                   <div className="flex-shrink-0 flex items-center pl-4">
                     {window.location.pathname === "/" ? (
-                      <div className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-300">
+                      <div className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-200">
                         juho pekkala
                       </div>
                     ) : (
                       <Link
                         to="/"
-                        className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-amber-400 hover:via-orange-600 hover:to-orange-300 dark:hover:text-transparent dark:hover:bg-clip-text dark:hover:bg-gradient-to-r dark:hover:from-amber-400 dark:hover:via-orange-600 dark:hover:to-orange-300 p-5 -m-5"
+                        className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-200 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-amber-400 hover:via-orange-600 hover:to-orange-300 dark:hover:text-transparent dark:hover:bg-clip-text dark:hover:bg-gradient-to-r dark:hover:from-amber-400 dark:hover:via-orange-600 dark:hover:to-orange-300 p-5 -m-5"
                       >
                         juho pekkala
                       </Link>
@@ -68,13 +68,13 @@ const Navigation = () => {
                           to={item.href}
                           getProps={isPartiallyCurrent}
                           className={
-                            "font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm"
+                            "font-mono text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm"
                           }
                         >
                           {item.name}
                         </Link>
                       ))}
-                      <div className="font-mono text-zinc-900 dark:text-zinc-300" aria-hidden="true">
+                      <div className="font-mono text-zinc-900 dark:text-zinc-200" aria-hidden="true">
                         /
                       </div>
                       <ThemeSwitcher />
@@ -96,7 +96,7 @@ const Navigation = () => {
                   to={item.href}
                   getProps={isPartiallyCurrent}
                   className={
-                    "font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 px-3 py-2 rounded-md text-2sm"
+                    "font-mono text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500 px-3 py-2 rounded-md text-2sm"
                   }
                 >
                   {item.name}

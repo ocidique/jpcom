@@ -19,12 +19,17 @@ const CVPage = () => {
         <div className="max-w-3xl mx-auto space-y-8">
           <div className="space-y-6">
             <p className="text-center font-medium text-zinc-900 dark:text-zinc-300 uppercase">Curriculum Vitae</p>
-            <h1 className="text-6xl font-medium text-center text-zinc-900 dark:text-zinc-300">Developer & Designer</h1>
+            <h1 className="text-6xl font-medium text-center text-zinc-900 dark:text-zinc-300">
+              developer{" "}
+              <span className="font-cursive" style={{ fontSize: "120px" }}>
+                & designer
+              </span>
+            </h1>
           </div>
-          <p className="text-orange-600 text-center">#web #frontend #fullstack #developer #designer</p>
-          <p className="text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider py-6">
+          <p className="text-orange-600 text-center">#web #frontend #fullstack</p>
+          <p className="text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider py-6 text-center">
             Hello, is it me you're looking for? A talented modern web software developer? The one who can design and
-            code UI's that are good looking, diamond cut sharp and accessible! 💎
+            code apps that are good looking, diamond cut sharp and accessible! 💎
           </p>
         </div>
         <div className="flex space-x-12">

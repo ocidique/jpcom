@@ -45,7 +45,7 @@ const AboutPage = () => {
             </div>
           </div>
           <div className="w-full md:w-3/5 space-y-12 mt-12 text-zinc-900 dark:text-zinc-300">
-            <h2 className="font-medium text-6xl">Hi there 👋🏻</h2>
+            <h2 className="font-medium text-6xl">hello 👋🏻</h2>
             <div className="flex flex-col space-y-6">
               <p>My name is Juho Pekkala. I warmly thank you finding here and humbly welcome you to my website.</p>
               <p>
