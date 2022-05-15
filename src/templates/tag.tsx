@@ -16,7 +16,7 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <div className="max-w-7xl mx-auto space-y-12">
-        <h2 className="text-6xl font-medium text-zinc-900 dark:text-zinc-300">Blog</h2>
+        <h2 className="text-6xl font-medium text-zinc-900 dark:text-zinc-300">blog</h2>
         <p className="text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider">{tagHeader}</p>
 
         <ul className="inline-flex items-center space-x-6">

@@ -2,6 +2,7 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import kebabCase from "lodash.kebabcase";
+import classNames from "classnames";
 
 import { isCurrent, isPartiallyCurrent } from "../helpers/utils";
 
@@ -21,12 +22,8 @@ const BlogList = ({ pageContext, data }) => {
   return (
     <Layout>
       <div className="max-w-7xl mx-auto space-y-12">
-        <h2 className="text-6xl font-medium text-zinc-900 dark:text-zinc-300">Blog</h2>
-
-        <p className="text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider">
-          I write large variety of things. Blogs can be from IT, design and worklife to more relaxed lifestyle
-          writings.
-        </p>
+        <h2 className="text-6xl font-medium text-zinc-900 dark:text-zinc-300">blog</h2>
+        <p className="text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider">I write sometimes.</p>
 
         <ul className="inline-flex items-center space-x-6">
           <li>
@@ -49,30 +46,27 @@ const BlogList = ({ pageContext, data }) => {
           ))}
         </ul>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {posts.map(({ node }) => {
-            const { title, slug, tags, hero_image, hero_image_alt } = node.frontmatter;
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+          {posts.map(({ node }, i) => {
+            const { title, slug, hero_image, hero_image_alt } = node.frontmatter;
             const postTitle = title || slug;
+
+            const cardClass = classNames({
+              "inline-block relative group": true,
+              "p-1 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all col-span-2 row-span-2 box-border":
+                node.frontmatter.pin,
+              "h-50 col-span-1": i === 2 || i === 3 || i === 5 || i > 6 || currentPage > 1,
+              "col-span-1 row-span-3": i === 1 && currentPage === 1,
+              "col-span-1 row-span-2": (i === 4 || i == 6) && currentPage === 1,
+            });
+
             return (
-              <Link
-                to={`/blog/${slug}`}
-                key={slug}
-                // className={
-                //   node.frontmatter.pin
-                //     ? "inline-block relative group transform hover:scale-[1.01] p-1 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all h-60 col-span-2 box-border"
-                //     : "inline-block relative group transform hover:scale-[1.01] p-1 bg-gradient-to-r from-[#ff6a00] via-[#fff45f] to-[#ff82f5] transition-all h-60 col-span-1"
-                // }
-                className={
-                  node.frontmatter.pin
-                    ? "inline-block relative group transform hover:scale-[1.01] p-1 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all h-60 col-span-2 box-border"
-                    : "inline-block relative group transform hover:scale-[1.01] transition-all h-60 col-span-1"
-                }
-              >
+              <Link to={`/blog/${slug}`} key={i} className={classNames(cardClass)}>
                 {node.frontmatter.pin && (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512"
-                    className="absolute text-white w-6 h-6 z-30 left-3 top-4"
+                    className="absolute text-white w-6 h-6 z-30 left-4 top-5"
                     stroke="currentColor"
                   >
                     {/* Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.*/}
@@ -110,10 +104,14 @@ const BlogList = ({ pageContext, data }) => {
             );
           })}
         </div>
-        <div className="flex justify-center items-center space-x-6 text-zinc-900 dark:text-zinc-300">
+        <div className="flex justify-center items-center space-x-4">
           <div className="flex justify-end w-56">
             {!isFirst && (
-              <Link to={`/blog/${prevPage}`} rel="prev" className="inline-flex items-center space-x-3">
+              <Link
+                to={`/blog/${prevPage}`}
+                rel="prev"
+                className="inline-flex items-center space-x-3 text-zinc-900 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:text-zinc-900"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
                     fillRule="evenodd"
@@ -128,17 +126,25 @@ const BlogList = ({ pageContext, data }) => {
           </div>
           {Array.from({ length: numPages }, (_, i) => (
             <div
-              key={`pagination-number${i + 1}`}
-              className={`w-8 text-center px-2 py-1 ${
-                currentPage === i + 1 ? "bg-orange-600 text-white font-medium" : ""
+              key={`pagination-number-${i + 1}`}
+              className={`${
+                currentPage === i + 1
+                  ? "bg-orange-600 text-white font-medium"
+                  : "text-zinc-900 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:text-zinc-900"
               }`}
             >
-              <Link to={`/blog/${i === 0 ? "" : i + 1}`}>{i + 1}</Link>
+              <Link to={`/blog/${i === 0 ? "" : i + 1}`} className="flex items-center justify-center w-8 px-3 py-1">
+                {i + 1}
+              </Link>
             </div>
           ))}
           <div className="flex justify-start w-56">
             {!isLast && (
-              <Link to={`/blog/${nextPage}`} rel="next" className="inline-flex items-center space-x-3">
+              <Link
+                to={`/blog/${nextPage}`}
+                rel="next"
+                className="inline-flex items-center space-x-3 px-2 py-1 text-zinc-900 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:text-zinc-900"
+              >
                 <span>Next Page</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
