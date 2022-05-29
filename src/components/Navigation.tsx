@@ -24,7 +24,7 @@ const Navigation = () => {
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 xl:px-0">
-            <div className="relative flex items-center justify-between py-8">
+            <div className="relative flex items-center justify-between pt-8 pb-12">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="p-2">
@@ -45,15 +45,15 @@ const Navigation = () => {
 
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-col space-y-10">
-                  <div className="flex-shrink-0 flex items-center pl-4">
+                  <div className="flex items-center pl-4">
                     {window.location.pathname === "/" ? (
-                      <div className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-200">
+                      <div className="font-cursive text-4xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-200">
                         juho pekkala
                       </div>
                     ) : (
                       <Link
                         to="/"
-                        className="font-cursive text-xl sm:text-2xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-200 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-amber-400 hover:via-orange-600 hover:to-orange-300 dark:hover:text-transparent dark:hover:bg-clip-text dark:hover:bg-gradient-to-r dark:hover:from-amber-400 dark:hover:via-orange-600 dark:hover:to-orange-300 p-5 -m-5"
+                        className="font-cursive text-4xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-200 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-amber-400 hover:via-orange-600 hover:to-orange-300 dark:hover:text-transparent dark:hover:bg-clip-text dark:hover:bg-gradient-to-r dark:hover:from-amber-400 dark:hover:via-orange-600 dark:hover:to-orange-300 p-5 -m-5"
                       >
                         juho pekkala
                       </Link>
@@ -61,14 +61,14 @@ const Navigation = () => {
                   </div>
 
                   <div className="hidden sm:flex sm:items-center">
-                    <div className="flex flex-wrap items-center space-x-8">
+                    <div className="flex flex-wrap items-center space-x-5">
                       {navigation.map((item) => (
                         <Link
                           key={item.name}
                           to={item.href}
                           getProps={isPartiallyCurrent}
                           className={
-                            "font-mono text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm"
+                            "font-mono text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm px-3 py-2"
                           }
                         >
                           {item.name}

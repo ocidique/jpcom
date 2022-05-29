@@ -10,8 +10,8 @@ const AboutPage = () => {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto">
-        <div className="flex space-x-32 my-32">
-          <div className="relative w-full md:w-2/5">
+        <div className="flex flex-col lg:flex-row lg:space-x-32 mt-16 lg:my-32">
+          <div className="relative w-full md:w-2/5 h-80">
             <div
               className="absolute z-30"
               style={{ background: "#9acd32", width: "200px", height: "200px", transform: "rotate(-30deg)" }}
@@ -44,7 +44,7 @@ const AboutPage = () => {
               />
             </div>
           </div>
-          <div className="w-full md:w-3/5 space-y-12 mt-12 text-zinc-900 dark:text-zinc-300">
+          <div className="w-full md:w-3/5 space-y-12 mt-12 text-zinc-900 dark:text-zinc-300 p-12 lg:p-0">
             <h2 className="font-medium text-6xl">hello 👋🏻</h2>
             <div className="flex flex-col space-y-6">
               <p>My name is Juho Pekkala. I warmly thank you finding here and humbly welcome you to my website.</p>

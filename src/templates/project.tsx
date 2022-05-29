@@ -5,6 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import kebabCase from "lodash.kebabcase";
 
 import Layout from "../components/Layout";
+import WrapperBlock from "../components/WrapperBlock";
 import PhotoMeta from "../components/PhotoMeta";
 import LogoBlock from "../components/LogoBlock";
 
@@ -57,7 +58,7 @@ const Project = ({ pageContext, data }) => {
 
       <LogoBlock />
 
-      <div className="max-w-7xl mx-auto space-y-12">
+      <WrapperBlock>
         <div className="flex justify-center items-center space-x-6 py-12">
           {previous && (
             <Link
@@ -65,7 +66,12 @@ const Project = ({ pageContext, data }) => {
               rel="prev"
               className="inline-flex items-center space-x-3 text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 font-medium"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 shrink-0"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
                 <path
                   fillRule="evenodd"
                   d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
@@ -83,7 +89,12 @@ const Project = ({ pageContext, data }) => {
               className="inline-flex items-center space-x-3 text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 font-medium"
             >
               <span>{next.frontmatter.title}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 shrink-0"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
                 <path
                   fillRule="evenodd"
                   d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
@@ -93,7 +104,7 @@ const Project = ({ pageContext, data }) => {
             </Link>
           )}
         </div>
-      </div>
+      </WrapperBlock>
     </Layout>
   );
 };

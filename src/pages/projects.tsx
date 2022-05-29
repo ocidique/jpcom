@@ -3,6 +3,8 @@ import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
+import WrapperBlock from "../components/WrapperBlock";
+import H2 from "../components/H2";
 
 const ProjectsPage = ({ data }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -11,10 +13,10 @@ const ProjectsPage = ({ data }) => {
 
   return (
     <Layout>
-      <div className="max-w-7xl mx-auto space-y-12">
-        <h2 className="text-6xl font-medium text-zinc-900 dark:text-zinc-300">projects</h2>
+      <WrapperBlock>
+        <H2>projects</H2>
 
-        <p className="text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider">
+        <p className="text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider">
           I do stuff sometimes.
         </p>
 
@@ -79,7 +81,7 @@ const ProjectsPage = ({ data }) => {
             );
           })}
         </div>
-      </div>
+      </WrapperBlock>
     </Layout>
   );
 };

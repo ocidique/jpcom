@@ -7,6 +7,8 @@ import classNames from "classnames";
 import { isCurrent, isPartiallyCurrent } from "../helpers/utils";
 
 import Layout from "../components/Layout";
+import WrapperBlock from "../components/WrapperBlock";
+import H2 from "../components/H2";
 
 const BlogList = ({ pageContext, data }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -21,16 +23,19 @@ const BlogList = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <div className="max-w-7xl mx-auto space-y-12">
-        <h2 className="text-6xl font-medium text-zinc-900 dark:text-zinc-300">blog</h2>
-        <p className="text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider">I write sometimes.</p>
+      <WrapperBlock>
+        <H2>blog</H2>
 
-        <ul className="inline-flex items-center space-x-6">
+        <p className="text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider">
+          I write sometimes.
+        </p>
+
+        <ul className="inline-flex items-center space-x-3 -ml-3">
           <li>
             <Link
               to="/blog/"
-              getProps={isCurrent}
-              className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
+              getProps={isPartiallyCurrent}
+              className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 px-3 py-2"
             >
               all
             </Link>
@@ -40,13 +45,13 @@ const BlogList = ({ pageContext, data }) => {
               <Link
                 to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}
                 getProps={isPartiallyCurrent}
-                className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
+                className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 px-3 py-2"
               >{`${tag.fieldValue}`}</Link>
             </li>
           ))}
         </ul>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
           {posts.map(({ node }, i) => {
             const { title, slug, hero_image, hero_image_alt } = node.frontmatter;
             const postTitle = title || slug;
@@ -55,7 +60,7 @@ const BlogList = ({ pageContext, data }) => {
               "inline-block relative group": true,
               "p-1 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all col-span-2 row-span-2 box-border":
                 node.frontmatter.pin,
-              "h-50 col-span-1": i === 2 || i === 3 || i === 5 || i > 6 || currentPage > 1,
+              "h-64 col-span-1": i === 2 || i === 3 || i === 5 || i > 6 || currentPage > 1,
               "col-span-1 row-span-3": i === 1 && currentPage === 1,
               "col-span-1 row-span-2": (i === 4 || i == 6) && currentPage === 1,
             });
@@ -78,18 +83,22 @@ const BlogList = ({ pageContext, data }) => {
                 )}
 
                 <div
-                  className={`absolute flex z-10 bg-black opacity-25 group-hover:opacity-0 transform transition-opacity w-full h-full ${
-                    node.frontmatter.pin && "-m-1"
-                  }`}
+                  className={
+                    hero_image
+                      ? `absolute flex z-10 bg-black opacity-25 group-hover:opacity-0 transform transition-opacity w-full h-full ${
+                          node.frontmatter.pin && "-m-1"
+                        }`
+                      : "absolute flex z-10 bg-zinc-900 transform transition-opacity w-full h-full"
+                  }
                 ></div>
                 <div
                   className={`absolute flex flex-col justify-end w-full h-full p-5 z-20 text-zinc-100 space-y-1 ${
                     node.frontmatter.pin && "-m-1"
                   }`}
                 >
-                  <h3 className="text-lg text-shadow-xl text-zinc-100">{postTitle}</h3>
+                  <h3 className="text-lg text-zinc-100">{postTitle}</h3>
 
-                  <p className="font-mono text-shadow-xl text-sm">{node.frontmatter.date}</p>
+                  <p className="font-mono text-sm">{node.frontmatter.date}</p>
                   {/* <p dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
                   {/* <ul className="inline-flex items-center space-x-3">
                     {tags.map((tag) => (
@@ -99,7 +108,7 @@ const BlogList = ({ pageContext, data }) => {
                     ))}
                   </ul>*/}
                 </div>
-                <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full" />
+                {hero_image && <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full" />}
               </Link>
             );
           })}
@@ -110,7 +119,7 @@ const BlogList = ({ pageContext, data }) => {
               <Link
                 to={`/blog/${prevPage}`}
                 rel="prev"
-                className="inline-flex items-center space-x-3 text-zinc-900 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:text-zinc-900"
+                className="inline-flex items-center space-x-3 px-2 py-1 text-zinc-900 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:text-zinc-900"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
@@ -157,7 +166,7 @@ const BlogList = ({ pageContext, data }) => {
             )}
           </div>
         </div>
-      </div>
+      </WrapperBlock>
     </Layout>
   );
 };

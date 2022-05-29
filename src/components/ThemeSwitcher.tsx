@@ -43,7 +43,7 @@ function ThemeSwitcher({}: Props) {
       onClick={() => toggleTheme()}
       title="Toggle theme between light and dark"
       aria-label="Toggle theme between light and dark"
-      className="text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500"
+      className="text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500 lg:px-3 lg:py-2"
     >
       {theme === "dark" ? (
         <svg
