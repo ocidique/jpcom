@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import WrapperBlock from "../components/WrapperBlock";
-import H2 from "../components/H2";
+import H1 from "../components/H1";
 
 const ProjectsPage = ({ data }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -14,7 +14,7 @@ const ProjectsPage = ({ data }) => {
   return (
     <Layout>
       <WrapperBlock>
-        <H2>projects</H2>
+        <H1>projects</H1>
 
         <p className="text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider">
           I do stuff sometimes.

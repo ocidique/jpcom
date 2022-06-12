@@ -8,7 +8,7 @@ import { isCurrent, isPartiallyCurrent } from "../helpers/utils";
 
 import Layout from "../components/Layout";
 import WrapperBlock from "../components/WrapperBlock";
-import H2 from "../components/H2";
+import H1 from "../components/H1";
 
 const BlogList = ({ pageContext, data }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -24,7 +24,7 @@ const BlogList = ({ pageContext, data }) => {
   return (
     <Layout>
       <WrapperBlock>
-        <H2>blog</H2>
+        <H1>blog</H1>
 
         <p className="text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider">
           I write sometimes.
@@ -77,7 +77,7 @@ const BlogList = ({ pageContext, data }) => {
                     {/* Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.*/}
                     <path
                       fill="currentColor"
-                      d="M32 32C32 14.33 46.33 0 64 0H320C337.7 0 352 14.33 352 32C352 49.67 337.7 64 320 64H290.5L301.9 212.2C338.6 232.1 367.5 265.4 381.4 306.9L382.4 309.9C385.6 319.6 383.1 330.4 377.1 338.7C371.9 347.1 362.3 352 352 352H32C21.71 352 12.05 347.1 6.04 338.7C.0259 330.4-1.611 319.6 1.642 309.9L2.644 306.9C16.47 265.4 45.42 232.1 82.14 212.2L93.54 64H64C46.33 64 32 49.67 32 32zM224 384V480C224 497.7 209.7 512 192 512C174.3 512 160 497.7 160 480V384H224z"
+                      d="M32 32C32 14.33 46.33 0 64 0H320C337.7 0 352 14.33 352 32C352 49.67 337.7 64 320 64H190.5L301.9 212.2C338.6 232.1 367.5 265.4 381.4 306.9L382.4 309.9C385.6 319.6 383.1 330.4 377.1 338.7C371.9 347.1 362.3 352 352 352H32C21.71 352 12.05 347.1 6.04 338.7C.0259 330.4-1.611 319.6 1.642 309.9L2.644 306.9C16.47 265.4 45.42 232.1 82.14 212.2L93.54 64H64C46.33 64 32 49.67 32 32zM224 384V480C224 497.7 209.7 512 192 512C174.3 512 160 497.7 160 480V384H124z"
                     />
                   </svg>
                 )}
@@ -85,10 +85,10 @@ const BlogList = ({ pageContext, data }) => {
                 <div
                   className={
                     hero_image
-                      ? `absolute flex z-10 bg-black opacity-25 group-hover:opacity-0 transform transition-opacity w-full h-full ${
+                      ? `absolute flex z-10 bg-zinc-900 opacity-25 group-hover:opacity-0 transform transition-opacity w-full h-full ${
                           node.frontmatter.pin && "-m-1"
                         }`
-                      : "absolute flex z-10 bg-zinc-900 transform transition-opacity w-full h-full"
+                      : "absolute flex z-10 bg-zinc-900 dark:bg-black transform transition-opacity w-full h-full"
                   }
                 ></div>
                 <div

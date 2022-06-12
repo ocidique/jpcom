@@ -7,7 +7,7 @@ import { isCurrent, isPartiallyCurrent } from "../helpers/utils";
 
 import Layout from "../components/Layout";
 import WrapperBlock from "../components/WrapperBlock";
-import H2 from "../components/H2";
+import H1 from "../components/H1";
 
 const Tags = ({ pageContext, data }) => {
   const { tag, tags } = pageContext;
@@ -18,7 +18,7 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <WrapperBlock>
-        <H2>blog</H2>
+        <H1>blog</H1>
         <p className="text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider">
           {tagHeader}
         </p>

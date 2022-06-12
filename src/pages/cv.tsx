@@ -20,19 +20,19 @@ const CVPage = () => {
         <div className="max-w-3xl mx-auto">
           <div>
             <p className="text-center font-medium text-zinc-900 dark:text-zinc-300 uppercase">Curriculum Vitae</p>
-            <h1 className="flex flex-col lg:flex-row justify-center items-center lg:space-x-6 text-6xl font-medium text-center text-zinc-900 dark:text-zinc-300 mt-6 lg:mt-16">
+            <h1 className="flex flex-col lg:flex-row justify-center items-center lg:space-x-6 text-6xl font-medium text-center text-zinc-900 dark:text-zinc-300 mt-6 lg:mt-12">
               <span>developer</span>
               <span className="block lg:hidden">&</span>
-              <span className="hidden lg:block font-cursive -mt-12" style={{ fontSize: "120px" }}>
+              <span className="hidden lg:block font-cursive -mt-4" style={{ fontSize: "100px" }}>
                 &
               </span>
-              <span className="font-cursive -mt-12" style={{ fontSize: "120px" }}>
+              <span className="font-cursive -mt-10" style={{ fontSize: "120px" }}>
                 designer
               </span>
             </h1>
           </div>
           <p className="text-orange-600 text-center mt-12">#webdev #frontend #fullstack</p>
-          <p className="text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-normal tracking-wider py-6 text-center px-12 lg:px-0">
+          <p className="text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-relaxed tracking-wider py-6 text-center px-12 lg:px-0">
             Hello, is it me you're looking for? A talented modern web software developer? The one who can design and
             code apps that are good looking, diamond cut sharp and accessible! 💎
           </p>
@@ -40,13 +40,13 @@ const CVPage = () => {
 
         <div className="flex flex-col lg:flex-row lg:space-x-12">
           <div className="hidden lg:block w-full lg:w-2/5 relative px-12">
-            <div className="absolute text-gray-200 dark:text-zinc-700 z-10">
+            <div className="absolute text-gray-300 dark:text-zinc-700 z-10">
               <DotPattern />
             </div>
             <div
               className="absolute z-10"
               style={{
-                bottom: "300px",
+                top: "400px",
                 left: "180px",
                 background: "#9acd32",
                 width: "200px",
@@ -57,7 +57,7 @@ const CVPage = () => {
             <div
               className="absolute w-0 h-0 border z-10"
               style={{
-                bottom: "240px",
+                top: "500px",
                 left: "170px",
                 transform: "rotate(40deg)",
                 borderWidth: "0 100px 170px 100px",
@@ -99,8 +99,9 @@ const CVPage = () => {
 
               <p className="text-zinc-900 dark:text-zinc-300">
                 On my freetime I like to challenge myself once in a while mentally and physically. Most of the time
-                work already offer challenges so I like to focus on physical exercises and creative hobbies. My
-                permanent favourite is the gym and recently I have started golf.
+                work already offer challenges so I like to focus on physical exercises and creative hobbies. However, I
+                constantly have couple side projects on going. My permanent favourite hobby is the gym and recently I
+                have started golf.
               </p>
             </div>
 
@@ -121,9 +122,13 @@ const CVPage = () => {
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">UI/UX/Accessibility/RWD</span>
                 </li>
-
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Python/Django/NodeJS/Java</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">
+                    Wireframing/UI Protyping/Visual Design/Figma
+                  </span>
+                </li>
+                <li className="list-disc text-orange-600">
+                  <span className="text-zinc-900 dark:text-zinc-300">Python/Django/NodeJS</span>
                 </li>
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">REST/GraphQL</span>
@@ -179,7 +184,7 @@ const CVPage = () => {
           <div className="space-y-4 px-4 lg:px-0">
             <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Education</p>
             <ul className="flex flex-col space-y-6 lg:space-y-10">
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6">
+              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
                 <div className="w-full lg:w-36">
                   <YearLabel>2017 - 2022</YearLabel>
                 </div>
@@ -199,7 +204,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6">
+              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
                 <div className="w-full lg:w-36">
                   <YearLabel>2009 - 2013</YearLabel>
                 </div>
@@ -219,7 +224,7 @@ const CVPage = () => {
           <div className="space-y-4 px-4 lg:px-0 pb-12">
             <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">Experience</p>
             <ul className="flex flex-col space-y-10">
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6">
+              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
                 <div className="w-full lg:w-36">
                   <YearLabel>2022 -</YearLabel>
                 </div>
@@ -228,19 +233,19 @@ const CVPage = () => {
                     Senior Software Developer - Haallas Finland Oy
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300">
-                    Long term e-service development. Python, Django, HTML, CSS, JavaScript, React, GraphQL, Tailwind,
-                    Design system, Azure
+                    Long term e-service development. Python, Django, HTML, CSS, JavaScript, TypeScript, React, GraphQL,
+                    Tailwind, Design system, Azure
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300">
                     Hybrid developer: responsible for UX/UI design and front-end development.
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300">
-                    Participated in various marketing and design activities.
+                    Participated in various technology, design and marketing activities.
                   </p>
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6">
+              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
                 <div className="w-full lg:w-36">
                   <YearLabel>2018 - 2021</YearLabel>
                 </div>
@@ -259,7 +264,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6">
+              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
                 <div className="w-full lg:w-36">
                   <YearLabel>2017 - 2018</YearLabel>
                 </div>
@@ -273,7 +278,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6">
+              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
                 <div className="w-full lg:w-36">
                   <YearLabel>2013 - 2017</YearLabel>
                 </div>
@@ -287,7 +292,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6">
+              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
                 <div className="w-full lg:w-36">
                   <YearLabel>2011 - 2014</YearLabel>
                 </div>
@@ -297,7 +302,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6">
+              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
                 <div className="w-full lg:w-36">
                   <YearLabel>2012</YearLabel>
                 </div>
@@ -311,7 +316,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6">
+              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
                 <div className="w-full lg:w-36">
                   <YearLabel>2012</YearLabel>
                 </div>
@@ -323,7 +328,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6">
+              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
                 <div className="w-full lg:w-36">
                   <YearLabel>2010</YearLabel>
                 </div>

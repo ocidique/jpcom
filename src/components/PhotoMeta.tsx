@@ -8,7 +8,7 @@ type Props = {
 
 const PhotoMeta: React.FunctionComponent<Props> = ({ alt, credit, url }) => {
   return (
-    <p className="text-sm text-zinc-600 dark:text-zinc-400 pl-1 py-1">
+    <div className="max-w-2xl mx-auto text-sm text-zinc-600 dark:text-zinc-400 pl-1 py-1">
       {alt}. Photo:{" "}
       {url ? (
         <a href={url} target="_blank" className=" hover:text-orange-500 dark:hover:text-orange-500">
@@ -17,7 +17,7 @@ const PhotoMeta: React.FunctionComponent<Props> = ({ alt, credit, url }) => {
       ) : (
         <span>{credit}</span>
       )}
-    </p>
+    </div>
   );
 };
 
