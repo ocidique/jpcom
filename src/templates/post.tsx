@@ -30,7 +30,7 @@ const BlogPost = ({ pageContext, data }) => {
 
   return (
     <MDXProvider components={shortcodes}>
-      <div className="min-h-screen scroll-smooth relative bg-zinc-100 dark:bg-zinc-900 z-30">
+      <div className="min-h-screen scroll-smooth relative bg-zinc-50 dark:bg-zinc-900 z-30">
         {/* <div className="absolute w-full z-20 bg-gradient-to-r from-amber-400 via-orange-600 to-orange-300 h-1"></div> */}
         <div className="flex flex-col min-h-screen justify-between">
           <div className="relative">
@@ -119,7 +119,7 @@ const BlogPost = ({ pageContext, data }) => {
                       <Link
                         to={`/blog/${previous.frontmatter.slug}`}
                         rel="prev"
-                        className="inline-flex items-center space-x-3 font-medium text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 "
+                        className="inline-flex w-full items-center justify-start space-x-3 font-medium text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 "
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ const BlogPost = ({ pageContext, data }) => {
                       <Link
                         to={`/blog/${next.frontmatter.slug}`}
                         rel="next"
-                        className="inline-flex items-center space-x-3 font-medium text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
+                        className="inline-flex w-full items-center justify-end space-x-3 font-medium text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
                       >
                         <span>{next.frontmatter.title}</span>
                         <svg

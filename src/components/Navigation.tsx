@@ -24,6 +24,7 @@ type Props = {
 };
 
 const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) => {
+  const pathname = typeof window !== "undefined" ? window.location.pathname : "";
   return (
     <Disclosure as="nav" className={absolute ? "absolute w-full z-20" : "relative w-full z-20"}>
       {({ open }) => (
@@ -51,7 +52,7 @@ const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) =
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-col space-y-8">
                   <div className="flex items-center pl-4">
-                    {window.location.pathname === "/" ? (
+                    {pathname === "/" ? (
                       <div className="font-cursive text-4xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-200">
                         juho pekkala
                       </div>

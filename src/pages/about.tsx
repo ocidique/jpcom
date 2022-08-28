@@ -52,7 +52,7 @@ const AboutPage = () => {
                 I'm a creative <span className="font-bold tracking-wide">developer</span>,{" "}
                 <span className="font-bold tracking-wide">designer</span> and lifelong learner from Finland 🇫🇮. From
                 the website you can find my professional info as well as my blog. I intend to share things in a relaxed
-                manner. I love creativity and adventures so I might share bits of those as well!
+                manner. I love creativity, DIY projects and adventures so I might share bits of those as well!
               </p>
             </div>
             <div className="flex flex-col space-y-4">
@@ -60,6 +60,7 @@ const AboutPage = () => {
               <CTA to="/cv/">Here to check my CV?</CTA>
               {/* <CTA to="#">Check out my work portfolio</CTA> */}
               {/* <CTA to="#">Check out my hobby photography</CTA> */}
+              {/* <CTA to="#">Check out my hobby stuff</CTA> */}
               <CTA to="/blog/">Read my blog. I write sometimes</CTA>
             </div>
           </div>
