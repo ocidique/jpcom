@@ -65,6 +65,11 @@
   }
 }
 
+/* Frontpage background */
+.frontpage-bg {
+  position: absolute !important;
+}
+
 /* Post content */
 
 .post-content ul {

@@ -8,7 +8,7 @@ const IndexPage = () => {
       <StaticImage
         src="../assets/forest.png"
         alt=""
-        className="w-screen h-screen absolute bottom-0 left-0 z-20"
+        className="frontpage-bg w-screen h-screen absolute bottom-0 left-0 z-20"
         aria-hidden="true"
       />
       <div className="absolute inset-0 z-20 bg-gradient-to-tl from-lime-900 via-sky-200 to-orange-300 opacity-80 dark:bg-gradient-br dark:from-black dark:via-slate-900 dark:to-cyan-900" />
