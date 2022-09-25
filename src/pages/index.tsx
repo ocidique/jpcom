@@ -51,7 +51,8 @@ const IndexPage = () => {
                   <div className="landing-circle" />
                   <div className="landing-square">
                     <div className="landing-square__left">
-                      <p className="welcome font-mono text-zinc-900 dark:text-zinc-200">welcome to my website</p>
+                      {/* <p className="welcome font-mono text-zinc-900 dark:text-zinc-200">welcome to my website</p> */}
+                      <p className="welcome font-mono text-zinc-900 dark:text-zinc-200">juho pekkala</p>
                     </div>
                     <div className="landing-square__right">
                       <p className="slogan font-mono text-zinc-900 dark:text-zinc-200">

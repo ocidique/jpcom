@@ -51,7 +51,7 @@ const BlogList = ({ pageContext, data }) => {
           ))}
         </ul>
 
-        <div className="grid grid-cols-6 lg:grid-cols-12 gap-4 lg:gap-5">
+        <div className="grid grid-cols-8 lg:grid-cols-12 gap-4 lg:gap-5">
           {posts.map(({ node }, i) => {
             const { title, slug, hero_image, hero_image_alt } = node.frontmatter;
             const postTitle = title || slug;
@@ -59,13 +59,26 @@ const BlogList = ({ pageContext, data }) => {
             const cardClass = classNames({
               "inline-block relative group rounded-lg overflow-hidden shadow-md shadow-zinc-400 dark:shadow-black":
                 true,
-              "p-1 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all col-span-6 row-span-2 box-border":
+              "p-1 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all col-span-12 lg:col-span-8 row-span-2 box-border":
                 node.frontmatter.pin,
-              "h-64 col-span-3": i === 2 || i === 3 || i === 5 || i > 6,
-              "col-span-4": currentPage > 1,
-              "col-span-3 row-span-3": i === 1 && currentPage === 1,
-              "col-span-3 row-span-2": (i === 4 || i == 6) && currentPage === 1,
+              "col-span-12 lg:col-span-4 row-span-1": i === 1 || i === 2,
+              "col-span-12 lg:col-span-4": i > 2 || currentPage > 1,
+              // "h-64 col-span-3": i === 2 || i === 3 || i === 5 || i > 6,
+              // "col-span-4": currentPage > 1,
+              // "col-span-3 row-span-3": i === 1 && currentPage === 1,
+              // "col-span-3 row-span-2": (i === 4 || i == 6) && currentPage === 1,
             });
+
+            // const cardClass = classNames({
+            //   "inline-block relative group rounded-lg overflow-hidden shadow-md shadow-zinc-400 dark:shadow-black":
+            //     true,
+            //   "p-1 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all col-span-6 row-span-2 box-border":
+            //     node.frontmatter.pin,
+            //   "h-64 col-span-3": i === 2 || i === 3 || i === 5 || i > 6,
+            //   "col-span-4": currentPage > 1,
+            //   "col-span-3 row-span-3": i === 1 && currentPage === 1,
+            //   "col-span-3 row-span-2": (i === 4 || i == 6) && currentPage === 1,
+            // });
 
             return (
               <Link to={`/blog/${slug}`} key={i} className={classNames(cardClass)}>
@@ -89,13 +102,19 @@ const BlogList = ({ pageContext, data }) => {
                       ? `absolute flex z-10 bg-zinc-900 opacity-30 group-hover:opacity-0 transform transition-opacity w-full h-full ${
                           node.frontmatter.pin && "-m-1"
                         }`
-                      : "absolute flex z-10 bg-gradient-to-tr from-amber-400 via-orange-300 to-orange-500 dark:hover:text-transparent dark:hover:bg-clip-text dark:bg-gradient-to-tr dark:from-orange-600 dark:via-orange-400 dark:to-amber-300 opacity-80 group-hover:opacity-100 transform transition-opacity w-full h-full"
+                      : "absolute flex z-10 bg-gradient-to-tr from-amber-400 via-orange-300 to-orange-500 dark:hover:text-transparent dark:hover:bg-clip-text dark:bg-gradient-to-tr dark:from-orange-600 dark:via-orange-400 dark:to-amber-300 opacity-80 group-hover:opacity-100 transform transition-opacity w-full h-full overflow-hidden"
                   }
                 ></div>
                 <div
-                  className={`absolute flex flex-col justify-end w-full h-full p-6 z-20 text-zinc-100 space-y-1 ${
-                    node.frontmatter.pin && "-m-1"
-                  }`}
+                  className={
+                    hero_image
+                      ? `absolute flex flex-col justify-end w-full h-full p-6 z-20 text-zinc-100 space-y-1 ${
+                          node.frontmatter.pin && "-m-1"
+                        }`
+                      : `relative flex flex-col justify-end w-full h-full p-6 z-20 text-zinc-100 space-y-1 ${
+                          node.frontmatter.pin && "-m-1"
+                        }`
+                  }
                 >
                   <h3 className={hero_image ? "text-xl text-white" : "text-xl text-black dark:text-white"}>
                     {postTitle}

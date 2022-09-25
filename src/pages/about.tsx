@@ -10,7 +10,7 @@ const AboutPage = () => {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto">
-        <div className="flex flex-col lg:flex-row lg:space-x-32 mt-16 lg:my-32">
+        <div className="flex flex-col lg:flex-row lg:space-x-32 mt-16 lg:my-24">
           <div className="relative w-full md:w-2/5 h-80">
             <div
               className="absolute z-30"
@@ -39,7 +39,7 @@ const AboutPage = () => {
             >
               <StaticImage
                 src="../assets/juho_profile.jpg"
-                alt="Juho Pekkala"
+                alt="Juho's profile picture"
                 className="p-4 rounded-full z-40 shrink-0"
               />
             </div>

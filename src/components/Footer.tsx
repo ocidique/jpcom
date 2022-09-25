@@ -3,7 +3,7 @@ import React from "react";
 const Layout = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="flex flex-col lg:flex-row max-w-7xl mx-auto items-center text-sm relative bottom-0 w-full border-t border-zinc-300 dark:border-zinc-700 mt-12 px-2 sm:px-6 xl:px-0 py-6 lg:py-10 space-y-6 lg:space-y-0">
+    <footer className="flex flex-col lg:flex-row max-w-7xl mx-auto items-center text-sm relative bottom-0 w-full border-t border-zinc-300 dark:border-zinc-700 mt-10 px-2 sm:px-6 xl:px-0 py-6 lg:py-10 space-y-6 lg:space-y-0">
       <div className="w-full lg:w-1/2 flex flex-col lg:flex-row lg:space-x-2 text-zinc-700 dark:text-zinc-400 space-y-2 lg:space-y-0">
         <span className="flex justify-center lg:justify-start">
           Copyright © Juho Pekkala {currentYear}. All rights reserved.

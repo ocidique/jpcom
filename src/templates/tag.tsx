@@ -52,7 +52,8 @@ const Tags = ({ pageContext, data }) => {
               <Link
                 to={`/blog/${slug}`}
                 key={slug}
-                className="inline-block rounded-lg overflow-hidden shadow-md shadow-zinc-400 dark:shadow-black relative group col-span-4"
+                className="inline-block rounded-lg overflow-hidden shadow-md shadow-zinc-400 dark:shadow-black relative group col-span-4 row-span-1"
+                style={{ minHeight: "300px" }}
               >
                 <div
                   className={
@@ -65,7 +66,7 @@ const Tags = ({ pageContext, data }) => {
                   className={
                     hero_image
                       ? "absolute flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-1"
-                      : "absolute flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-1"
+                      : "relative flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-1"
                   }
                 >
                   <h3 className={hero_image ? "text-xl text-white" : "text-xl text-black dark:text-white"}>

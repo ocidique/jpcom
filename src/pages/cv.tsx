@@ -46,7 +46,7 @@ const CVPage = () => {
             <div
               className="absolute z-10"
               style={{
-                top: "400px",
+                top: "300px",
                 left: "180px",
                 background: "#9acd32",
                 width: "200px",
@@ -57,7 +57,7 @@ const CVPage = () => {
             <div
               className="absolute w-0 h-0 border z-10"
               style={{
-                top: "500px",
+                top: "400px",
                 left: "170px",
                 transform: "rotate(40deg)",
                 borderWidth: "0 100px 170px 100px",
@@ -78,12 +78,12 @@ const CVPage = () => {
                   “Juho is a dedicated and hardworking person. He always gives input and ideas to develop every day
                   work.”
                 </p>
-                <div className="flex flex-col space-y-4">
+                {/* <div className="flex flex-col space-y-4">
                   <CTA to="#">Portfolio coming soon</CTA>
                   <CTA to="#">Printable CV coming soon</CTA>
-                  {/* <CTA to="#">Check the portfolio</CTA>
-                <CTA to="#">Printable CV</CTA> */}
-                </div>
+                  <CTA to="#">Check the portfolio</CTA>
+                  <CTA to="#">Printable CV</CTA>
+                </div> */}
               </div>
             </div>
           </div>
@@ -92,11 +92,15 @@ const CVPage = () => {
             <div className="space-y-4">
               <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Profile</p>
               <p className="text-zinc-900 dark:text-zinc-300 text-lg">
-                Senior Software Developer with over 10 years of experience. Lifelong learner. Strongest skill set for
-                front end development, eye for design and usability, but also solid skills for back end development.
-                Knowledge for distributed systems and cloud. Creative and entrepreneurial mindset.
+                A versatile software professional with over 10 years of experience. Lifelong learner. Strongest skill
+                set for front end development, eye for design and usability, but also solid skills for back end
+                development. Knowledge for distributed systems and cloud. Creative and entrepreneurial mindset.
               </p>
-
+              <p className="text-zinc-900 dark:text-zinc-300 text-lg">
+                Juho is eager to build the finest software and likes to set into customers and end users perspective
+                when it comes to delivering the best solutions. Having a lifelong learning mentality ensures that new
+                technologies and other latest and greatest solutions are more than a welcome.
+              </p>
               <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                 On my freetime I like to challenge myself once in a while mentally and physically. Most of the time
                 work already offer challenges so I like to focus on physical exercises and creative hobbies. However, I
@@ -110,37 +114,38 @@ const CVPage = () => {
               <ul className="ml-4 space-y-2 text-lg">
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">
-                    Eager to build the finest software, hands-on coding skillz
+                    {/* Eager to build the finest software, hands-on coding skillz */}
+                    Hands-on coding skillz
                   </span>
                 </li>
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">HTML/CSS/TS/JS/React</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">HTML, CSS, JavaScript, Typescript, React</span>
                 </li>
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">Design Systems</span>
                 </li>
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">UI/UX/Accessibility/RWD</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">UI/UX, Accessibility, RWD</span>
                 </li>
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">
-                    Wireframing/UI Protyping/Visual Design/Figma
+                    Wireframing, UI Protyping, Visual Design, Figma, Sketch
                   </span>
                 </li>
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Python/Django/NodeJS</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">Python, Django, NodeJS</span>
                 </li>
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">REST/GraphQL</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">REST, GraphQL</span>
                 </li>
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Database Design/Schemas/SQL/NoSQL</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">Database Design, Schemas, SQL, NoSQL</span>
                 </li>
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">Git</span>
                 </li>
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Azure/AWS</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">Azure, AWS</span>
                 </li>
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">Agile Methodologies, XP, Scrum Master</span>
@@ -149,9 +154,6 @@ const CVPage = () => {
                   <span className="text-zinc-900 dark:text-zinc-300">
                     Project management, maintaining project status and priorities
                   </span>
-                </li>
-                <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Over 10 years of experience</span>
                 </li>
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">
