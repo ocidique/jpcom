@@ -4,6 +4,7 @@ import WrapperBlock from "../components/WrapperBlock";
 import CTA from "../components/CTA";
 
 import DotPattern from "../assets/dot_pattern.svg";
+import SEO from "../components/SEO";
 
 const YearLabel = ({ children }: any) => {
   return (
@@ -350,5 +351,7 @@ const CVPage = () => {
     </Layout>
   );
 };
+
+export const Head = () => <SEO title="Curriculum Vitae" />;
 
 export default CVPage;

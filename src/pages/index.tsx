@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 import { StaticImage } from "gatsby-plugin-image";
+import SEO from "../components/SEO";
 
 const IndexPage = () => {
   return (
@@ -81,3 +82,5 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const Head = () => <SEO title="Welcome" />;

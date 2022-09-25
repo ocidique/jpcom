@@ -14,6 +14,7 @@ import LogoBlock from "../components/LogoBlock";
 import PhotoMeta from "../components/PhotoMeta";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 
 const shortcodes = {
   WrapperBlock,
@@ -171,6 +172,17 @@ const BlogPost = ({ pageContext, data }) => {
 };
 
 export default BlogPost;
+
+/**
+ * Head export to define metadata for the page
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
+ */
+
+export const Head = ({ pageContext, data }) => {
+  const { mdx } = data;
+  return <SEO title={mdx.frontmatter.title} />;
+};
 
 export const pageQuery = graphql`
   query ($id: String!) {

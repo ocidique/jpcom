@@ -9,6 +9,7 @@ import { isCurrent, isPartiallyCurrent } from "../helpers/utils";
 import Layout from "../components/Layout";
 import WrapperBlock from "../components/WrapperBlock";
 import H1 from "../components/H1";
+import SEO from "../components/SEO";
 
 const BlogList = ({ pageContext, data }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -190,6 +191,8 @@ const BlogList = ({ pageContext, data }) => {
 };
 
 export default BlogList;
+
+export const Head = () => <SEO title="Blog" />;
 
 export const pageQuery = graphql`
   query blogPageQuery($skip: Int!, $limit: Int!) {

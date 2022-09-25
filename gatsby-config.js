@@ -1,8 +1,15 @@
 module.exports = {
   siteMetadata: {
     title: `Juho Pekkala's Website`,
+    author: {
+      name: `Juho Pekkala`,
+      summary: `Creative Software Developer and Designer`,
+    },
     siteUrl: `https://www.juhopekkala.com`,
-    description: `Creative Software Developer and Designer`,
+    description: `From the website you can find my professional info as well as my blog. I intend to share things in a relaxed manner. I love creativity, DIY projects and adventures so I might share bits of those as well!`,
+    social: {
+      twitter: `ocidique`,
+    },
   },
   plugins: [
     "gatsby-plugin-netlify-cms",

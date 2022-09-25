@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import CTA from "../components/CTA";
 
 import DotPattern from "../assets/dot_pattern.svg";
+import SEO from "../components/SEO";
 
 const AboutPage = () => {
   return (
@@ -69,5 +70,7 @@ const AboutPage = () => {
     </Layout>
   );
 };
+
+export const Head = () => <SEO title="About me" />;
 
 export default AboutPage;

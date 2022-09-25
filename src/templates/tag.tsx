@@ -8,6 +8,7 @@ import { isCurrent, isPartiallyCurrent } from "../helpers/utils";
 import Layout from "../components/Layout";
 import WrapperBlock from "../components/WrapperBlock";
 import H1 from "../components/H1";
+import SEO from "../components/SEO";
 
 const Tags = ({ pageContext, data }) => {
   const { tag, tags } = pageContext;
@@ -88,6 +89,20 @@ const Tags = ({ pageContext, data }) => {
 };
 
 export default Tags;
+
+/**
+ * Head export to define metadata for the page
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
+ */
+
+export const Head = ({ pageContext, data }) => {
+  const { tag } = pageContext;
+  const { totalCount } = data.allMdx;
+
+  const tagHeader = `Posts${totalCount === 1 ? "" : "s"} tagged with "${tag}"`;
+  return <SEO title={tagHeader} />;
+};
 
 export const pageQuery = graphql`
   query ($tag: String) {
