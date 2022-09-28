@@ -30,7 +30,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <div className="flex flex-col min-h-screen justify-between">
           <div className="relative">
             <Navigation />
-            <div className="px-4 sm:px-6 xl:px-0">{children}</div>
+            <div className="px-4 lg:px-0">{children}</div>
           </div>
           {pathname !== "/" && <Footer />}
         </div>

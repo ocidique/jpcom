@@ -89,7 +89,7 @@ const CVPage = () => {
             </div>
           </div>
 
-          <div className="w-full lg:w-3/5 text-zinc-900 space-y-8 px-6 lg:px-0">
+          <div className="w-full lg:w-3/5 text-zinc-900 space-y-8 px-4 lg:px-0">
             <div className="space-y-4">
               <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Profile</p>
               <p className="text-zinc-900 dark:text-zinc-300 text-lg">
@@ -183,7 +183,7 @@ const CVPage = () => {
           </div>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-8">
+        <div className="max-w-3xl lg:mx-auto space-y-8">
           <div className="space-y-4 px-4 lg:px-0">
             <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Education</p>
             <ul className="flex flex-col space-y-6 lg:space-y-10">

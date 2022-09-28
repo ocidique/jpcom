@@ -36,84 +36,83 @@ const BlogPost = ({ pageContext, data }) => {
         <div className="flex flex-col min-h-screen justify-between">
           <div className="relative">
             {image ? <Navigation absolute isPostPage /> : <Navigation />}
-
-            <div className="px-4 sm:px-6 xl:px-0">
-              <div className="space-y-12 -mt-12">
-                <div className={image ? "flex flex-col justify-end lg:absolute w-full h-screen z-10" : "w-full"}>
-                  <div className="max-w-7xl mx-auto space-y-2 mt-24 mb-12">
-                    <div className="flex flex-col items-center justify-center space-y-6 text-center">
-                      <h1
-                        className={
-                          image
-                            ? "text-4xl lg:text-6xl font-medium text-zinc-100 text-shadow-xl tracking-tight"
-                            : "text-4xl lg:text-6xl font-medium text-zinc-900 dark:text-zinc-100 tracking-tight"
-                        }
-                      >
-                        {mdx.frontmatter.title}
-                      </h1>
-                      <p
-                        className={
-                          image
-                            ? "font-mono text-zinc-100 text-shadow-xl"
-                            : "font-mono text-zinc-900 dark:text-zinc-100"
-                        }
-                      >
-                        {mdx.frontmatter.date}
-                      </p>
-                      {/* <ul className="inline-flex items-center space-x-3">
-                        {mdx.frontmatter.tags.map((tag) => (
-                          <li
-                            key={tag}
-                            className={
-                              image
-                                ? "text-shadow-xl text-orange-600 hover:text-orange-500"
-                                : "text-orange-600 hover:text-orange-500"
-                            }
+            <div className="space-y-12 -mt-12">
+              <div className={image ? "flex flex-col justify-end absolute w-full h-screen z-10" : "w-full"}>
+                <div className="max-w-7xl mx-auto space-y-2 mt-24 mb-12">
+                  <div className="flex flex-col items-center justify-center space-y-6 text-center">
+                    <h1
+                      className={
+                        image
+                          ? "text-4xl lg:text-6xl font-medium text-zinc-100 text-shadow-xl tracking-tight"
+                          : "text-4xl lg:text-6xl font-medium text-zinc-900 dark:text-zinc-100 tracking-tight"
+                      }
+                    >
+                      {mdx.frontmatter.title}
+                    </h1>
+                    <p
+                      className={
+                        image ? "font-mono text-zinc-100 text-shadow-xl" : "font-mono text-zinc-900 dark:text-zinc-100"
+                      }
+                    >
+                      {mdx.frontmatter.date}
+                    </p>
+                    {/* <ul className="inline-flex items-center space-x-3">
+                      {mdx.frontmatter.tags.map((tag) => (
+                        <li
+                          key={tag}
+                          className={
+                            image
+                              ? "text-shadow-xl text-orange-600 hover:text-orange-500"
+                              : "text-orange-600 hover:text-orange-500"
+                          }
+                        >
+                          <Link to={`/blog/tags/${kebabCase(tag)}/`}>{`#${tag}`}</Link>
+                        </li>
+                      ))}
+                    </ul> */}
+                    {image && (
+                      <div className="flex flex-inline justify-center hover:text-red group">
+                        <a href="#content">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-12 w-12 text-zinc-100 group-hover:text-orange-600 filter-shadow"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            aria-hidden="true"
                           >
-                            <Link to={`/blog/tags/${kebabCase(tag)}/`}>{`#${tag}`}</Link>
-                          </li>
-                        ))}
-                      </ul> */}
-                      {image && (
-                        <div className="flex flex-inline justify-center hover:text-red group">
-                          <a href="#content">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="h-12 w-12 text-zinc-100 group-hover:text-orange-600 filter-shadow"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              aria-hidden="true"
-                            >
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                            </svg>
-                          </a>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                {image && (
-                  <div>
-                    <GatsbyImage image={image} alt={mdx.frontmatter.hero_image_alt} className="w-full h-screen" />
-                    {mdx.frontmatter.hero_image_credit_text && (
-                      <PhotoMeta
-                        alt={mdx.frontmatter.hero_image_alt}
-                        credit={mdx.frontmatter.hero_image_credit_text}
-                        url={mdx.frontmatter.hero_image_credit_link}
-                      />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </a>
+                      </div>
                     )}
                   </div>
-                )}
-
-                <div id="content" className="post-content text-zinc-900 dark:text-zinc-300 space-y-10 -mt-12">
-                  <MDXRenderer localImages={mdx.frontmatter.embeddedImagesLocal}>{mdx.body}</MDXRenderer>
                 </div>
+              </div>
 
+              {image && (
+                <div>
+                  <GatsbyImage image={image} alt={mdx.frontmatter.hero_image_alt} className="w-full h-screen" />
+                  {mdx.frontmatter.hero_image_credit_text && (
+                    <PhotoMeta
+                      alt={mdx.frontmatter.hero_image_alt}
+                      credit={mdx.frontmatter.hero_image_credit_text}
+                      url={mdx.frontmatter.hero_image_credit_link}
+                    />
+                  )}
+                </div>
+              )}
+
+              <div id="content" className="post-content text-zinc-900 dark:text-zinc-300 space-y-10 -mt-12 px-4">
+                <MDXRenderer localImages={mdx.frontmatter.embeddedImagesLocal}>{mdx.body}</MDXRenderer>
+              </div>
+
+              <div className="px-4">
                 <LogoBlock />
+              </div>
 
+              <div className="px-4">
                 <WrapperBlock>
                   <div className="flex justify-between items-center space-x-6 py-6">
                     {previous && (

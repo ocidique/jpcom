@@ -24,7 +24,7 @@ const Tags = ({ pageContext, data }) => {
           {tagHeader}
         </p>
 
-        <ul className="inline-flex items-center space-x-3 -ml-3">
+        <ul className="lg:inline-flex lg:items-center lg:space-x-3 -ml-3">
           <li>
             <Link
               to="/blog/"
@@ -45,7 +45,7 @@ const Tags = ({ pageContext, data }) => {
           ))}
         </ul>
 
-        <div className="grid grid-cols-6 lg:grid-cols-12 gap-6">
+        <div className="grid grid-cols-12 gap-6">
           {edges.map(({ node }) => {
             const { title, slug, hero_image, hero_image_alt } = node.frontmatter;
             const postTitle = title || slug;
@@ -53,7 +53,7 @@ const Tags = ({ pageContext, data }) => {
               <Link
                 to={`/blog/${slug}`}
                 key={slug}
-                className="inline-block rounded-lg overflow-hidden shadow-md shadow-zinc-400 dark:shadow-black relative group col-span-4 row-span-1"
+                className="inline-block rounded-lg overflow-hidden shadow-md shadow-zinc-400 dark:shadow-black relative group col-span-12 md:col-span-6 lg:col-span-4 row-span-1"
                 style={{ minHeight: "300px" }}
               >
                 <div

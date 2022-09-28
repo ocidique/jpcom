@@ -31,7 +31,7 @@ const BlogList = ({ pageContext, data }) => {
           I write sometimes.
         </p>
 
-        <ul className="inline-flex items-center space-x-3 -ml-3">
+        <ul className="lg:inline-flex lg:items-center lg:space-x-3 -ml-3">
           <li>
             <Link
               to="/blog/"

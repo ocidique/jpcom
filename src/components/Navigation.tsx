@@ -37,12 +37,12 @@ const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) =
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon
-                      className="block h-6 w-6 text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500"
+                      className="block h-10 w-10 text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500"
                       aria-hidden="true"
                     />
                   ) : (
                     <MenuAlt1Icon
-                      className="block h-6 w-6 text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500"
+                      className="block h-10 w-10 text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500"
                       aria-hidden="true"
                     />
                   )}
@@ -107,9 +107,7 @@ const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) =
               </div>
               <div
                 className={
-                  isPostPage
-                    ? "hidden lg:block px-4 text-zinc-200"
-                    : "hidden lg:block px-4 text-zinc-900 dark:text-orange-600"
+                  isPostPage ? "lg:block px-4 text-zinc-200" : "lg:block px-4 text-zinc-900 dark:text-orange-600"
                 }
               >
                 <Link to="/">

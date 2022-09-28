@@ -53,7 +53,7 @@ const IndexPage = () => {
                   <div className="landing-square">
                     <div className="landing-square__left">
                       {/* <p className="welcome font-mono text-zinc-900 dark:text-zinc-200">welcome to my website</p> */}
-                      <p className="welcome font-mono text-zinc-900 dark:text-zinc-200">juho pekkala</p>
+                      <p className="welcome font-mono text-zinc-900 dark:text-zinc-200 text-3xl">juho pekkala</p>
                     </div>
                     <div className="landing-square__right">
                       <p className="slogan font-mono text-zinc-900 dark:text-zinc-200">
@@ -66,13 +66,20 @@ const IndexPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-col lg:hidden text-center text-5xl text-zinc-900 dark:text-zinc-200">
-              <div className="font-cursive">creative</div>
-              <div className="font-medium">developer</div>
-              <div className="font-medium">&</div>
-              <div className="font-cursive -mt-5" style={{ fontSize: "70px" }}>
-                designer
-              </div>
+            <div className="flex flex-col lg:hidden text-3xl text-zinc-900 dark:text-zinc-200 space-y-2 px-4">
+              <div className="font-mono">hi</div>
+              <div className="font-mono">i'm juho</div>
+              <div className="font-mono">developer</div>
+              <div className="font-mono">&</div>
+              <div className="font-mono">designer</div>
+              {/* <div className="mt-16">
+                <div className="font-cursive">creative</div>
+                <div className="font-medium">developer</div>
+                <div className="font-medium">&</div>
+                <div className="font-cursive -mt-5" style={{ fontSize: "70px" }}>
+                  designer
+                </div>
+              </div> */}
             </div>
           </div>
         </div>
