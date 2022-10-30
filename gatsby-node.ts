@@ -1,13 +1,41 @@
+import type { GatsbyNode } from "gatsby";
+
 const path = require("path");
 const kebabCase = require("lodash.kebabcase");
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
+export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
   const blogPostTemplate = path.resolve("src/templates/post.tsx");
   const tagTemplate = path.resolve("src/templates/tag.tsx");
 
-  const result = await graphql(`
+  const result: {
+    errors?: any;
+    data?: {
+      allMdx: {
+        edges: {
+          node: {
+            id: string;
+            excerpt: string;
+            frontmatter: {
+              date: Date;
+              slug: string;
+              title: string;
+              type: string;
+              tags: [string];
+            };
+          };
+        };
+      };
+      tagsGroup: {
+        allMdx: {
+          group: {
+            fieldValue: string;
+          };
+        };
+      };
+    };
+  } = await graphql(`
     {
       allMdx(sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000) {
         edges {
@@ -38,8 +66,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  const posts = result.data.allMdx.edges;
-  const tags = result.data.tagsGroup.group;
+  const { allMdx, tagsGroup } = result.data;
+
+  const posts = allMdx.edges;
+  const tags = tagsGroup.group;
 
   // Create paginated posts pages
   const postsPerPage = 9;
@@ -73,7 +103,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         next,
       },
     });
-    // }
   });
 
   // Create tag pages

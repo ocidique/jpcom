@@ -1,4 +1,6 @@
-module.exports = {
+import type { GatsbyConfig } from "gatsby";
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: `Juho Pekkala's Website`,
     author: {
@@ -53,5 +55,14 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: "gatsby-plugin-graphql-codegen",
+      options: {
+        filename: "./gatsby-graphql.ts",
+        documentPaths: ["./src/**/*.{ts,tsx}", "./node_modules/gatsby-*/**/*.js", "./gatsby-node.ts"],
+      },
+    },
   ],
 };
+
+export default config;
