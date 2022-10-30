@@ -13,6 +13,7 @@ import SEO from "../components/SEO";
 const Tags = ({ pageContext, data }) => {
   const { tag, tags } = pageContext;
   const { edges, totalCount } = data.allMdx;
+  const posts = edges;
 
   const tagHeader = `${totalCount} post${totalCount === 1 ? "" : "s"} tagged with "${tag}"`;
 
@@ -24,8 +25,8 @@ const Tags = ({ pageContext, data }) => {
           {tagHeader}
         </p>
 
-        <ul className="lg:inline-flex lg:items-center lg:space-x-3 -ml-3">
-          <li>
+        <ul className="lg:inline-flex flex-wrap lg:items-center -ml-3">
+          <li className="lg:mr-3 my-2">
             <Link
               to="/blog/"
               getProps={isCurrent}
@@ -35,7 +36,7 @@ const Tags = ({ pageContext, data }) => {
             </Link>
           </li>
           {tags.map((tag) => (
-            <li key={tag.fieldValue}>
+            <li key={tag.fieldValue} className="lg:mr-3 my-2">
               <Link
                 to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}
                 getProps={isPartiallyCurrent}
@@ -46,7 +47,7 @@ const Tags = ({ pageContext, data }) => {
         </ul>
 
         <div className="grid grid-cols-12 gap-6">
-          {edges.map(({ node }) => {
+          {posts.map(({ node }) => {
             const { title, slug, hero_image, hero_image_alt } = node.frontmatter;
             const postTitle = title || slug;
             return (
@@ -60,14 +61,14 @@ const Tags = ({ pageContext, data }) => {
                   className={
                     hero_image
                       ? "absolute flex z-10 bg-black opacity-30 group-hover:opacity-10 transform transition-opacity w-full h-full"
-                      : "absolute flex z-10 bg-gradient-to-tr from-amber-400 via-orange-300 to-orange-500 dark:hover:text-transparent dark:hover:bg-clip-text dark:bg-gradient-to-tr dark:from-orange-600 dark:via-orange-400 dark:to-amber-300 opacity-80 group-hover:opacity-100 transform transition-opacity w-full h-full"
+                      : "absolute p-1 flex z-10 bg-white group-hover:opacity-50 dark:opacity-50 dark:bg-zinc-900 border-4 border-zinc-900 dark:border-zinc-300 rounded-lg dark:group-hover:opacity-100 transform transition-opacity w-full h-full overflow-hidden"
                   }
                 ></div>
                 <div
                   className={
                     hero_image
-                      ? "absolute flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-1"
-                      : "relative flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-1"
+                      ? "absolute flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-2"
+                      : "relative flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-2"
                   }
                 >
                   <h3 className={hero_image ? "text-xl text-white" : "text-xl text-black dark:text-white"}>
@@ -82,7 +83,6 @@ const Tags = ({ pageContext, data }) => {
             );
           })}
         </div>
-        {/* <Link to="/tags">All tags</Link> */}
       </WrapperBlock>
     </Layout>
   );

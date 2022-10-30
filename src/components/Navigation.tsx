@@ -3,12 +3,13 @@ import { Link } from "gatsby";
 import { Disclosure } from "@headlessui/react";
 import { MenuAlt1Icon, XIcon } from "@heroicons/react/outline";
 
-import { isPartiallyCurrent } from "../helpers/utils";
+import { isCurrent, isPartiallyCurrent } from "../helpers/utils";
 
 import Logo from "../assets/logo.svg";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 
 const navigation = [
+  { name: "home", href: "/" },
   { name: "about", href: "/about/" },
   { name: "cv", href: "/cv/" },
   // { name: "projects", href: "/projects/" },
@@ -29,7 +30,7 @@ const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) =
     <Disclosure as="nav" className={absolute ? "absolute w-full z-20" : "relative w-full z-20"}>
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 xl:px-0">
+          <div className="max-w-5xl mx-auto px-2 sm:px-6 xl:px-0">
             <div className="relative flex items-center justify-between pt-8 pb-12">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -76,7 +77,7 @@ const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) =
                         <Link
                           key={item.name}
                           to={item.href}
-                          getProps={isPartiallyCurrent}
+                          getProps={item.name === "home" ? isCurrent : isPartiallyCurrent}
                           className={
                             isPostPage
                               ? "font-mono text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm px-3 py-2"

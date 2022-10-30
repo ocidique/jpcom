@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 const PhotographyPage = () => {
   return (
     <Layout>
-      <div className="max-w-7xl mx-auto">PhotographyPage</div>
+      <div className="max-w-5xl mx-auto">PhotographyPage</div>
     </Layout>
   );
 };

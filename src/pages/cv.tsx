@@ -47,8 +47,8 @@ const CVPage = () => {
             <div
               className="absolute z-10"
               style={{
-                top: "300px",
-                left: "180px",
+                top: "280px",
+                left: "160px",
                 background: "#9acd32",
                 width: "200px",
                 height: "200px",
@@ -58,8 +58,8 @@ const CVPage = () => {
             <div
               className="absolute w-0 h-0 border z-10"
               style={{
-                top: "400px",
-                left: "170px",
+                top: "380px",
+                left: "150px",
                 transform: "rotate(40deg)",
                 borderWidth: "0 100px 170px 100px",
                 borderColor: "transparent transparent #cd5c5c transparent",
@@ -68,7 +68,7 @@ const CVPage = () => {
             <div
               // className="relative shadow-md border dark:border-zinc-800 rounded-lg p-6 bg-white dark:bg-one-dark-600 z-20 space-y-8 w-80"
               className="relative transform hover:scale-[1.01] transition-all rounded-xl bg-gradient-to-r p-1 from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] z-20 w-80"
-              style={{ top: "60px", left: "60px" }}
+              style={{ top: "40px", left: "40px" }}
             >
               <div className="p-4 rounded-lg bg-white dark:bg-one-dark-600 space-y-8">
                 <p className="italic text-zinc-900 dark:text-zinc-300">
@@ -91,7 +91,7 @@ const CVPage = () => {
 
           <div className="w-full lg:w-3/5 text-zinc-900 space-y-8 px-4 lg:px-0">
             <div className="space-y-4">
-              <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Profile</p>
+              <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Profile</p>
               <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                 A versatile software professional with over 10 years of experience. Lifelong learner. Strongest skill
                 set for front end development, eye for design and usability, but also solid skills for back end
@@ -111,7 +111,7 @@ const CVPage = () => {
             </div>
 
             <div className="space-y-4">
-              <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Expertise</p>
+              <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Expertise</p>
               <ul className="ml-4 space-y-2 text-lg">
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">
@@ -167,7 +167,7 @@ const CVPage = () => {
               </ul>
             </div>
             <div className="space-y-4">
-              <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Languages</p>
+              <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Languages</p>
               <ul className="ml-4 space-y-2 text-lg">
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">Finnish as native</span>
@@ -185,14 +185,14 @@ const CVPage = () => {
 
         <div className="max-w-3xl lg:mx-auto space-y-8">
           <div className="space-y-4 px-4 lg:px-0">
-            <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Education</p>
+            <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Education</p>
             <ul className="flex flex-col space-y-6 lg:space-y-10">
               <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
                 <div className="w-full lg:w-36">
                   <YearLabel>2017 - 2022</YearLabel>
                 </div>
                 <div className="w-full space-y-4">
-                  <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">
+                  <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">
                     M.Sc. in CSE - University of Oulu
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
@@ -225,7 +225,7 @@ const CVPage = () => {
             </ul>
           </div>
           <div className="space-y-4 px-4 lg:px-0 pb-12">
-            <p className="font-semibold text-xl text-zinc-900 dark:text-zinc-300">Experience</p>
+            <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Experience</p>
             <ul className="flex flex-col space-y-10">
               <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
                 <div className="w-full lg:w-36">

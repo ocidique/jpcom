@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 const ResourcesPage = () => {
   return (
     <Layout>
-      <div className="max-w-7xl mx-auto">ResourcesPage</div>
+      <div className="max-w-5xl mx-auto">ResourcesPage</div>
     </Layout>
   );
 };

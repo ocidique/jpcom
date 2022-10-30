@@ -3,19 +3,19 @@ import React from "react";
 const Layout = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="flex flex-col lg:flex-row max-w-7xl mx-auto items-center text-sm relative bottom-0 w-full border-t border-zinc-300 dark:border-zinc-700 mt-10 px-2 sm:px-6 xl:px-0 py-6 lg:py-10 space-y-6 lg:space-y-0">
-      <div className="w-full lg:w-1/2 flex flex-col lg:flex-row lg:space-x-2 text-zinc-700 dark:text-zinc-400 space-y-2 lg:space-y-0">
+    <footer className="flex flex-col lg:flex-row max-w-5xl mx-auto items-center text-sm relative bottom-0 w-full border-t border-zinc-300 dark:border-zinc-700 mt-10 px-2 sm:px-6 xl:px-0 py-6 lg:py-10 space-y-6 lg:space-y-0">
+      <div className="w-full lg:w-1/2 flex flex-col lg:flex-row lg:space-x-2 text-zinc-700 dark:text-zinc-300 space-y-2 lg:space-y-0">
         <span className="flex justify-center lg:justify-start">
           Copyright © Juho Pekkala {currentYear}. All rights reserved.
         </span>
         <span className="flex justify-center lg:justify-start font-mono tracking-tighter">(⌐■_■)</span>
       </div>
-      <div className="w-full lg:w-1/2 flex flex-wrap items-center justify-center lg:justify-end space-x-4 text-zinc-700 dark:text-zinc-400">
+      <div className="w-full lg:w-1/2 flex flex-wrap items-center justify-center lg:justify-end space-x-4 text-zinc-700 dark:text-zinc-300">
         {/* Discord ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 640 512"
-          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400 hover:text-orange-600 hover:cursor-pointer"
+          className="w-5 h-5 shrink-0 fill-zinc-700 fill:text-zinc-300 hover:fill-orange-500 dark:hover-fill-orange-500 hover:cursor-pointer"
           stroke="currentColor"
         >
           <path
@@ -28,7 +28,7 @@ const Layout = () => {
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
-          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400 hover:text-orange-600 hover:cursor-pointer"
+          className="w-5 h-5 shrink-0 fill-zinc-700 fill:text-zinc-300 hover:fill-orange-500 dark:hover-fill-orange-500 hover:cursor-pointer"
           stroke="currentColor"
         >
           <path
@@ -41,7 +41,7 @@ const Layout = () => {
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
-          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400 hover:text-orange-600 hover:cursor-pointer"
+          className="w-5 h-5 shrink-0 fill-zinc-700 fill:text-zinc-300 hover:fill-orange-500 dark:hover-fill-orange-500 hover:cursor-pointer"
           stroke="currentColor"
         >
           <path
@@ -51,11 +51,11 @@ const Layout = () => {
         </svg> */}
 
         {/* Twitter ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
-        <a href="https://twitter.com/ocidique" target="_blank">
+        <a href="https://twitter.com/ocidique" target="_blank" className="hover:text-orange-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400 hover:text-orange-600 hover:cursor-pointer"
+            className="w-5 h-5 shrink-0 fill-zinc-700 fill:text-zinc-300 hover:fill-orange-500 dark:hover-fill-orange-500 hover:cursor-pointer"
             stroke="currentColor"
           >
             <path
@@ -69,7 +69,7 @@ const Layout = () => {
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 496 512"
-          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400 hover:text-orange-600 hover:cursor-pointer"
+          className="w-5 h-5 shrink-0 fill-zinc-700 fill:text-zinc-300 hover:fill-orange-500 dark:hover-fill-orange-500 hover:cursor-pointer"
           stroke="currentColor"
         >
           <path
@@ -82,7 +82,7 @@ const Layout = () => {
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 576 512"
-          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400 hover:text-orange-600 hover:cursor-pointer"
+          className="w-5 h-5 shrink-0 fill-zinc-700 fill:text-zinc-300 hover:fill-orange-500 dark:hover-fill-orange-500 hover:cursor-pointer"
           stroke="currentColor"
         >
           <path
@@ -95,7 +95,7 @@ const Layout = () => {
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
-          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400 hover:text-orange-600 hover:cursor-pointer"
+          className="w-5 h-5 shrink-0 fill-zinc-700 fill:text-zinc-300 hover:fill-orange-500 dark:hover-fill-orange-500 hover:cursor-pointer"
           stroke="currentColor"
         >
           <path
@@ -108,7 +108,7 @@ const Layout = () => {
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 640 512"
-          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400 hover:text-orange-600 hover:cursor-pointer"
+          className="w-5 h-5 shrink-0 fill-zinc-700 fill:text-zinc-300 hover:fill-orange-500 dark:hover-fill-orange-500 hover:cursor-pointer"
           stroke="currentColor"
         >
           <path
@@ -118,11 +118,11 @@ const Layout = () => {
         </svg> */}
 
         {/* LinkedIn ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
-        <a href="https://www.linkedin.com/in/juhopekkala/" target="_blank">
+        <a href="https://www.linkedin.com/in/juhopekkala/" target="_blank" className="hover:text-orange-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
-            className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400 hover:text-orange-600 hover:cursor-pointer"
+            className="w-5 h-5 shrink-0 fill-zinc-700 fill:text-zinc-300 hover:fill-orange-500 dark:hover-fill-orange-500 hover:cursor-pointer"
           >
             <path
               fill="currentColor"
@@ -131,16 +131,16 @@ const Layout = () => {
           </svg>
         </a>
 
-        {/* <div className="font-mono text-zinc-700 dark:text-zinc-400" aria-hidden="true">
+        {/* <div className="font-mono text-zinc-700 dark:text-zinc-300" aria-hidden="true">
           /
         </div> */}
 
         {/* Github ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
-        <a href="https://github.com/ocidique" target="_blank">
+        <a href="https://github.com/ocidique" target="_blank" className="hover:text-orange-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 496 512"
-            className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400 hover:text-orange-600 hover:cursor-pointer"
+            className="w-5 h-5 shrink-0 fill-zinc-700 fill:text-zinc-300 hover:fill-orange-500 dark:hover-fill-orange-500 hover:cursor-pointer"
             stroke="currentColor"
           >
             <path
@@ -151,11 +151,11 @@ const Layout = () => {
         </a>
 
         {/* Codepen ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
-        <a href="https://codepen.io/ocidique" target="_blank">
+        <a href="https://codepen.io/ocidique" target="_blank" className="hover:text-orange-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400 hover:text-orange-600 hover:cursor-pointer"
+            className="w-5 h-5 shrink-0 fill-zinc-700 fill:text-zinc-300 hover:fill-orange-500 dark:hover-fill-orange-500 hover:cursor-pointer"
             stroke="currentColor"
           >
             <path
@@ -169,7 +169,7 @@ const Layout = () => {
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
-          className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400 hover:text-orange-600 hover:cursor-pointer"
+          className="w-5 h-5 shrink-0 fill-zinc-700 fill:text-zinc-300 hover:fill-orange-500 dark:hover-fill-orange-500 hover:cursor-pointer"
           stroke="currentColor"
         >
           <path
@@ -179,11 +179,11 @@ const Layout = () => {
         </svg> */}
 
         {/* Stack Overflow ! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}
-        <a href="https://stackoverflow.com/users/3190280/ocidique" target="_blank">
+        <a href="https://stackoverflow.com/users/3190280/ocidique" target="_blank" className="hover:text-orange-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 384 512"
-            className="w-5 h-5 shrink-0 text-zinc-700 dark:text-zinc-400 hover:text-orange-600 hover:cursor-pointer"
+            className="w-5 h-5 shrink-0 fill-zinc-700 fill:text-zinc-300 hover:fill-orange-500 dark:hover-fill-orange-500 hover:cursor-pointer"
             stroke="currentColor"
           >
             <path

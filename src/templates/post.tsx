@@ -3,11 +3,8 @@ import { Link, graphql } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import kebabCase from "lodash.kebabcase";
 
-import Layout from "../components/Layout";
 import WrapperBlock from "../components/WrapperBlock";
-
 import ContentBlock from "../components/ContentBlock";
 import HighlightBlock from "../components/HighlightBlock";
 import LogoBlock from "../components/LogoBlock";
@@ -26,19 +23,19 @@ const shortcodes = {
 
 const BlogPost = ({ pageContext, data }) => {
   const { mdx } = data;
-  const image = getImage(mdx.frontmatter.hero_image);
+  const displayHeroImage = mdx.frontmatter.display_hero_image;
+  const image = displayHeroImage && getImage(mdx.frontmatter.hero_image);
   const { previous, next } = pageContext;
 
   return (
     <MDXProvider components={shortcodes}>
       <div className="min-h-screen scroll-smooth relative bg-zinc-50 dark:bg-zinc-900 z-30">
-        {/* <div className="absolute w-full z-20 bg-gradient-to-r from-amber-400 via-orange-600 to-orange-300 h-1"></div> */}
         <div className="flex flex-col min-h-screen justify-between">
           <div className="relative">
             {image ? <Navigation absolute isPostPage /> : <Navigation />}
             <div className="space-y-12 -mt-12">
               <div className={image ? "flex flex-col justify-end absolute w-full h-screen z-10" : "w-full"}>
-                <div className="max-w-7xl mx-auto space-y-2 mt-24 mb-12">
+                <div className="max-w-5xl mx-auto space-y-2 mt-24 mb-12">
                   <div className="flex flex-col items-center justify-center space-y-6 text-center">
                     <h1
                       className={
@@ -48,6 +45,7 @@ const BlogPost = ({ pageContext, data }) => {
                       }
                     >
                       {mdx.frontmatter.title}
+                      {mdx.frontmatter.display_hero_image}
                     </h1>
                     <p
                       className={
@@ -56,20 +54,6 @@ const BlogPost = ({ pageContext, data }) => {
                     >
                       {mdx.frontmatter.date}
                     </p>
-                    {/* <ul className="inline-flex items-center space-x-3">
-                      {mdx.frontmatter.tags.map((tag) => (
-                        <li
-                          key={tag}
-                          className={
-                            image
-                              ? "text-shadow-xl text-orange-600 hover:text-orange-500"
-                              : "text-orange-600 hover:text-orange-500"
-                          }
-                        >
-                          <Link to={`/blog/tags/${kebabCase(tag)}/`}>{`#${tag}`}</Link>
-                        </li>
-                      ))}
-                    </ul> */}
                     {image && (
                       <div className="flex flex-inline justify-center hover:text-red group">
                         <a href="#content">
@@ -192,6 +176,7 @@ export const pageQuery = graphql`
         slug
         title
         tags
+        display_hero_image
         hero_image_alt
         hero_image_credit_link
         hero_image_credit_text

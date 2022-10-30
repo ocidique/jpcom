@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 const PortfolioPage = () => {
   return (
     <Layout>
-      <div className="max-w-7xl mx-auto">PortfolioPage</div>
+      <div className="max-w-5xl mx-auto">PortfolioPage</div>
     </Layout>
   );
 };

@@ -12,7 +12,6 @@ import H1 from "../components/H1";
 import SEO from "../components/SEO";
 
 const BlogList = ({ pageContext, data }) => {
-  const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMdx.edges;
   const { currentPage, numPages, tags } = pageContext;
 
@@ -31,8 +30,8 @@ const BlogList = ({ pageContext, data }) => {
           I write sometimes.
         </p>
 
-        <ul className="lg:inline-flex lg:items-center lg:space-x-3 -ml-3">
-          <li>
+        <ul className="lg:inline-flex flex-wrap lg:items-center -ml-3">
+          <li className="lg:mr-3 my-2">
             <Link
               to="/blog/"
               getProps={isPartiallyCurrent}
@@ -42,7 +41,7 @@ const BlogList = ({ pageContext, data }) => {
             </Link>
           </li>
           {tags.map((tag) => (
-            <li key={tag.fieldValue}>
+            <li key={tag.fieldValue} className="lg:mr-3 my-2">
               <Link
                 to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}
                 getProps={isPartiallyCurrent}
@@ -64,22 +63,7 @@ const BlogList = ({ pageContext, data }) => {
                 node.frontmatter.pin,
               "col-span-12 lg:col-span-4 row-span-1": i === 1 || i === 2,
               "col-span-12 lg:col-span-4": i > 2 || currentPage > 1,
-              // "h-64 col-span-3": i === 2 || i === 3 || i === 5 || i > 6,
-              // "col-span-4": currentPage > 1,
-              // "col-span-3 row-span-3": i === 1 && currentPage === 1,
-              // "col-span-3 row-span-2": (i === 4 || i == 6) && currentPage === 1,
             });
-
-            // const cardClass = classNames({
-            //   "inline-block relative group rounded-lg overflow-hidden shadow-md shadow-zinc-400 dark:shadow-black":
-            //     true,
-            //   "p-1 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all col-span-6 row-span-2 box-border":
-            //     node.frontmatter.pin,
-            //   "h-64 col-span-3": i === 2 || i === 3 || i === 5 || i > 6,
-            //   "col-span-4": currentPage > 1,
-            //   "col-span-3 row-span-3": i === 1 && currentPage === 1,
-            //   "col-span-3 row-span-2": (i === 4 || i == 6) && currentPage === 1,
-            // });
 
             return (
               <Link to={`/blog/${slug}`} key={i} className={classNames(cardClass)}>
@@ -103,21 +87,29 @@ const BlogList = ({ pageContext, data }) => {
                       ? `absolute flex z-10 bg-zinc-900 opacity-30 group-hover:opacity-0 transform transition-opacity w-full h-full ${
                           node.frontmatter.pin && "-m-1"
                         }`
-                      : "absolute flex z-10 bg-gradient-to-tr from-amber-400 via-orange-300 to-orange-500 dark:hover:text-transparent dark:hover:bg-clip-text dark:bg-gradient-to-tr dark:from-orange-600 dark:via-orange-400 dark:to-amber-300 opacity-80 group-hover:opacity-100 transform transition-opacity w-full h-full overflow-hidden"
+                      : "absolute p-1 flex z-10 bg-white group-hover:opacity-50 dark:opacity-50 dark:bg-zinc-900 border-4 border-zinc-900 dark:border-zinc-300 rounded-lg dark:group-hover:opacity-100 transform transition-opacity w-full h-full overflow-hidden"
                   }
                 ></div>
                 <div
                   className={
                     hero_image
-                      ? `absolute flex flex-col justify-end w-full h-full p-6 z-20 text-zinc-100 space-y-1 ${
+                      ? `absolute flex flex-col justify-end w-full h-full p-6 z-20 text-zinc-100 space-y-2 ${
                           node.frontmatter.pin && "-m-1"
                         }`
-                      : `relative flex flex-col justify-end w-full h-full p-6 z-20 text-zinc-100 space-y-1 ${
+                      : `relative flex flex-col justify-end w-full h-full p-6 z-20 text-zinc-100 space-y-2 ${
                           node.frontmatter.pin && "-m-1"
                         }`
                   }
                 >
-                  <h3 className={hero_image ? "text-xl text-white" : "text-xl text-black dark:text-white"}>
+                  <h3
+                    className={
+                      node.frontmatter.pin
+                        ? "text-3xl font-medium"
+                        : hero_image
+                        ? "text-xl text-white"
+                        : "text-xl text-black dark:text-white"
+                    }
+                  >
                     {postTitle}
                   </h3>
                   <p className={hero_image ? "font-mono text-sm" : "font-mono text-black dark:text-white text-sm"}>
@@ -132,13 +124,13 @@ const BlogList = ({ pageContext, data }) => {
           })}
         </div>
 
-        <div className="flex justify-center items-center space-x-4">
+        <div className="flex justify-center items-center space-x-4 font-mono">
           <div className="flex justify-end w-56">
             {!isFirst && (
               <Link
                 to={`/blog/${prevPage}`}
                 rel="prev"
-                className="inline-flex items-center space-x-3 px-2 py-1 text-zinc-900 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:text-zinc-900"
+                className="inline-flex items-center space-x-3 px-2 py-1 text-sm text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
@@ -155,10 +147,10 @@ const BlogList = ({ pageContext, data }) => {
           {Array.from({ length: numPages }, (_, i) => (
             <div
               key={`pagination-number-${i + 1}`}
-              className={`${
+              className={`font-mono ${
                 currentPage === i + 1
-                  ? "bg-orange-600 text-white font-medium"
-                  : "text-zinc-900 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:text-zinc-900"
+                  ? "text-orange-600 font-medium underline"
+                  : "text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
               }`}
             >
               <Link to={`/blog/${i === 0 ? "" : i + 1}`} className="flex items-center justify-center w-8 px-3 py-1">
@@ -171,7 +163,7 @@ const BlogList = ({ pageContext, data }) => {
               <Link
                 to={`/blog/${nextPage}`}
                 rel="next"
-                className="inline-flex items-center space-x-3 px-2 py-1 text-zinc-900 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:text-zinc-900"
+                className="inline-flex items-center space-x-3 px-2 py-1 text-sm text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
               >
                 <span>Next Page</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

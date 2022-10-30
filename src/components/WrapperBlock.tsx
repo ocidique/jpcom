@@ -5,7 +5,7 @@ type Props = {
 };
 
 const WrapperBlock: React.FunctionComponent<Props> = ({ children }) => {
-  return <div className="max-w-7xl mx-auto space-y-6 lg:space-y-12">{children}</div>;
+  return <div className="max-w-5xl mx-auto space-y-6 lg:space-y-12">{children}</div>;
 };
 
 export default WrapperBlock;
