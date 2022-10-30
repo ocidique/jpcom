@@ -4,7 +4,7 @@ type Props = {
   isPostPage?: boolean;
 };
 
-function ThemeSwitcher({ isPostPage = false }: Props) {
+const ThemeSwitcher = ({ isPostPage = false }: Props) => {
   const [theme, setTheme] = useState("");
 
   useEffect(() => {
@@ -84,6 +84,6 @@ function ThemeSwitcher({ isPostPage = false }: Props) {
       )}
     </button>
   );
-}
+};
 
 export default ThemeSwitcher;

@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import kebabCase from "lodash.kebabcase";
 import classNames from "classnames";
 
-import { isCurrent, isPartiallyCurrent } from "../helpers/utils";
+import { isPartiallyCurrent } from "../helpers/utils";
 
 import Layout from "../components/Layout";
 import WrapperBlock from "../components/WrapperBlock";
@@ -188,11 +188,6 @@ export const Head = () => <SEO title="Blog" />;
 
 export const pageQuery = graphql`
   query blogPageQuery($skip: Int!, $limit: Int!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMdx(
       sort: { fields: [frontmatter___pin, frontmatter___date], order: [ASC, DESC] }
       filter: { frontmatter: { type: { eq: "blog" } } }

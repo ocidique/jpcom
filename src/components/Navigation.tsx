@@ -25,7 +25,6 @@ type Props = {
 };
 
 const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) => {
-  // const pathname = typeof window !== "undefined" ? window.location.pathname : "";
   return (
     <Disclosure as="nav" className={absolute ? "absolute w-full z-20" : "relative w-full z-20"}>
       {({ open }) => (
@@ -52,25 +51,6 @@ const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) =
 
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-col space-y-8">
-                  {/* <div className="flex items-center pl-4">
-                    {pathname === "/" ? (
-                      <div className="font-cursive text-4xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-200">
-                        juho pekkala
-                      </div>
-                    ) : (
-                      <Link
-                        to="/"
-                        className={
-                          isPostPage
-                            ? "font-cursive text-4xl md:text-5xl font-semibold text-zinc-200 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-amber-400 hover:via-orange-600 hover:to-orange-300 dark:hover:text-transparent dark:hover:bg-clip-text dark:hover:bg-gradient-to-r dark:hover:from-amber-400 dark:hover:via-orange-600 dark:hover:to-orange-300 p-5 -m-5"
-                            : "font-cursive text-4xl md:text-5xl font-semibold text-zinc-900 dark:text-zinc-200 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-amber-400 hover:via-orange-600 hover:to-orange-300 dark:hover:text-transparent dark:hover:bg-clip-text dark:hover:bg-gradient-to-r dark:hover:from-amber-400 dark:hover:via-orange-600 dark:hover:to-orange-300 p-5 -m-5"
-                        }
-                      >
-                        juho pekkala
-                      </Link>
-                    )}
-                  </div> */}
-
                   <div className="hidden sm:flex sm:items-center">
                     <div className="flex flex-wrap items-center space-x-5 -ml-3">
                       {navigation.map((item) => (
