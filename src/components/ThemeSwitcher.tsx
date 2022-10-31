@@ -24,7 +24,7 @@ const ThemeSwitcher = ({ isPostPage = false }: Props) => {
 
   function applyTheme(theme: string) {
     setTheme(theme);
-    document.body.className = theme;
+    document.documentElement.className = theme;
   }
 
   function rotateTheme(theme: string) {
