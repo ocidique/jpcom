@@ -352,6 +352,6 @@ const CVPage = () => {
   );
 };
 
-export const Head = () => <SEO title="Curriculum Vitae" />;
+export const Head = () => <SEO title="CV" description="Juho Pekkala's Curriculum Vitae" />;
 
 export default CVPage;

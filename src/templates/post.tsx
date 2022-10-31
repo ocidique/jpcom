@@ -164,7 +164,7 @@ export default BlogPost;
 
 export const Head = ({ pageContext, data }) => {
   const { mdx } = data;
-  return <SEO title={mdx.frontmatter.title} />;
+  return <SEO title={mdx.frontmatter.title} description="Juho Pekkala's personal blog" />;
 };
 
 export const pageQuery = graphql`

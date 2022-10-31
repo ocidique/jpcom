@@ -71,6 +71,6 @@ const AboutPage = () => {
   );
 };
 
-export const Head = () => <SEO title="About me" />;
+export const Head = () => <SEO title="about" description="About Juho Pekkala" />;
 
 export default AboutPage;

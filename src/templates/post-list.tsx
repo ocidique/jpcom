@@ -184,7 +184,7 @@ const BlogList = ({ pageContext, data }) => {
 
 export default BlogList;
 
-export const Head = () => <SEO title="Blog" />;
+export const Head = () => <SEO title="blog" description="Juho Pekkala's personal blog" />;
 
 export const pageQuery = graphql`
   query blogPageQuery($skip: Int!, $limit: Int!) {

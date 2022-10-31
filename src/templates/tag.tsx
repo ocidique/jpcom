@@ -100,8 +100,8 @@ export const Head = ({ pageContext, data }) => {
   const { tag } = pageContext;
   const { totalCount } = data.allMdx;
 
-  const tagHeader = `Posts${totalCount === 1 ? "" : "s"} tagged with "${tag}"`;
-  return <SEO title={tagHeader} />;
+  const tagHeader = `blog posts tagged with "${tag}"`;
+  return <SEO title={tagHeader} description="Juho Pekkala's personal blog" />;
 };
 
 export const pageQuery = graphql`
