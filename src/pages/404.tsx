@@ -1,22 +1,9 @@
-import * as React from "react";
-import { Link } from "gatsby";
+import React from "react";
+import Layout from "../components/Layout";
+import WrapperBlock from "../components/WrapperBlock";
+import H1 from "../components/H1";
 import SEO from "../components/SEO";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-
-const paragraphStyles = {
-  marginBottom: 48,
-};
 const codeStyles = {
   color: "#8A6534",
   padding: 4,
@@ -25,33 +12,29 @@ const codeStyles = {
   borderRadius: 4,
 };
 
-// markup
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
+    <Layout>
+      <WrapperBlock>
+        <H1>page not found</H1>
+        <p className="text-zinc-900 dark:text-zinc-300">
+          yikes, this is not the page you're looking for!
+          <span role="img" aria-label="Droid emoji" className="mx-2">
+            🤖
+          </span>
+        </p>
         {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
+          <p className="text-zinc-900 dark:text-zinc-300">
             Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
+          </p>
         ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+      </WrapperBlock>
+    </Layout>
   );
 };
 
-export const Head = () => <SEO title="404: Page Not Found" />;
+export const Head = () => (
+  <SEO title="yikes, this is not the page you're looking for!" description="404: Page Not Found" />
+);
 
 export default NotFoundPage;
