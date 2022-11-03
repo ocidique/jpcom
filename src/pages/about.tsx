@@ -57,7 +57,7 @@ const AboutPage = () => {
               </p>
             </div>
             <div className="flex flex-col space-y-4">
-              {/* <CTA to="#">Read more about me in the introduction post</CTA> */}
+              <CTA to="/blog/hello-world/">Read more about me in the introduction post</CTA>
               <CTA to="/cv/">Here to check my CV?</CTA>
               {/* <CTA to="#">Check out my work portfolio</CTA> */}
               {/* <CTA to="#">Check out my hobby photography</CTA> */}
