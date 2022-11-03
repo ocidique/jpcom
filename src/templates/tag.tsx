@@ -30,7 +30,7 @@ const Tags = ({ pageContext, data }) => {
             <Link
               to="/blog/"
               getProps={isCurrent}
-              className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 px-3 py-2"
+              className="font-mono text-zinc-900 dark:text-zinc-300 group-hover:underline :text-orange-500 dark:hover:text-orange-500 px-3 py-2"
             >
               all
             </Link>
@@ -40,7 +40,7 @@ const Tags = ({ pageContext, data }) => {
               <Link
                 to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}
                 getProps={isPartiallyCurrent}
-                className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 px-3 py-2"
+                className="font-mono text-zinc-900 dark:text-zinc-300 hover:underline hover:text-orange-500 dark:hover:text-orange-500 px-3 py-2"
               >{`${tag.fieldValue}`}</Link>
             </li>
           ))}
@@ -54,31 +54,35 @@ const Tags = ({ pageContext, data }) => {
               <Link
                 to={`/blog/${slug}`}
                 key={slug}
-                className="inline-block rounded-lg overflow-hidden shadow-md shadow-zinc-400 dark:shadow-black relative group col-span-12 md:col-span-6 lg:col-span-4 row-span-1"
-                style={{ minHeight: "300px" }}
+                className="inline-block rounded-lg overflow-hidden relative group col-span-12 md:col-span-6 lg:col-span-4 row-span-1 p-1 bg-zinc-800 dark:bg-zinc-300"
+                style={{ minHeight: "220px", maxHeight: "220px" }}
               >
                 <div
                   className={
                     hero_image
-                      ? "absolute flex z-10 bg-black opacity-30 group-hover:opacity-10 transform transition-opacity w-full h-full"
-                      : "absolute p-1 flex z-10 bg-white group-hover:opacity-50 dark:opacity-50 dark:bg-zinc-900 border-4 border-zinc-900 dark:border-zinc-300 rounded-lg dark:group-hover:opacity-100 transform transition-opacity w-full h-full overflow-hidden"
+                      ? "absolute flex z-10 bg-zinc-900 opacity-20 group-hover:opacity-0 transform transition-opacity w-full h-full -m-1"
+                      : "absolute flex z-10 bg-zinc-900 opacity-5 dark:opacity-30 group-hover:opacity-0 transform transition-opacity w-full h-full -m-1"
                   }
                 ></div>
-                <div
-                  className={
-                    hero_image
-                      ? "absolute flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-2"
-                      : "relative flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-2"
-                  }
-                >
-                  <h3 className={hero_image ? "text-xl text-white" : "text-xl text-black dark:text-white"}>
+                <div className={"absolute flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-2"}>
+                  <h3
+                    className={
+                      hero_image
+                        ? "text-xl text-white group-hover:underline"
+                        : "text-xl text-black dark:text-white group-hover:underline"
+                    }
+                  >
                     {postTitle}
                   </h3>
                   <p className={hero_image ? "font-mono text-sm" : "font-mono text-black dark:text-zinc-100 text-sm"}>
                     {node.frontmatter.date}
                   </p>
                 </div>
-                {hero_image && <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full" />}
+                {hero_image ? (
+                  <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full rounded-md" />
+                ) : (
+                  <div className="bg-white dark:bg-zinc-900 h-full w-full rounded-md"></div>
+                )}
               </Link>
             );
           })}

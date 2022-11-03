@@ -43,12 +43,13 @@ const ThemeSwitcher = ({ isPostPage = false }: Props) => {
   return (
     <button
       onClick={() => toggleTheme()}
+      id="theme-switcher"
       title="Toggle theme between light and dark"
       aria-label="Toggle theme between light and dark"
       className={
         isPostPage
-          ? "text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500 lg:px-3 lg:py-2"
-          : "text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500 lg:px-3 lg:py-2"
+          ? "bg-zinc-50 dark:bg-zinc-900 rounded-full text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500 lg:p-2"
+          : "text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500 lg:p-2"
       }
     >
       {theme === "dark" ? (

@@ -24,7 +24,7 @@ const IndexPage = () => {
                 <div className="relative z-50">
                   <div
                     className="font-cursive absolute text-zinc-100 text-shadow-xl text-center"
-                    style={{ fontSize: "60px", top: "-30px", left: "60px" }}
+                    style={{ fontSize: "60px", top: "-32px", left: "55px", transform: "rotate(-6deg)" }}
                   >
                     creative
                   </div>

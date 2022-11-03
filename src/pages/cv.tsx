@@ -32,7 +32,7 @@ const CVPage = () => {
               </span>
             </h1>
           </div>
-          <p className="text-orange-600 text-center mt-12">#webdev #frontend #fullstack</p>
+          <p className="text-orange-600 text-center mt-12">#webdev #frontend #fullstack #uxengineer</p>
           <p className="text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-relaxed tracking-wider py-6 text-center px-12 lg:px-0">
             Hello, is it me you're looking for? A talented modern web software developer? The one who can design and
             code apps that are good looking, diamond cut sharp and accessible! 💎
@@ -66,7 +66,6 @@ const CVPage = () => {
               }}
             ></div>
             <div
-              // className="relative shadow-md border dark:border-zinc-800 rounded-lg p-6 bg-white dark:bg-one-dark-600 z-20 space-y-8 w-80"
               className="relative transform hover:scale-[1.01] transition-all rounded-xl bg-gradient-to-r p-1 from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] z-20 w-80"
               style={{ top: "40px", left: "40px" }}
             >
@@ -123,10 +122,7 @@ const CVPage = () => {
                   <span className="text-zinc-900 dark:text-zinc-300">HTML, CSS, JavaScript, Typescript, React</span>
                 </li>
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Design Systems</span>
-                </li>
-                <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">UI/UX, Accessibility, RWD</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">UI/UX, Design Systems, Accessibility, RWD</span>
                 </li>
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">
@@ -134,7 +130,7 @@ const CVPage = () => {
                   </span>
                 </li>
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Python, Django, NodeJS</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">Python, Django, NodeJS, Java</span>
                 </li>
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">REST, GraphQL</span>
@@ -187,7 +183,7 @@ const CVPage = () => {
           <div className="space-y-4 px-4 lg:px-0">
             <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Education</p>
             <ul className="flex flex-col space-y-6 lg:space-y-10">
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
+              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
                 <div className="w-full lg:w-36">
                   <YearLabel>2017 - 2022</YearLabel>
                 </div>
@@ -207,7 +203,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
+              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
                 <div className="w-full lg:w-36">
                   <YearLabel>2009 - 2013</YearLabel>
                 </div>
@@ -227,7 +223,7 @@ const CVPage = () => {
           <div className="space-y-4 px-4 lg:px-0 pb-12">
             <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Experience</p>
             <ul className="flex flex-col space-y-10">
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
+              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
                 <div className="w-full lg:w-36">
                   <YearLabel>2022 -</YearLabel>
                 </div>
@@ -248,7 +244,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
+              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
                 <div className="w-full lg:w-36">
                   <YearLabel>2018 - 2021</YearLabel>
                 </div>
@@ -269,7 +265,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
+              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
                 <div className="w-full lg:w-36">
                   <YearLabel>2017 - 2018</YearLabel>
                 </div>
@@ -283,7 +279,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
+              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
                 <div className="w-full lg:w-36">
                   <YearLabel>2013 - 2017</YearLabel>
                 </div>
@@ -297,7 +293,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
+              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
                 <div className="w-full lg:w-36">
                   <YearLabel>2011 - 2014</YearLabel>
                 </div>
@@ -307,7 +303,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
+              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
                 <div className="w-full lg:w-36">
                   <YearLabel>2012</YearLabel>
                 </div>
@@ -321,7 +317,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
+              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
                 <div className="w-full lg:w-36">
                   <YearLabel>2012</YearLabel>
                 </div>
@@ -333,7 +329,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row bg-white dark:bg-one-dark-600 lg:space-x-4 space-y-4 lg:space-y-0 border border-zinc-300 dark:border-zinc-700 p-6 rounded">
+              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
                 <div className="w-full lg:w-36">
                   <YearLabel>2010</YearLabel>
                 </div>

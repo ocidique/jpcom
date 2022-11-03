@@ -73,15 +73,15 @@
 /* Post content */
 
 .post-content ul {
-  @apply max-w-2xl mx-auto pl-5 space-y-2 text-lg list-disc;
+  @apply max-w-2xl mx-auto pl-5 space-y-2 text-xl leading-9 list-disc;
 }
 
 .post-content ol {
-  @apply max-w-2xl mx-auto pl-5 space-y-2 text-lg list-decimal;
+  @apply max-w-2xl mx-auto pl-5 space-y-2 text-xl leading-9 list-decimal;
 }
 
 .post-content h1 {
-  @apply max-w-2xl mx-auto text-2xl font-semibold;
+  @apply max-w-2xl mx-auto text-3xl font-semibold;
 }
 
 .post-content h2 {
@@ -93,7 +93,7 @@
 }
 
 .post-content h4 {
-  @apply max-w-2xl mx-auto text-lg font-semibold;
+  @apply max-w-2xl mx-auto text-xl font-semibold;
 }
 
 .post-content h2 + p,
@@ -112,7 +112,7 @@
 }
 
 .post-content p {
-  @apply max-w-2xl mx-auto text-lg space-y-3;
+  @apply max-w-2xl mx-auto text-xl leading-9 space-y-3;
 }
 
 .post-content .post-photo-meta {
@@ -120,7 +120,7 @@
 }
 
 .post-content blockquote {
-  @apply max-w-2xl mx-auto text-lg pl-6 py-1 border-l-4 border-orange-500 space-y-3;
+  @apply max-w-2xl mx-auto text-xl pl-6 py-1 border-l-4 border-orange-500 space-y-3;
 }
 
 .post-content pre {
@@ -152,11 +152,11 @@
 }
 
 .post-content th {
-  @apply px-3.5 py-4 text-left font-semibold sm:pl-6;
+  @apply px-2.5 py-3 text-left text-lg font-semibold sm:pl-6;
 }
 
 .post-content td {
-  @apply whitespace-nowrap px-3.5 py-4 text-sm sm:pl-6;
+  @apply whitespace-nowrap px-2.5 py-3 text-base sm:pl-6;
 }
 
 /* Frontpage */

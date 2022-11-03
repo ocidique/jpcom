@@ -35,7 +35,7 @@ const BlogPost = ({ pageContext, data }) => {
             {image ? <Navigation absolute isPostPage /> : <Navigation />}
             <div className="space-y-12 -mt-12">
               <div className={image ? "flex flex-col justify-end absolute w-full h-screen z-10" : "w-full"}>
-                <div className="max-w-5xl mx-auto space-y-2 mt-24 mb-12">
+                <div className="max-w-5xl mx-auto space-y-2 mt-24 mb-16">
                   <div className="flex flex-col items-center justify-center space-y-6 text-center">
                     <h1
                       className={
@@ -103,7 +103,7 @@ const BlogPost = ({ pageContext, data }) => {
                       <Link
                         to={`/blog/${previous.frontmatter.slug}`}
                         rel="prev"
-                        className="inline-flex w-full items-center justify-start space-x-3 font-medium text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 "
+                        className="inline-flex w-full items-center justify-start space-x-3 text-lg font-bold text-zinc-900 dark:text-zinc-300 hover:underline hover:text-orange-500 dark:hover:text-orange-500 "
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -125,7 +125,7 @@ const BlogPost = ({ pageContext, data }) => {
                       <Link
                         to={`/blog/${next.frontmatter.slug}`}
                         rel="next"
-                        className="inline-flex w-full items-center justify-end space-x-3 font-medium text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
+                        className="inline-flex w-full items-center justify-end space-x-3 text-lg font-bold text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
                       >
                         <span>{next.frontmatter.title}</span>
                         <svg

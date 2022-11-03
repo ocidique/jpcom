@@ -52,7 +52,13 @@ const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) =
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-col space-y-8">
                   <div className="hidden sm:flex sm:items-center">
-                    <div className="flex flex-wrap items-center space-x-5 -ml-3">
+                    <div
+                      className={
+                        isPostPage
+                          ? "bg-zinc-50 dark:bg-zinc-900 rounded-full flex flex-wrap items-center space-x-5 -ml-3 px-3"
+                          : "flex flex-wrap items-center space-x-5 -ml-3 px-3"
+                      }
+                    >
                       {navigation.map((item) => (
                         <Link
                           key={item.name}
@@ -60,8 +66,8 @@ const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) =
                           getProps={item.name === "home" ? isCurrent : isPartiallyCurrent}
                           className={
                             isPostPage
-                              ? "font-mono text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm px-3 py-2"
-                              : "font-mono text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500 rounded-md text-2sm px-3 py-2"
+                              ? "font-mono text-zinc-900 dark:text-zinc-200 hover:underline hover:text-orange-500 dark:hover:text-orange-500 text-2sm px-3 py-2"
+                              : "font-mono text-zinc-900 dark:text-zinc-200 hover:underline hover:text-orange-500 dark:hover:text-orange-500 text-2sm px-3 py-2"
                           }
                         >
                           {item.name}
@@ -69,7 +75,7 @@ const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) =
                       ))}
                       {isPostPage ? (
                         <>
-                          <div className="font-mono text-zinc-200" aria-hidden="true">
+                          <div className={"font-mono text-zinc-900 dark:text-zinc-200"} aria-hidden="true">
                             /
                           </div>
                           <ThemeSwitcher isPostPage />

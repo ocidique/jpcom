@@ -45,7 +45,7 @@ const BlogList = ({ pageContext, data }) => {
               <Link
                 to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}
                 getProps={isPartiallyCurrent}
-                className="font-mono text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500 px-3 py-2"
+                className="font-mono text-zinc-900 dark:text-zinc-300 hover:underline hover:text-orange-500 dark:hover:text-orange-500 px-3 py-2"
               >{`${tag.fieldValue}`}</Link>
             </li>
           ))}
@@ -57,10 +57,10 @@ const BlogList = ({ pageContext, data }) => {
             const postTitle = title || slug;
 
             const cardClass = classNames({
-              "inline-block relative group rounded-lg overflow-hidden shadow-md shadow-zinc-400 dark:shadow-black":
-                true,
-              "p-1 bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all col-span-12 lg:col-span-8 row-span-2 box-border":
+              "inline-block relative rounded-lg group overflow-hidden p-1": true,
+              "bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all col-span-12 lg:col-span-8 row-span-2":
                 node.frontmatter.pin,
+              "bg-zinc-800 dark:bg-zinc-300": !node.frontmatter.pin,
               "col-span-12 lg:col-span-4 row-span-1": i === 1 || i === 2,
               "col-span-12 lg:col-span-4": i > 2 || currentPage > 1,
             });
@@ -81,33 +81,32 @@ const BlogList = ({ pageContext, data }) => {
                   </svg>
                 )}
 
-                <div
+                {/* <div
                   className={
                     hero_image
                       ? `absolute flex z-10 bg-zinc-900 opacity-30 group-hover:opacity-0 transform transition-opacity w-full h-full ${
                           node.frontmatter.pin && "-m-1"
                         }`
-                      : "absolute p-1 flex z-10 bg-white group-hover:opacity-50 dark:opacity-50 dark:bg-zinc-900 border-4 border-zinc-900 dark:border-zinc-300 rounded-lg dark:group-hover:opacity-100 transform transition-opacity w-full h-full overflow-hidden"
+                      : "absolute p-1 flex z-10 bg-white group-hover:opacity-50 dark:opacity-50 dark:bg-zinc-900 border-4 border-zinc-900 dark:border-zinc-300 dark:group-hover:opacity-100 transform transition-opacity w-full h-full overflow-hidden"
                   }
-                ></div>
+                ></div> */}
                 <div
                   className={
                     hero_image
-                      ? `absolute flex flex-col justify-end w-full h-full p-6 z-20 text-zinc-100 space-y-2 ${
-                          node.frontmatter.pin && "-m-1"
-                        }`
-                      : `relative flex flex-col justify-end w-full h-full p-6 z-20 text-zinc-100 space-y-2 ${
-                          node.frontmatter.pin && "-m-1"
-                        }`
+                      ? "absolute flex z-10 bg-zinc-900 opacity-20 group-hover:opacity-0 transform transition-opacity w-full h-full -m-1"
+                      : "absolute flex z-10 bg-zinc-900 opacity-5 dark:opacity-30 group-hover:opacity-0 transform transition-opacity w-full h-full -m-1"
                   }
+                ></div>
+                <div
+                  className={"absolute flex flex-col justify-end w-full h-full p-6 z-20 text-zinc-100 space-y-2 -m-1"}
                 >
                   <h3
                     className={
                       node.frontmatter.pin
-                        ? "text-3xl font-medium"
+                        ? "text-3xl font-medium group-hover:underline"
                         : hero_image
-                        ? "text-xl text-white"
-                        : "text-xl text-black dark:text-white"
+                        ? "text-xl text-white group-hover:underline"
+                        : "text-xl text-black dark:text-white group-hover:underline"
                     }
                   >
                     {postTitle}
@@ -116,8 +115,10 @@ const BlogList = ({ pageContext, data }) => {
                     {node.frontmatter.date}
                   </p>
                 </div>
-                {hero_image && (
+                {hero_image ? (
                   <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full rounded-md" />
+                ) : (
+                  <div className="bg-white dark:bg-zinc-900 h-full w-full rounded-md"></div>
                 )}
               </Link>
             );
@@ -130,7 +131,7 @@ const BlogList = ({ pageContext, data }) => {
               <Link
                 to={`/blog/${prevPage}`}
                 rel="prev"
-                className="inline-flex items-center space-x-3 px-2 py-1 text-sm text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
+                className="inline-flex items-center space-x-3 px-2 py-1 text-sm text-zinc-900 dark:text-zinc-300 hover:underline hover:text-orange-500 dark:hover:text-orange-500"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path
@@ -150,7 +151,7 @@ const BlogList = ({ pageContext, data }) => {
               className={`font-mono ${
                 currentPage === i + 1
                   ? "text-orange-600 font-medium underline"
-                  : "text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
+                  : "text-zinc-900 dark:text-zinc-300 hover:underline hover:text-orange-500 dark:hover:text-orange-500"
               }`}
             >
               <Link to={`/blog/${i === 0 ? "" : i + 1}`} className="flex items-center justify-center w-8 px-3 py-1">
@@ -163,7 +164,7 @@ const BlogList = ({ pageContext, data }) => {
               <Link
                 to={`/blog/${nextPage}`}
                 rel="next"
-                className="inline-flex items-center space-x-3 px-2 py-1 text-sm text-zinc-900 dark:text-zinc-300 hover:text-orange-500 dark:hover:text-orange-500"
+                className="inline-flex items-center space-x-3 px-2 py-1 text-sm text-zinc-900 dark:text-zinc-300 hover:underline hover:text-orange-500 dark:hover:text-orange-500"
               >
                 <span>Next Page</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
