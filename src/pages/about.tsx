@@ -35,13 +35,13 @@ const AboutPage = () => {
               <DotPattern />
             </div>
             <div
-              className="absolute rounded-full transform hover:scale-[1.01] transition-all bg-gradient-to-r p-1 from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] z-40"
-              style={{ top: "50px", left: "80px" }}
+              className="absolute rounded-full transform hover:scale-[1.01] transition-all bg-gradient-to-r p-1 from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] z-40 shrink-0"
+              style={{ width: "200px", height: "200px", top: "50px", left: "80px" }}
             >
               <StaticImage
                 src="../assets/juho_profile.jpg"
                 alt="Juho's profile picture"
-                className="p-4 rounded-full z-40 shrink-0"
+                className="p-4 rounded-full z-40"
               />
             </div>
           </div>

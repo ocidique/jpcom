@@ -35,7 +35,7 @@ const BlogPost = ({ pageContext, data }) => {
             {image ? <Navigation absolute isPostPage /> : <Navigation />}
             <div className="space-y-12 -mt-12">
               <div className={image ? "flex flex-col justify-end absolute w-full h-screen z-10" : "w-full"}>
-                <div className="max-w-5xl mx-auto space-y-2 mt-24 mb-16">
+                <div className="max-w-5xl mx-auto space-y-2 mt-24 mb-12">
                   <div className="flex flex-col items-center justify-center space-y-6 text-center">
                     <h1
                       className={

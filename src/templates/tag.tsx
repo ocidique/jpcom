@@ -81,7 +81,10 @@ const Tags = ({ pageContext, data }) => {
                 {hero_image ? (
                   <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full rounded-md" />
                 ) : (
-                  <div className="bg-white dark:bg-zinc-900 h-full w-full rounded-md"></div>
+                  <div
+                    className="bg-white dark:bg-zinc-900 h-full w-full rounded-md"
+                    style={{ minHeight: "220px" }}
+                  ></div>
                 )}
               </Link>
             );

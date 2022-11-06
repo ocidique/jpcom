@@ -55,8 +55,8 @@ const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) =
                     <div
                       className={
                         isPostPage
-                          ? "bg-zinc-50 dark:bg-zinc-900 rounded-full flex flex-wrap items-center space-x-5 -ml-3 px-3"
-                          : "flex flex-wrap items-center space-x-5 -ml-3 px-3"
+                          ? "bg-zinc-50 dark:bg-zinc-900 rounded-full flex flex-wrap items-center space-x-5 -ml-6 px-3"
+                          : "flex flex-wrap items-center space-x-5 -ml-6 px-3"
                       }
                     >
                       {navigation.map((item) => (
@@ -65,9 +65,7 @@ const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) =
                           to={item.href}
                           getProps={item.name === "home" ? isCurrent : isPartiallyCurrent}
                           className={
-                            isPostPage
-                              ? "font-mono text-zinc-900 dark:text-zinc-200 hover:underline hover:text-orange-500 dark:hover:text-orange-500 text-2sm px-3 py-2"
-                              : "font-mono text-zinc-900 dark:text-zinc-200 hover:underline hover:text-orange-500 dark:hover:text-orange-500 text-2sm px-3 py-2"
+                            "font-mono text-zinc-900 dark:text-zinc-200 hover:underline hover:text-orange-500 dark:hover:text-orange-500 text-2sm px-3 py-2"
                           }
                         >
                           {item.name}
@@ -110,7 +108,7 @@ const Navigation: React.FC<Props> = ({ absolute = false, isPostPage = false }) =
                 <Link
                   key={item.name}
                   to={item.href}
-                  getProps={isPartiallyCurrent}
+                  getProps={item.name === "home" ? isCurrent : isPartiallyCurrent}
                   className={
                     "font-mono text-zinc-900 dark:text-zinc-200 hover:text-orange-500 dark:hover:text-orange-500 px-3 py-2 rounded-md text-2sm"
                   }

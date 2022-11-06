@@ -48,7 +48,7 @@ const IndexPage = () => {
                   </div>
                 </div>
 
-                <div className="landing hidden xl:flex">
+                <div className="landing hidden lg:flex">
                   <div className="landing-circle" />
                   <div className="landing-square">
                     <div className="landing-square__left">
@@ -65,12 +65,31 @@ const IndexPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-col lg:hidden text-3xl text-zinc-900 dark:text-zinc-200 space-y-2 px-4">
-              <div className="font-mono">hi</div>
-              <div className="font-mono">i'm juho</div>
-              <div className="font-mono">developer</div>
-              <div className="font-mono">&</div>
-              <div className="font-mono">designer</div>
+            <div className="flex flex-col lg:hidden text-3xl space-y-2 px-4">
+              <div>
+                <p className="text-center text-xl font-medium text-zinc-900 dark:text-zinc-300 uppercase mb-6">
+                  Juho Pekkala
+                </p>
+                <h1 className="flex flex-col lg:flex-row relative justify-center items-center lg:space-x-6 text-6xl font-medium text-center text-zinc-100 text-shadow-xlmt-6 lg:mt-12">
+                  <span
+                    className="font-cursive relative text-shadow-xl text-center"
+                    style={{ fontSize: "50px", top: "10px", left: "-50px", transform: "rotate(-6deg)" }}
+                  >
+                    creative
+                  </span>
+                  <span className="font-poppins font-semibold text-shadow-xl tracking-tight">developer</span>
+                  <span className="block lg:hidden font-cursive text-shadow-xl">&</span>
+                  <span className="hidden lg:block font-cursive -mt-4" style={{ fontSize: "100px" }}>
+                    &
+                  </span>
+                  <span
+                    className="font-cursive text-shadow-xl -mt-10"
+                    style={{ fontSize: "120px", transform: "rotate(-9deg)" }}
+                  >
+                    designer
+                  </span>
+                </h1>
+              </div>
             </div>
           </div>
         </div>

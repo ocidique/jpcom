@@ -61,8 +61,8 @@ const BlogList = ({ pageContext, data }) => {
               "bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all col-span-12 lg:col-span-8 row-span-2":
                 node.frontmatter.pin,
               "bg-zinc-800 dark:bg-zinc-300": !node.frontmatter.pin,
-              "col-span-12 lg:col-span-4 row-span-1": i === 1 || i === 2,
-              "col-span-12 lg:col-span-4": i > 2 || currentPage > 1,
+              "col-span-12 lg:col-span-4 row-span-2": i === 1 && currentPage === 1,
+              "col-span-12 lg:col-span-4": i > 1 || currentPage > 1,
             });
 
             return (
@@ -118,7 +118,10 @@ const BlogList = ({ pageContext, data }) => {
                 {hero_image ? (
                   <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full rounded-md" />
                 ) : (
-                  <div className="bg-white dark:bg-zinc-900 h-full w-full rounded-md"></div>
+                  <div
+                    className="bg-white dark:bg-zinc-900 h-full w-full rounded-md"
+                    style={{ minHeight: "220px" }}
+                  ></div>
                 )}
               </Link>
             );

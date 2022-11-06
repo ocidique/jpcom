@@ -183,7 +183,7 @@ const CVPage = () => {
           <div className="space-y-4 px-4 lg:px-0">
             <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Education</p>
             <ul className="flex flex-col space-y-6 lg:space-y-10">
-              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
+              <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
                   <YearLabel>2017 - 2022</YearLabel>
                 </div>
@@ -203,7 +203,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
+              <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
                   <YearLabel>2009 - 2013</YearLabel>
                 </div>
@@ -223,7 +223,7 @@ const CVPage = () => {
           <div className="space-y-4 px-4 lg:px-0 pb-12">
             <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Experience</p>
             <ul className="flex flex-col space-y-10">
-              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
+              <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
                   <YearLabel>2022 -</YearLabel>
                 </div>
@@ -244,7 +244,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
+              <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
                   <YearLabel>2018 - 2021</YearLabel>
                 </div>
@@ -265,7 +265,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
+              <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
                   <YearLabel>2017 - 2018</YearLabel>
                 </div>
@@ -279,7 +279,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
+              <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
                   <YearLabel>2013 - 2017</YearLabel>
                 </div>
@@ -293,7 +293,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
+              <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
                   <YearLabel>2011 - 2014</YearLabel>
                 </div>
@@ -303,7 +303,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
+              <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
                   <YearLabel>2012</YearLabel>
                 </div>
@@ -317,7 +317,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
+              <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
                   <YearLabel>2012</YearLabel>
                 </div>
@@ -329,7 +329,7 @@ const CVPage = () => {
                 </div>
               </li>
 
-              <li className="flex flex-col lg:flex-row  lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 p-6 lg:px-0">
+              <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
                   <YearLabel>2010</YearLabel>
                 </div>
