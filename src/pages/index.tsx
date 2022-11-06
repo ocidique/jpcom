@@ -29,7 +29,7 @@ const IndexPage = () => {
                     creative
                   </div>
                   <div
-                    className="font-semibold text-zinc-100 text-shadow-xl tracking-tight"
+                    className="font-poppins font-semibold text-zinc-100 text-shadow-xl tracking-tight"
                     style={{ fontSize: "80px" }}
                   >
                     developer

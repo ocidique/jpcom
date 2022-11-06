@@ -22,7 +22,7 @@ const CVPage = () => {
           <div>
             <p className="text-center font-medium text-zinc-900 dark:text-zinc-300 uppercase">Curriculum Vitae</p>
             <h1 className="flex flex-col lg:flex-row justify-center items-center lg:space-x-6 text-6xl font-medium text-center text-zinc-900 dark:text-zinc-300 mt-6 lg:mt-12">
-              <span>developer</span>
+              <span className="font-poppins">developer</span>
               <span className="block lg:hidden">&</span>
               <span className="hidden lg:block font-cursive -mt-4" style={{ fontSize: "100px" }}>
                 &
@@ -33,7 +33,7 @@ const CVPage = () => {
             </h1>
           </div>
           <p className="text-orange-600 text-center mt-12">#webdev #frontend #fullstack #uxengineer</p>
-          <p className="text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-relaxed tracking-wider py-6 text-center px-12 lg:px-0">
+          <p className="font-poppins text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-relaxed tracking-wider py-6 text-center px-12 lg:px-0">
             Hello, is it me you're looking for? A talented modern web software developer? The one who can design and
             code apps that are good looking, diamond cut sharp and accessible! 💎
           </p>

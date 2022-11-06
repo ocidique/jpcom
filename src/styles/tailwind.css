@@ -32,6 +32,30 @@
   }
 
   @font-face {
+    font-family: "Poppins";
+    font-weight: 400;
+    src: url(../fonts/Poppins-Regular.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 500;
+    src: url(../fonts/Poppins-Medium.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 600;
+    src: url(../fonts/Poppins-SemiBold.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    font-weight: 700;
+    src: url(../fonts/Inter-Bold.ttf) format("truetype");
+  }
+
+  @font-face {
     font-family: "Roboto Mono";
     font-weight: 400;
     src: url(../fonts/RobotoMono-Regular.ttf) format("truetype");
@@ -81,19 +105,19 @@
 }
 
 .post-content h1 {
-  @apply max-w-2xl mx-auto text-3xl font-semibold;
+  @apply max-w-2xl mx-auto text-3xl font-poppins font-semibold;
 }
 
 .post-content h2 {
-  @apply max-w-2xl mx-auto text-2xl font-semibold;
+  @apply max-w-2xl mx-auto text-2xl font-poppins font-semibold;
 }
 
 .post-content h3 {
-  @apply max-w-2xl mx-auto text-xl font-semibold;
+  @apply max-w-2xl mx-auto text-xl font-poppins font-semibold;
 }
 
 .post-content h4 {
-  @apply max-w-2xl mx-auto text-xl font-semibold;
+  @apply max-w-2xl mx-auto text-xl font-poppins font-semibold;
 }
 
 .post-content h2 + p,
