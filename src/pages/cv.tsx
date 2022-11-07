@@ -93,19 +93,18 @@ const CVPage = () => {
               <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Profile</p>
               <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                 A versatile software professional with over 10 years of experience. Lifelong learner. Strongest skill
-                set for front end development, eye for design and usability, but also solid skills for back end
-                development. Knowledge for distributed systems and cloud. Creative and entrepreneurial mindset.
+                set for front-end development, eye for design and usability, also solid skills for back-end
+                development. Knowledge of distributed systems and cloud. Creative and entrepreneurial mindset.
               </p>
               <p className="text-zinc-900 dark:text-zinc-300 text-lg">
-                Juho is eager to build the finest software and likes to set into customers and end users perspective
-                when it comes to delivering the best solutions. Having a lifelong learning mentality ensures that new
-                technologies and other latest and greatest solutions are more than a welcome.
+                I'm eager to build the finest software and like to set into customers' and end users' perspectives when
+                delivering the best solutions. A lifelong learning mentality ensures that new technologies and other
+                latest and greatest solutions are welcome.
               </p>
               <p className="text-zinc-900 dark:text-zinc-300 text-lg">
-                On my freetime I like to challenge myself once in a while mentally and physically. Most of the time
-                work already offer challenges so I like to focus on physical exercises and creative hobbies. However, I
-                constantly have couple side projects on going. My permanent favourite hobby is the gym and recently I
-                have started golf.
+                In my free time, I like to challenge myself once in a while mentally and physically. Most of the time
+                work already offers challenges so I like to focus on physical exercises and creative hobbies which
+                takes the mind elsewhere. However, I constantly have a couple of side projects ongoing.
               </p>
             </div>
 
@@ -113,10 +112,7 @@ const CVPage = () => {
               <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Expertise</p>
               <ul className="ml-4 space-y-2 text-lg">
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">
-                    {/* Eager to build the finest software, hands-on coding skillz */}
-                    Hands-on coding skillz
-                  </span>
+                  <span className="text-zinc-900 dark:text-zinc-300">Hands-on coding skillz</span>
                 </li>
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">HTML, CSS, JavaScript, Typescript, React</span>
@@ -233,7 +229,7 @@ const CVPage = () => {
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                     Long term e-service development. Python, Django, HTML, CSS, JavaScript, TypeScript, React, GraphQL,
-                    Tailwind, Design system, Azure
+                    Tailwind, Design system, Playwright, Azure
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                     Hybrid developer: responsible for UX/UI design and front-end development.
