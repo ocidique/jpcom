@@ -54,8 +54,7 @@ const Tags = ({ pageContext, data }) => {
               <Link
                 to={`/blog/${slug}`}
                 key={slug}
-                className="inline-block rounded-lg overflow-hidden relative group col-span-12 md:col-span-6 lg:col-span-4 row-span-1 p-1 bg-zinc-800 dark:bg-zinc-300"
-                style={{ minHeight: "220px", maxHeight: "220px" }}
+                className="inline-block rounded-lg overflow-hidden relative group col-span-12 md:col-span-6 lg:col-span-4 row-span-1 p-1 bg-zinc-800 dark:bg-zinc-300 min-h-[220px]"
               >
                 <div
                   className={
@@ -81,10 +80,7 @@ const Tags = ({ pageContext, data }) => {
                 {hero_image ? (
                   <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full rounded-md" />
                 ) : (
-                  <div
-                    className="bg-white dark:bg-zinc-900 h-full w-full rounded-md"
-                    style={{ minHeight: "220px" }}
-                  ></div>
+                  <div className="bg-white dark:bg-zinc-900 h-full w-full rounded-md min-h-[220px]"></div>
                 )}
               </Link>
             );

@@ -100,17 +100,17 @@ const BlogList = ({ pageContext, data }) => {
                 <div
                   className={"absolute flex flex-col justify-end w-full h-full p-6 z-20 text-zinc-100 space-y-2 -m-1"}
                 >
-                  <h3
+                  <h2
                     className={
                       node.frontmatter.pin
-                        ? "text-3xl font-medium group-hover:underline"
+                        ? "text-3xl text-shadow font-poppins font-medium"
                         : hero_image
-                        ? "text-xl text-white group-hover:underline"
-                        : "text-xl text-black dark:text-white group-hover:underline"
+                        ? "text-xl font-poppins text-white"
+                        : "text-xl font-poppins text-black dark:text-white"
                     }
                   >
                     {postTitle}
-                  </h3>
+                  </h2>
                   <p className={hero_image ? "font-mono text-sm" : "font-mono text-black dark:text-white text-sm"}>
                     {node.frontmatter.date}
                   </p>
@@ -118,10 +118,7 @@ const BlogList = ({ pageContext, data }) => {
                 {hero_image ? (
                   <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full rounded-md" />
                 ) : (
-                  <div
-                    className="bg-white dark:bg-zinc-900 h-full w-full rounded-md"
-                    style={{ minHeight: "220px" }}
-                  ></div>
+                  <div className="bg-white dark:bg-zinc-900 h-full w-full rounded-md min-h-[220px]"></div>
                 )}
               </Link>
             );

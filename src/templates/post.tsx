@@ -40,8 +40,8 @@ const BlogPost = ({ pageContext, data }) => {
                     <h1
                       className={
                         image
-                          ? "text-4xl lg:text-6xl font-medium text-zinc-100 text-shadow-xl tracking-tight"
-                          : "text-4xl lg:text-6xl font-medium text-zinc-900 dark:text-zinc-100 tracking-tight"
+                          ? "text-4xl lg:text-6xl font-poppins font-medium text-zinc-100 text-shadow-xl tracking-tight"
+                          : "text-4xl lg:text-6xl font-poppins font-medium text-zinc-900 dark:text-zinc-100 tracking-tight"
                       }
                     >
                       {mdx.frontmatter.title}

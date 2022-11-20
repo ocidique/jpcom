@@ -90,7 +90,7 @@ const CVPage = () => {
 
           <div className="w-full lg:w-3/5 text-zinc-900 space-y-8 px-4 lg:px-0">
             <div className="space-y-4">
-              <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Profile</p>
+              <h2 className="font-poppins font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Profile</h2>
               <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                 A versatile software professional with over 10 years of experience. Lifelong learner. Strongest skill
                 set for front-end development, eye for design and usability, also solid skills for back-end
@@ -109,7 +109,7 @@ const CVPage = () => {
             </div>
 
             <div className="space-y-4">
-              <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Expertise</p>
+              <h2 className="font-poppins font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Expertise</h2>
               <ul className="ml-4 space-y-2 text-lg">
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">Hands-on coding skillz</span>
@@ -159,7 +159,7 @@ const CVPage = () => {
               </ul>
             </div>
             <div className="space-y-4">
-              <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Languages</p>
+              <h2 className="font-poppins font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Languages</h2>
               <ul className="ml-4 space-y-2 text-lg">
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">Finnish as native</span>
@@ -177,7 +177,7 @@ const CVPage = () => {
 
         <div className="max-w-3xl lg:mx-auto space-y-8">
           <div className="space-y-4 px-4 lg:px-0">
-            <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Education</p>
+            <h2 className="font-poppins font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Education</h2>
             <ul className="flex flex-col space-y-6 lg:space-y-10">
               <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
@@ -217,7 +217,7 @@ const CVPage = () => {
             </ul>
           </div>
           <div className="space-y-4 px-4 lg:px-0 pb-12">
-            <p className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Experience</p>
+            <h2 className="font-poppins font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Experience</h2>
             <ul className="flex flex-col space-y-10">
               <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
