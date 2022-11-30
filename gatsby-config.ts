@@ -8,7 +8,7 @@ const config: GatsbyConfig = {
       summary: `Creative Software Developer and Designer`,
     },
     siteUrl: `https://www.juhopekkala.com`,
-    description: `Juho Pekkala's personal website. Here you can find my professional info as well as my blog. I intend to share things in a relaxed manner. I'm a software development enthusiast, I love creativity, DIY projects and adventures so I might share bits of those as well!`,
+    description: `A software development -oriented blog with a touch of personal life; creativity, photography, nature, adventures of any sort, metal music, and sports`,
     social: {
       twitter: `ocidique`,
     },
