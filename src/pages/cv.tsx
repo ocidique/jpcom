@@ -162,13 +162,20 @@ const CVPage = () => {
               <h2 className="font-poppins font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Languages</h2>
               <ul className="ml-4 space-y-2 text-lg">
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Finnish as native</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">Finnish as native 🇫🇮</span>
                 </li>
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Professional working proficiency in English</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">
+                    Professional working proficiency in English 🇬🇧
+                  </span>
                 </li>
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Moderate proficiency in Swedish</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">Måttlig kunskap i svenska 🇸🇪</span>
+                </li>
+                <li className="list-disc text-orange-600">
+                  <span className="text-zinc-900 dark:text-zinc-300">
+                    Aprendizaje de conceptos básicos del español 🇪🇸
+                  </span>
                 </li>
               </ul>
             </div>
@@ -232,7 +239,7 @@ const CVPage = () => {
                     Tailwind, Design system, Playwright, Azure
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
-                    Hybrid developer: responsible for UX/UI design and front-end development.
+                    Hybrid full-stack developer: responsible for UI/UX design and front-end development.
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                     Participated in various technology, design and marketing activities.
@@ -253,10 +260,10 @@ const CVPage = () => {
                     Design system, Azure
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
-                    Hybrid developer: responsible for UX/UI design and front-end development.
+                    Hybrid full-stack developer: responsible for UI/UX design and front-end development.
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
-                    Organized multiple tech talks and demo coffees.
+                    Organized multiple local tech talks and demo coffees.
                   </p>
                 </div>
               </li>
