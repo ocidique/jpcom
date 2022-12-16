@@ -103,10 +103,10 @@ const BlogList = ({ pageContext, data }) => {
                   <h2
                     className={
                       node.frontmatter.pin
-                        ? "text-3xl text-shadow font-poppins font-medium"
+                        ? "text-3xl text-shadow font-medium"
                         : hero_image
-                        ? "text-xl font-poppins text-white"
-                        : "text-xl font-poppins text-black dark:text-white"
+                        ? "text-xl text-white"
+                        : "text-xl text-black dark:text-white"
                     }
                   >
                     {postTitle}

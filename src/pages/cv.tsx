@@ -22,7 +22,7 @@ const CVPage = () => {
           <div>
             <p className="text-center font-medium text-zinc-900 dark:text-zinc-300 uppercase">Curriculum Vitae</p>
             <h1 className="flex flex-col lg:flex-row justify-center items-center lg:space-x-6 text-6xl font-medium text-center text-zinc-900 dark:text-zinc-300 mt-6 lg:mt-12">
-              <span className="font-poppins">developer</span>
+              <span>developer</span>
               <span className="block lg:hidden">&</span>
               <span className="hidden lg:block font-cursive -mt-4" style={{ fontSize: "100px" }}>
                 &
@@ -33,7 +33,7 @@ const CVPage = () => {
             </h1>
           </div>
           <p className="text-orange-600 text-center mt-12">#webdev #frontend #fullstack #uxengineer</p>
-          <p className="font-poppins text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-relaxed tracking-wider py-6 text-center px-12 lg:px-0">
+          <p className="text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-relaxed tracking-wider py-6 text-center px-12 lg:px-0">
             Hello, is it me you're looking for? A talented modern web software developer? The one who can design and
             code apps that are good looking, diamond cut sharp and accessible! 💎
           </p>
@@ -88,9 +88,9 @@ const CVPage = () => {
             </div>
           </div>
 
-          <div className="w-full lg:w-3/5 text-zinc-900 space-y-8 px-4 lg:px-0">
+          <div className="w-full lg:w-3/5 text-zinc-900 space-y-8">
             <div className="space-y-4">
-              <h2 className="font-poppins font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Profile</h2>
+              <h2 className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Profile</h2>
               <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                 A versatile software professional with over 10 years of experience. Lifelong learner. Strongest skill
                 set for front-end development, eye for design and usability, also solid skills for back-end
@@ -109,7 +109,7 @@ const CVPage = () => {
             </div>
 
             <div className="space-y-4">
-              <h2 className="font-poppins font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Expertise</h2>
+              <h2 className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Expertise</h2>
               <ul className="ml-4 space-y-2 text-lg">
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">Hands-on coding skillz</span>
@@ -159,7 +159,7 @@ const CVPage = () => {
               </ul>
             </div>
             <div className="space-y-4">
-              <h2 className="font-poppins font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Languages</h2>
+              <h2 className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Languages</h2>
               <ul className="ml-4 space-y-2 text-lg">
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">Finnish as native 🇫🇮</span>
@@ -184,7 +184,7 @@ const CVPage = () => {
 
         <div className="max-w-3xl lg:mx-auto space-y-8">
           <div className="space-y-4 px-4 lg:px-0">
-            <h2 className="font-poppins font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Education</h2>
+            <h2 className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Education</h2>
             <ul className="flex flex-col space-y-6 lg:space-y-10">
               <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
@@ -224,7 +224,7 @@ const CVPage = () => {
             </ul>
           </div>
           <div className="space-y-4 px-4 lg:px-0 pb-12">
-            <h2 className="font-poppins font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Experience</h2>
+            <h2 className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Experience</h2>
             <ul className="flex flex-col space-y-10">
               <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">

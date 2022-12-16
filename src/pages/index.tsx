@@ -29,7 +29,7 @@ const IndexPage = () => {
                     creative
                   </div>
                   <div
-                    className="font-poppins font-semibold text-zinc-100 text-shadow-xl tracking-tight"
+                    className="font-semibold text-zinc-100 text-shadow-xl tracking-tight"
                     style={{ fontSize: "80px" }}
                   >
                     developer
@@ -77,7 +77,7 @@ const IndexPage = () => {
                   >
                     creative
                   </span>
-                  <span className="font-poppins font-semibold text-shadow-xl tracking-tight">developer</span>
+                  <span className="font-semibold text-shadow-xl tracking-tight">developer</span>
                   <span className="block lg:hidden font-cursive text-shadow-xl">&</span>
                   <span className="hidden lg:block font-cursive -mt-4" style={{ fontSize: "100px" }}>
                     &
