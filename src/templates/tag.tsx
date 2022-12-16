@@ -46,7 +46,7 @@ const Tags = ({ pageContext, data }) => {
           ))}
         </ul>
 
-        <div className="grid grid-cols-12 gap-6">
+        <div className="grid grid-cols-12 gap-4">
           {posts.map(({ node }) => {
             const { title, slug, hero_image, hero_image_alt } = node.frontmatter;
             const postTitle = title || slug;
@@ -54,17 +54,10 @@ const Tags = ({ pageContext, data }) => {
               <Link
                 to={`/blog/${slug}`}
                 key={slug}
-                className="inline-block rounded-lg overflow-hidden relative group col-span-12 md:col-span-6 lg:col-span-4 row-span-1 p-1 bg-zinc-800 dark:bg-zinc-300 min-h-[220px]"
+                className="col-span-12 lg:col-span-4 after:content group relative after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight rounded-lg"
               >
-                <div
-                  className={
-                    hero_image
-                      ? "absolute flex z-10 bg-zinc-900 opacity-20 group-hover:opacity-0 transform transition-opacity w-full h-full -m-1"
-                      : "absolute flex z-10 bg-zinc-900 opacity-5 dark:opacity-30 group-hover:opacity-0 transform transition-opacity w-full h-full -m-1"
-                  }
-                ></div>
                 <div className={"absolute flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-2"}>
-                  <h3
+                  <h2
                     className={
                       hero_image
                         ? "text-xl text-white group-hover:underline"
@@ -72,15 +65,19 @@ const Tags = ({ pageContext, data }) => {
                     }
                   >
                     {postTitle}
-                  </h3>
+                  </h2>
                   <p className={hero_image ? "font-mono text-sm" : "font-mono text-black dark:text-zinc-100 text-sm"}>
                     {node.frontmatter.date}
                   </p>
                 </div>
                 {hero_image ? (
-                  <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full rounded-md" />
+                  <GatsbyImage
+                    image={getImage(hero_image)}
+                    alt={hero_image_alt}
+                    className="h-full transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
+                  />
                 ) : (
-                  <div className="bg-white dark:bg-zinc-900 h-full w-full rounded-md min-h-[220px]"></div>
+                  <div className="bg-zinc-300 dark:bg-zinc-800 h-full w-full rounded-md min-h-[220px]"></div>
                 )}
               </Link>
             );

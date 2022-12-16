@@ -51,16 +51,14 @@ const BlogList = ({ pageContext, data }) => {
           ))}
         </ul>
 
-        <div className="grid grid-cols-8 lg:grid-cols-12 gap-4 lg:gap-5">
+        <div className="grid grid-cols-8 lg:grid-cols-12 gap-4">
           {posts.map(({ node }, i) => {
             const { title, slug, hero_image, hero_image_alt } = node.frontmatter;
             const postTitle = title || slug;
-
             const cardClass = classNames({
-              "inline-block relative rounded-lg group overflow-hidden p-1": true,
-              "bg-gradient-to-r from-[#6EE7B7] via-[#3B82F6] to-[#9333EA] transition-all col-span-12 lg:col-span-8 row-span-2":
-                node.frontmatter.pin,
-              "bg-zinc-800 dark:bg-zinc-300": !node.frontmatter.pin,
+              "after:content group relative after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight rounded-lg":
+                true,
+              "col-span-12 lg:col-span-8 row-span-2": node.frontmatter.pin,
               "col-span-12 lg:col-span-4 row-span-2": i === 1 && currentPage === 1,
               "col-span-12 lg:col-span-4": i > 1 || currentPage > 1,
             });
@@ -81,44 +79,31 @@ const BlogList = ({ pageContext, data }) => {
                   </svg>
                 )}
 
-                {/* <div
-                  className={
-                    hero_image
-                      ? `absolute flex z-10 bg-zinc-900 opacity-30 group-hover:opacity-0 transform transition-opacity w-full h-full ${
-                          node.frontmatter.pin && "-m-1"
-                        }`
-                      : "absolute p-1 flex z-10 bg-white group-hover:opacity-50 dark:opacity-50 dark:bg-zinc-900 border-4 border-zinc-900 dark:border-zinc-300 dark:group-hover:opacity-100 transform transition-opacity w-full h-full overflow-hidden"
-                  }
-                ></div> */}
-                <div
-                  className={
-                    hero_image
-                      ? "absolute flex z-10 bg-zinc-900 opacity-20 group-hover:opacity-0 transform transition-opacity w-full h-full -m-1"
-                      : "absolute flex z-10 bg-zinc-900 opacity-5 dark:opacity-30 group-hover:opacity-0 transform transition-opacity w-full h-full -m-1"
-                  }
-                ></div>
-                <div
-                  className={"absolute flex flex-col justify-end w-full h-full p-6 z-20 text-zinc-100 space-y-2 -m-1"}
-                >
+                <div className={"absolute flex flex-col justify-end w-full h-full p-6 z-20 text-zinc-100 space-y-2"}>
                   <h2
                     className={
                       node.frontmatter.pin
-                        ? "text-3xl text-shadow font-medium"
+                        ? "text-3xl text-shadow font-medium group-hover:underline"
                         : hero_image
-                        ? "text-xl text-white"
-                        : "text-xl text-black dark:text-white"
+                        ? "text-xl text-white text-shadow group-hover:underline"
+                        : "text-xl text-black dark:text-white group-hover:underline"
                     }
                   >
                     {postTitle}
                   </h2>
+
                   <p className={hero_image ? "font-mono text-sm" : "font-mono text-black dark:text-white text-sm"}>
                     {node.frontmatter.date}
                   </p>
                 </div>
                 {hero_image ? (
-                  <GatsbyImage image={getImage(hero_image)} alt={hero_image_alt} className="h-full rounded-md" />
+                  <GatsbyImage
+                    image={getImage(hero_image)}
+                    alt={hero_image_alt}
+                    className="h-full transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
+                  />
                 ) : (
-                  <div className="bg-white dark:bg-zinc-900 h-full w-full rounded-md min-h-[220px]"></div>
+                  <div className="bg-zinc-300 dark:bg-zinc-800 h-full w-full rounded-md min-h-[220px]"></div>
                 )}
               </Link>
             );

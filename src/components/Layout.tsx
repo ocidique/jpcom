@@ -25,7 +25,7 @@ const Layout: React.FC<Props> = ({ children }) => {
   const pathname = typeof window !== "undefined" ? window.location.pathname : "";
   return (
     <MDXProvider components={shortcodes}>
-      <div className="min-h-screen scroll-smooth relative bg-zinc-50 dark:bg-zinc-900 z-30">
+      <div className="min-h-screen scroll-smooth relative bg-zinc-50 dark:bg-[#0F0F0F] z-30">
         <div className="flex flex-col min-h-screen justify-between">
           <div className="relative">
             <Navigation />
