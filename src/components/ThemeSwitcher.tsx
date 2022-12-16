@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useEffect, useState } from "react";
 
 type Props = {
   isPostPage?: boolean;
@@ -6,6 +6,11 @@ type Props = {
 
 const ThemeSwitcher = ({ isPostPage = false }: Props) => {
   const [theme, setTheme] = useState("");
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useLayoutEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   useEffect(() => {
     applyTheme(getTheme());
@@ -38,6 +43,10 @@ const ThemeSwitcher = ({ isPostPage = false }: Props) => {
     const newTheme = rotateTheme(getTheme());
     applyTheme(newTheme);
     saveTheme(newTheme);
+  }
+
+  if (!hasMounted) {
+    return <div className="w-6 h-6"></div>;
   }
 
   return (
