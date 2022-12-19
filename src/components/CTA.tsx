@@ -10,7 +10,7 @@ const CTA: React.FunctionComponent<Props> = ({ to, children }) => {
   return (
     <Link
       to={to}
-      className="inline-flex items-center space-x-4 font-medium tracking-wide text-orange-600 hover:text-orange-500"
+      className="inline-flex items-center space-x-4 font-medium tracking-wide text-orange-600 hover:text-orange-500 hover:underline"
     >
       {children}
       <span className="ml-4">
