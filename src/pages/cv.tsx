@@ -228,11 +228,30 @@ const CVPage = () => {
             <ul className="flex flex-col space-y-10">
               <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
-                  <YearLabel>2022 -</YearLabel>
+                  <YearLabel>2023 -</YearLabel>
                 </div>
                 <div className="w-full space-y-4">
                   <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">
-                    Senior Software Developer - Haallas Finland Oy
+                    Lead Software Developer - Siili Solutions Oy
+                  </p>
+                  <p className="text-zinc-900 dark:text-zinc-300 text-lg">
+                    Long term e-service development. Python, Django, HTML, CSS, JavaScript, TypeScript, React, GraphQL,
+                    Tailwind, Design system, Playwright, Azure
+                  </p>
+                  <p className="text-zinc-900 dark:text-zinc-300 text-lg">
+                    Hybrid full-stack developer: responsible for UI/UX design and front-end development.
+                  </p>
+                  <p className="text-zinc-900 dark:text-zinc-300 text-lg">Haallas merged to Siili Solutions Oy.</p>
+                </div>
+              </li>
+
+              <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
+                <div className="w-full lg:w-36">
+                  <YearLabel>2022</YearLabel>
+                </div>
+                <div className="w-full space-y-4">
+                  <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">
+                    Lead Software Developer - Haallas Finland Oy
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                     Long term e-service development. Python, Django, HTML, CSS, JavaScript, TypeScript, React, GraphQL,
@@ -243,6 +262,9 @@ const CVPage = () => {
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                     Participated in various technology, design and marketing activities.
+                  </p>
+                  <p className="text-zinc-900 dark:text-zinc-300 text-lg">
+                    Valamis consultancy goes under own brand. Acquired by Siili Solutions Oy.
                   </p>
                 </div>
               </li>
@@ -302,7 +324,9 @@ const CVPage = () => {
                 </div>
                 <div className="w-full space-y-4">
                   <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">Web Developer - Freelance</p>
-                  <p className="text-zinc-900 dark:text-zinc-300 text-lg">Wordpress development. PHP, HTML, CSS.</p>
+                  <p className="text-zinc-900 dark:text-zinc-300 text-lg">
+                    Wordpress development for various customers. PHP, HTML, CSS.
+                  </p>
                 </div>
               </li>
 
@@ -339,7 +363,7 @@ const CVPage = () => {
                 <div className="w-full space-y-4">
                   <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">Web Developer - DreamIT</p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
-                    Summer Job. Product development using PHP, CakePHP, HTML, CSS, JavaScript.
+                    Product development using PHP, CakePHP, HTML, CSS, JavaScript.
                   </p>
                 </div>
               </li>
