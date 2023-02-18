@@ -32,11 +32,11 @@ const CVPage = () => {
               </span>
             </h1>
           </div>
-          <p className="text-orange-600 text-center mt-12">#webdev #frontend #fullstack #uxengineer</p>
-          <p className="text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-relaxed tracking-wider py-6 text-center px-12 lg:px-0">
+          <p className="text-orange-600 text-center mt-12">#fullstack #frontend #design #ux #ui</p>
+          {/* <p className="text-xl lg:text-3xl text-zinc-900 dark:text-zinc-300 leading-relaxed tracking-wider py-6 text-center px-12 lg:px-0">
             Hello, is it me you're looking for? A talented modern web software developer? The one who can design and
             code apps that are good looking, diamond cut sharp and accessible! 💎
-          </p>
+          </p> */}
         </div>
 
         <div className="flex flex-col lg:flex-row lg:space-x-12">
@@ -232,7 +232,7 @@ const CVPage = () => {
                 </div>
                 <div className="w-full space-y-4">
                   <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">
-                    Lead Software Developer - Siili Solutions Oy
+                    Lead Software Developer - Siili Solutions Oyj
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                     Long term e-service development. Python, Django, HTML, CSS, JavaScript, TypeScript, React, GraphQL,
@@ -241,7 +241,7 @@ const CVPage = () => {
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                     Hybrid full-stack developer: responsible for UI/UX design and front-end development.
                   </p>
-                  <p className="text-zinc-900 dark:text-zinc-300 text-lg">Haallas merged to Siili Solutions Oy.</p>
+                  <p className="text-zinc-900 dark:text-zinc-300 text-lg">Haallas merged to Siili Solutions Oyj.</p>
                 </div>
               </li>
 
@@ -264,7 +264,7 @@ const CVPage = () => {
                     Participated in various technology, design and marketing activities.
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
-                    Valamis consultancy goes under own brand. Acquired by Siili Solutions Oy.
+                    Valamis consultancy goes under own brand. Acquired by Siili Solutions Oyj.
                   </p>
                 </div>
               </li>
