@@ -92,19 +92,17 @@ const CVPage = () => {
             <div className="space-y-4">
               <h2 className="font-semibold text-2xl text-zinc-900 dark:text-zinc-300">Profile</h2>
               <p className="text-zinc-900 dark:text-zinc-300 text-lg">
-                A versatile software professional with over 10 years of experience. Lifelong learner. Strongest skill
-                set for front-end development, eye for design and usability, also solid skills for back-end
-                development. Knowledge of distributed systems and cloud. Creative and entrepreneurial mindset.
+                I am a versatile full-stack developer with a creative mindset, and strong design skills. With over 10
+                years of experience in the field, I have developed a keen eye for detail and a passion for creating
+                exceptional user experiences. My expertise spans across the entire software development life cycle,
+                from conceptualization to deployment.
               </p>
               <p className="text-zinc-900 dark:text-zinc-300 text-lg">
-                I'm eager to build the finest software and like to set into customers' and end users' perspectives when
-                delivering the best solutions. A lifelong learning mentality ensures that new technologies and other
-                latest and greatest solutions are welcome.
-              </p>
-              <p className="text-zinc-900 dark:text-zinc-300 text-lg">
-                In my free time, I like to challenge myself once in a while mentally and physically. Most of the time
-                work already offers challenges so I like to focus on physical exercises and creative hobbies which
-                takes the mind elsewhere. However, I constantly have a couple of side projects ongoing.
+                As a full-stack developer, I am well-versed in both front-end and back-end development technologies and
+                have a proven track record of delivering high-quality projects. With my unique blend of technical and
+                creative skills, I am confident in my ability to take on any project and exceed expectations. A
+                lifelong learning mentality ensures that new technologies and other latest and greatest solutions are
+                welcome.
               </p>
             </div>
 
@@ -126,7 +124,7 @@ const CVPage = () => {
                   </span>
                 </li>
                 <li className="list-disc text-orange-600">
-                  <span className="text-zinc-900 dark:text-zinc-300">Python, Django, NodeJS, Java</span>
+                  <span className="text-zinc-900 dark:text-zinc-300">Python, Django, NodeJS, Java, PHP</span>
                 </li>
                 <li className="list-disc text-orange-600">
                   <span className="text-zinc-900 dark:text-zinc-300">REST, GraphQL</span>
@@ -212,7 +210,7 @@ const CVPage = () => {
                 </div>
                 <div className="w-full space-y-4">
                   <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">
-                    B.Eng. in Oulu University of Applied Sciences
+                    B.Eng. - Oulu University of Applied Sciences
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                     Computer Software Engineering. Orientation to mobile development using Qt. Business as minor
