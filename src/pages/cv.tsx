@@ -226,7 +226,26 @@ const CVPage = () => {
             <ul className="flex flex-col space-y-10">
               <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
                 <div className="w-full lg:w-36">
-                  <YearLabel>2023 -</YearLabel>
+                  <YearLabel>2025</YearLabel>
+                </div>
+                <div className="w-full space-y-4">
+                  <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">
+                    Full-Stack Developer & Designer, Partner - Heroe Oy
+                  </p>
+                  <p className="text-zinc-900 dark:text-zinc-300 text-lg">
+                    New ventures as a Partner in a newly founded company called{" "}
+                    <a href="https://www.heroe.fi/">Heroe</a> which is a part of the{" "}
+                    <a href="https://luotocompany.fi/">Luoto Company ecosystem</a>.
+                  </p>
+                  <p className="text-zinc-900 dark:text-zinc-300 text-lg">
+                    Currently working with tech stack: Java, Spring, React, TypeScript
+                  </p>
+                </div>
+              </li>
+
+              <li className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 border-t border-zinc-300 dark:border-zinc-700 py-6">
+                <div className="w-full lg:w-36">
+                  <YearLabel>2023 - 2025</YearLabel>
                 </div>
                 <div className="w-full space-y-4">
                   <p className="font-semibold text-lg text-zinc-900 dark:text-zinc-300">
