@@ -234,11 +234,11 @@ const CVPage = () => {
                   </p>
                   <p className="text-zinc-900 dark:text-zinc-300 text-lg">
                     New ventures as a Partner in a newly founded company called{" "}
-                    <a href="https://www.heroe.fi/" className="hover:text-orange-500 hover:underline">
+                    <a href="https://www.heroe.fi/" className="text-orange-500 hover:underline">
                       Heroe
                     </a>{" "}
                     which is a part of the{" "}
-                    <a href="https://luotocompany.fi/" className="hover:text-orange-500 hover:underline">
+                    <a href="https://luotocompany.fi/" className="text-orange-500 hover:underline">
                       Luoto Company Ecosystem
                     </a>
                     .
