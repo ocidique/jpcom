@@ -51,9 +51,9 @@ const AboutPage = () => {
               <p>My name is Juho Pekkala. I warmly thank you finding here and humbly welcome you to my website.</p>
               <p>
                 I'm a creative <span className="font-bold tracking-wide">developer</span>,{" "}
-                <span className="font-bold tracking-wide">designer</span> and lifelong learner from Finland 🇫🇮. From
-                the website you can find my professional info as well as my blog. I intend to share things in a relaxed
-                manner. I love creativity, DIY projects and adventures so I might share bits of those as well!
+                <span className="font-bold tracking-wide">designer</span> and lifelong learner from Finland 🇫🇮.
+                Currently website works as a simple professional info website. Planning to add blog in the future. I
+                love creativity, photography, DIY projects and adventures so I might share bits of those as well!
               </p>
             </div>
             <div className="flex flex-col space-y-4">
