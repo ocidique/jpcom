@@ -29,7 +29,7 @@ const AboutPage = () => {
               }}
             ></div>
             <div
-              className="absolute z-10 text-gray-200 dark:text-zinc-700"
+              className="absolute z-10 text-zinc-200 dark:text-zinc-700"
               style={{ top: "150px", left: "100px", transform: "rotate(-90deg)" }}
             >
               <DotPattern />

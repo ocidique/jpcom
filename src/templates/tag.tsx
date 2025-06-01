@@ -17,6 +17,8 @@ const Tags = ({ pageContext, data }) => {
 
   const tagHeader = `${totalCount} post${totalCount === 1 ? "" : "s"} tagged with "${tag}"`;
 
+  // TODO: make this view more like an archive or create separate view for that?
+
   return (
     <Layout>
       <WrapperBlock>
@@ -30,7 +32,7 @@ const Tags = ({ pageContext, data }) => {
             <Link
               to="/blog/"
               getProps={isCurrent}
-              className="font-mono text-zinc-900 dark:text-zinc-300 group-hover:underline :text-orange-500 dark:hover:text-orange-500 px-3 py-2"
+              className="font-mono text-zinc-900 dark:text-zinc-300 group-hover:underline hover:text-orange-500 dark:hover:text-orange-500 px-3 py-2"
             >
               all
             </Link>
@@ -54,7 +56,7 @@ const Tags = ({ pageContext, data }) => {
               <Link
                 to={`/blog/${slug}`}
                 key={slug}
-                className="col-span-12 lg:col-span-4 after:content group relative after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight rounded-lg"
+                className="col-span-12 lg:col-span-4 after:content group relative after:pointer-events-none after:absolute after:inset-0 after:shadow-highlight"
               >
                 <div className={"absolute flex flex-col justify-end w-full h-full p-4 z-20 text-zinc-100 space-y-2"}>
                   <h2
@@ -74,10 +76,10 @@ const Tags = ({ pageContext, data }) => {
                   <GatsbyImage
                     image={getImage(hero_image)}
                     alt={hero_image_alt}
-                    className="h-full transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
+                    className="h-full transform brightness-90 transition will-change-auto group-hover:brightness-110"
                   />
                 ) : (
-                  <div className="bg-zinc-300 dark:bg-zinc-800 h-full w-full rounded-md min-h-[220px]"></div>
+                  <div className="bg-zinc-300 dark:bg-zinc-800 h-full w-full min-h-[220px]"></div>
                 )}
               </Link>
             );
