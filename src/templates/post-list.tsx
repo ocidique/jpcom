@@ -131,61 +131,76 @@ const BlogList = ({ pageContext, data }) => {
           </WrapperBlock>
         </div>
 
-        <WrapperBlock>
-          <div className="flex justify-center items-center space-x-4 font-mono">
-            <div className="flex justify-end w-56">
-              {!isFirst && (
-                <Link
-                  to={`/blog/${prevPage}`}
-                  rel="prev"
-                  className="inline-flex items-center space-x-3 px-2 py-1 text-sm text-zinc-900 dark:text-zinc-300 hover:underline hover:text-orange-500 dark:hover:text-orange-500"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path
-                      fillRule="evenodd"
-                      d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+        {numPages > 1 && (
+          <WrapperBlock>
+            <div className="flex justify-center items-center space-x-4 font-mono">
+              <div className="flex justify-end w-56">
+                {!isFirst && (
+                  <Link
+                    to={`/blog/${prevPage}`}
+                    rel="prev"
+                    className="inline-flex items-center space-x-3 px-2 py-1 text-sm text-zinc-900 dark:text-zinc-300 hover:underline hover:text-orange-500 dark:hover:text-orange-500"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
 
-                  <span>Previous Page</span>
-                </Link>
-              )}
-            </div>
-            {Array.from({ length: numPages }, (_, i) => (
-              <div
-                key={`pagination-number-${i + 1}`}
-                className={`font-mono ${
-                  currentPage === i + 1
-                    ? "text-orange-600 font-medium underline"
-                    : "text-zinc-900 dark:text-zinc-300 hover:underline hover:text-orange-500 dark:hover:text-orange-500"
-                }`}
-              >
-                <Link to={`/blog/${i === 0 ? "" : i + 1}`} className="flex items-center justify-center w-8 px-3 py-1">
-                  {i + 1}
-                </Link>
+                    <span>Previous Page</span>
+                  </Link>
+                )}
               </div>
-            ))}
-            <div className="flex justify-start w-56">
-              {!isLast && (
-                <Link
-                  to={`/blog/${nextPage}`}
-                  rel="next"
-                  className="inline-flex items-center space-x-3 px-2 py-1 text-sm text-zinc-900 dark:text-zinc-300 hover:underline hover:text-orange-500 dark:hover:text-orange-500"
+              {Array.from({ length: numPages }, (_, i) => (
+                <div
+                  key={`pagination-number-${i + 1}`}
+                  className={`font-mono ${
+                    currentPage === i + 1
+                      ? "text-orange-600 font-medium underline"
+                      : "text-zinc-900 dark:text-zinc-300 hover:underline hover:text-orange-500 dark:hover:text-orange-500"
+                  }`}
                 >
-                  <span>Next Page</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path
-                      fillRule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </Link>
-              )}
+                  <Link
+                    to={`/blog/${i === 0 ? "" : i + 1}`}
+                    className="flex items-center justify-center w-8 px-3 py-1"
+                  >
+                    {i + 1}
+                  </Link>
+                </div>
+              ))}
+              <div className="flex justify-start w-56">
+                {!isLast && (
+                  <Link
+                    to={`/blog/${nextPage}`}
+                    rel="next"
+                    className="inline-flex items-center space-x-3 px-2 py-1 text-sm text-zinc-900 dark:text-zinc-300 hover:underline hover:text-orange-500 dark:hover:text-orange-500"
+                  >
+                    <span>Next Page</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </Link>
+                )}
+              </div>
             </div>
-          </div>
-        </WrapperBlock>
+          </WrapperBlock>
+        )}
       </div>
     </Layout>
   );
